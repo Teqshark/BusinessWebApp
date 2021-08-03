@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Segura Construction Co</title>
+    
+
+
+
+    <!-- <meta charset="UTF-8" /> -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description"
+    content="Segura Construction Co is family owned concrete constructoion company focused on the completion of commercial and residential professional retaining walls in the central Arkansas region. ">
+  <meta name="Segura Retaining Walls " content="landing page">
+
+  <!-- OG Meta Tags to iporve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+  <meta property="og:site_name" content="Segura Construction " /> <!-- website name -->
+  <meta property="og:site" content="https://www.seguraconstruction.co"> <!-- website link -->
+  <meta property="og:title" content="Top Rated Retaining walls construction " />
+  <!-- title shown in the actual shared post -->
+  <meta property="og:description"
+    content="Segura Construction Co builds medium and large scale  commercial and residential retaining wall construction projects in the central arkansas region." />
+  <!-- description shown in the actual shared post -->
+<!--
+  <meta property="og:image" content="/images/logo.png" />  -->
+  <!-- image link, make sure it's jpg -->
+  <meta property="og:url" content="https://seguraconstruction.co" /> <!-- where do you want your post to link to -->
+
+  
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+
+
+
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+
+     <div class="centered mt-5">
+     <div class="container mt-4 pt-5">
+     <%= render 'shared/header'%>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    
+    <%= yield %>
+
+    
+    </div>
+    </div>
+     <footer  >
+   <%= render 'shared/copyright'%>
+    </footer>
+  </body>
+
+</html>
