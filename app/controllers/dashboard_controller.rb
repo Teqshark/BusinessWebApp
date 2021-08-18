@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
   protect_from_forgery
+  
   # GET /dashboard or /dashboard.json
   def index
     
@@ -17,7 +18,7 @@ class DashboardController < ApplicationController
 
   def create 
     
-    @project = Project.new(project_params)
+    # @project = Project.new(project_params)
     @project = current_user.projects.build(project_params)
 
     puts 'printing project object '
