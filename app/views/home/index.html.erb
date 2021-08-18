@@ -1,7 +1,7 @@
   <%# <div class="centered"> %>
 
     <div class="top-cont">
-      <div class="container d-none">
+      <div class="container">
     <%= link_to root_path do %>
       <%# <img class="logo" src="/images/SigmasCoin.png" /> %>
       <%#= image_tag("SigmasCoin.png", class:"logo") %>
@@ -9,15 +9,11 @@
       <% end %>  
 
        <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>. Hello <%= current_user.first_name%> <%= current_user.last_name%>
-        <%= link_to 'Sign out', destroy_user_session_path %>
-    <% else %>
-        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+        Signed in as <%= current_user.email %>. Hello <%= current_user.full_name%> 
     <% end %> 
-      
-      </div>
+    </div>
       <h1>Segura Construction Co,
-        Pour<b>pro                                   fessional commercial<b> concrete retaining walls. 
+        Pour<b> professional commercial</b> concrete retaining walls. 
       </h1>
       <h1> With over 30 years of experience we offer unmatched quality cast in place retaining walls for medium and large scale commercial and residential projects. 
       </h1>
@@ -56,119 +52,45 @@
     <%# </div> %>
   </div>
   
-  <div class="container-short d-none">
+  <div class="container-short">
     
  <%#= render "shared/new" %>
 
+      <li><i class="fas fa-map-marker-alt"></i><a href="index.html#hoursMap"> 234 Concrete Blvd, Hot Springs Ar 71901 US</a></li>
 
+
+                        <li><i class="fas fa-phone"></i><a class="" href="tel:15015208571">+1-101-444-2222</a></li>
   </div>
 
 
-
+      
+                        <!-- <li><i class="fas fa-envelope"></i><a class="" href="mailto:office@myzoomauto.com">office@myzoomauto.com</a></li> -->
   <!-- Contact -->
-    <div id="contact" class="form">
+    <div id="project-form" class="form">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>CONTACT</h2>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="address">Don't hesitate to give us a call or just use the contact form below</li>
-                        <li><i class="fas fa-map-marker-alt"></i><a href="index.html#hoursMap"> 234 Concrete Blvd, Hot Springs Ar 71901 US</a></li>
+            <%# <!- Contact Form  %>
+         <% if user_signed_in? %>
+    <h3>This is the partial project form </h3>
+    <%= render 'shared/project'%>
 
-                        <li><i class="fas fa-phone"></i><a class="" href="tel:15015208571">+1-501-520-8571</a></li>
-                        <!-- <li><i class="fas fa-envelope"></i><a class="" href="mailto:office@myzoomauto.com">office@myzoomauto.com</a></li> -->
+
+    <% else %>
+    <%= render 'shared/create_project_signup'%>
+
+    <h2> Create a free account first or log in to create a project and get an estimate</h2>
+     <%# <%= render 'shared/project'%>
+      <%# <p>Register or Log in to submit a project, schedule it, check its progress and receive an estimate via email/call</p> %>
+        <%= link_to 'Register', new_user_registration_path %>  or <%= link_to 'Sign in', new_user_session_path %>
+    <% end %> 
+           
+
                     </ul>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
              <div class="row">
                 <div class="col-lg-6 offset-lg-3">
-                    
-                    <%# <!- Contact Form  %>
-         <% if user_signed_in? %>
-       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-    <div class="field">
-    <%= f.label :first_name %> <br />
-    <%= f.text_field :first_name, autocomplete: "first name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %> <br />
-    <%= f.text_field :last_name, autocomplete: "last name" %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :phone_number %> <br />
-    <%= f.text_field :phone_number, autocomplete: "phone number"%>
-  </div>
-
-
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <span class="password-min" >
-    <em>(<%= @minimum_password_length %> characters minimum)</em></span>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions mt-3">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-    <% else %>
-        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
-    <% end %> 
-                    <h2>Submit a request</h2>
-
-
-                    <form id="contactForm" data-toggle="validator" data-focus="false" class="d-none">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="phone" class="form-control-input" id="cphone" required>
-                            <label class="label-control" for="cphone">Phone # </label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="wallLength" required></textarea>
-                            <label class="label-control" for="wallLength">What is the approxiate Length of retaining wall</label>
-                            <textarea class="form-control-textarea" id="wallWidth" required ></textarea>
-                            <label class="label-control" for="wallWidth">What is the average width of the retaining wall </label>
-                            <textarea class="form-control-textarea" id="wallHeight" required></textarea>
-                            <label class="label-control" for="wallHeight">What is the Average height of wall</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-           
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SEND REQUEST</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    
-
                 </div>
             </div>
         </div> <!-- end of container -->

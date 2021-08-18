@@ -1,4 +1,7 @@
 <h1>Dashboard#index</h1>
+<h1>Welcome to your dashboard <%= current_user.full_name%>!</h1>
+
+
 <p>Find me in app/views/dashboard/index.html.erb</p>
 
   <li class="nav-item">
@@ -23,3 +26,17 @@
        
 
         <% end %>
+<h3>projects list: </h3>
+  <h4>projects: </h4>
+  <%= @projects %>
+  <h5>projects loop </h5>
+        <% @projects.each do |project| %>
+     
+          <%= project.height %>
+          <%= project.width %>
+          <%= project.zip_code%>
+          <h2>project owner:</h2>
+          <%= project.user_id%>
+          <% end %>
+
+  <h3>end project list </h3>
