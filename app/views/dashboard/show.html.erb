@@ -1,0 +1,38 @@
+<p id="notice">
+  <%= notice %>
+</p>
+
+<p>
+<strong>Project name: </strong>
+<%= @project.title%>
+</p>
+
+<p>
+ <strong>Scheudled Start Date: </strong>
+ <%= @project.scheduled_start_date%>
+ </p>
+
+ <p>
+ <strong>Scheudled Completion Date: </strong>
+ <%= @project.scheduled_end_date%>
+ </p>
+
+ <p>
+ <strong>Project Location: </strong>
+ <%= @project.location_address  %> <%= @project.zip_code%>
+ </p>
+
+ <p>
+ <strong>Project details: </strong>
+ length: 
+ <%= @project.length%>
+ <br>
+  height: 
+ <%= @project.height%>
+ <br>
+ width: 
+ <%= @project.width%>
+
+ </p>
+ <%= lik_to 'Edit', edit_project_path(@project)%> |
+ <%= link_to 'Back', projects_path %>

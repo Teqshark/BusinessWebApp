@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
   def index
+    @project ||= Project.new
+  
   end
 
-  
-   
-  
+
   private
   def resource_name 
     :project 

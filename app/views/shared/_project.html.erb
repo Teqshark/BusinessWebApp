@@ -1,0 +1,114 @@
+
+
+<!-- 
+<div>
+<h2>create a project </h2>
+<%= form_for(resource, as: resource_name, url: '/dashboard/index') do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :location_address_without_zip_code %><br />
+    <%= f.text_field :location, autofocus: true %>
+  </div>
+  <div class="field">
+  <%= f.label :zip_code %> <br />
+  <%= f.number_field :zip_code %>
+  </div>
+    
+    <div class="field">
+    <h3>Length and Height measurements are in feet.</h3>
+    <h5>(estimates are fine)</h5>
+    <%= f.label :length %> <br />
+    <%= f.number_field :length %>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_height %> <br />
+    <%= f.number_field :height %>
+  </div>
+  
+  <div class="field">
+      <h3>Width is in inches </h3>
+    <%= f.label :average_width %> <br />
+    <%= f.number_field :width %>
+  </div>
+
+  <div class="actions mt-3">
+    <%= f.submit "Submit project" %>
+  </div>
+  <% end %>
+<h2>form end </h2>
+  </div>
+  
+   > <-->
+   <h2>Create a project </h2>
+<%= form_with(model: @project, url: 'dashboard/create') do |f| %>
+  <% if resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resource.errors.count, "error") %> prohibited this project from being created</h2>
+
+      <ul>
+        <% resource.errors.each do |error|%>
+          <li><%= error.full_message %></li>
+        <%end%>
+      </ul>
+    </div>
+  <%end%>
+
+
+
+
+<!-- >  
+
+   <div class="field">
+    <%= f.label :description %>
+    <p class="form-text">(give a brief description of your project)</p>
+    <%= f.text_field :description %>
+  </div>
+
+<div class="field">
+    <%= f.label :project_address %>
+    <%= f.text_field :address %>
+  </div> 
+
+  <div class="field date">
+   <%= f.label :desired_completion_date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field date">
+    <%= f.label :desired_start_date %>
+    <%= f.date_select :date %>
+  </div>
+ < -->
+
+   <div class="field">
+    <%= f.label :project_zip_code%>
+    <%= f.number_field :zip_code%>
+  </div>
+
+   <div class="field">
+    <%= f.label :average_length%>
+    <%= f.number_field :length%>
+  </div>
+
+   <div class="field">
+    <%= f.label :average_height%>
+    <%= f.number_field  :height%>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_width%>
+    <%= f.number_field  :width%>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+
+  <%end%>
+
+

@@ -13,6 +13,32 @@
  *= require_tree .
  *= require_self
  */
+.field.date {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* justify-items: center; */
+  /* display: block; */
+  /* position: relative; */
+  font-size: 0.5em;
+  /* -webkit-appearance: listbox; */
+  /* border: 5px dashed rgb(251, 211, 124); */
+  /* display: flexbox; */
+}
+.field > i,
+em {
+  font-size: 0.3em;
+}
+.field.date > select {
+  /* border: 5px solid red; */
+  /* width: auto; */
+
+  width: 40%;
+  min-width: 150px;
+  margin: auto;
+  /* padding: 20px 40px; */
+  /* margin-left: 40px; */
+}
 
 .get-quote {
   border-radius: 5px;
@@ -86,7 +112,14 @@
   /* display: list-item; */
   /* position: static; */
 }
-
+.button_to > input {
+  /* border: 4px dashed blue; */
+  /* display: flex;
+   */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: auto;
+}
 form {
   /* display: absolute; */
   display: flex;

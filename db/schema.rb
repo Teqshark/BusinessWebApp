@@ -10,19 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_05_182251) do
+ActiveRecord::Schema.define(version: 2021_08_07_050407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "projects", force: :cascade do |t|
     t.bigint "user_id"
-    t.integer "length", default: 0
-    t.integer "width", default: 0
-    t.integer "height", default: 0
+    t.integer "length", default: 200
+    t.integer "width", default: 200
+    t.integer "height", default: 200
     t.string "location", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "zip_code"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index]
   resources :home, only: [:index]
   
-  resources :user
+  resources :user,:project 
+
   root 'home#index'
 
   devise_scope :user do
@@ -35,6 +36,8 @@ end
   # get 'devise/registrations#new'
   # (.:format) 
   get 'dashboard/index'
+  post 'dashboard/index'
+  post 'dashboard/create'
   get 'users/index'
   # resdaer
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
