@@ -1,23 +1,23 @@
 class DashboardController < ApplicationController
   protect_from_forgery
-  
+  before_action :authenticate_user!
+
   # GET /dashboard or /dashboard.json
   def index
     
-    @projects = Project.all
+    @projects = Project.where(user_id: current_user.id)
   end
 
   def new
-    # user = current_user
-    @project = Project.new
+    user = current_user
+    # @project = Project.new
       # client = Clinet.find(some_id) 
       # If you using resources just take id from params  
-  # @project = user.projects.build
-
+  @project = user.projects.build
   end
 
   def create 
-    
+     @projects = Project.where(user_id: current_user.id)
     # @project = Project.new(project_params)
     @project = current_user.projects.build(project_params)
 
@@ -32,7 +32,7 @@ class DashboardController < ApplicationController
     else 
       puts 'project unable to save'
       flash[:notice] = "warning: project was not saved"
-     render 'dashboard/index'
+      render 'index'
     end
     flash["notice"] = "Test notice"
   end

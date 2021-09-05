@@ -26,17 +26,23 @@
        
 
         <% end %>
+
+
+<%= link_to 'Create a Project & get a free estimate', dashboard_new_url %>
+
 <h3>projects list: </h3>
   <h4>projects: </h4>
   <%= @projects %>
   <h5>projects loop </h5>
+  <ul>
         <% @projects.each do |project| %>
-     
+          <li>
           <%= project.height %>
           <%= project.width %>
           <%= project.zip_code%>
           <h2>project owner:</h2>
           <%= project.user_id%>
+          </li>
           <% end %>
-
+  </ul>
   <h3>end project list </h3>

@@ -18,16 +18,19 @@
         <%# <%= link_to 'About Us', home_about_path, class:"nav-link" %>
 
         <%# </li> %>
-        <li class="nav-item ">
-          <%# <a class="nav-link" href="#">Features</a> %>
-          <%= link_to 'see users', users_index_path, class:"nav-link " %>
-        </li>
+     
 
 
         <% if user_signed_in?%>
         <!--<li class="nav-item">
           <%= link_to 'dashboard', 'dashboard/index', class:"nav-link" %>
         </li> -->
+        <% if current_user.admin %>
+           <li class="nav-item ">
+          <%# <a class="nav-link" href="#">Features</a> %>
+          <%= link_to 'see users', users_index_path, class:"nav-link " %>
+        </li>
+        <% end %>
         <li class="nav-item ">
           <%= link_to 'Dashboard', dashboard_index_path, class:"nav-link" %>
         </li>
@@ -49,8 +52,16 @@
           <%= link_to 'Log In', new_user_session_path, class:"nav-link"%>
 
         </li>
-
+  
         <% end %>
+          <li class="nav-item">
+          <%= link_to 'Our mission', home_our_mission_url, class:"nav-link"%>
+  <li class="nav-item">
+          <%# <%= link_to 'Contact Us', contact_us class:"nav-link"%> 
+          <a href="tel:13432212" id="call-now" >62384<i class="fa fa-phone fa-2x contact-us-btn"></i>  </a>
+ 
+ <a href="email:SeguraConstruction Co"  id="call-now" ><i class="fa fa-phone fa-2x contact-us-btn"></i>  </a>
+
         <%# <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
         </li> %>

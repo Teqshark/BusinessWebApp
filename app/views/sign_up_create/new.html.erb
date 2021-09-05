@@ -1,0 +1,70 @@
+ <div class="container-short" style="width: auto;margin: auto;"><p  id="notice" style="background: red;width: auto;margin: auto;">
+ <% if @sign_up_create.errors.any?%>
+    
+    <%# <h2> %>
+    <%# Input errors: %>
+    <%# </h2> %>
+      <% @sign_up_create.errors.each do |error|%>
+    
+      <%# <br> %>
+      <%# error.attribute %> 
+      <%# : <%= error.message %>  
+      <%# <br> %>
+      <%# <h3>error full message : </h3> %>
+      <%= error.full_message %> 
+      <br>
+      
+    
+      <%end%>
+  
+    <h2>Check your inputs and try again. </h2>
+  <% end%>
+<%# @sign_up_create.errors.messages if @sign_up_create.errors.messages if @sign_up_create.errors.any? %> 
+ 
+</p>
+  </div>
+<%# 
+puts @sign_up_create
+puts @sign_up_create.errors 
+
+puts @sign_up_create.errors.
+@sign_up_create.errors.any? # If there are errors, do something
+
+  # You can iterate through all messages by attribute type and validation message
+  # This will be something like:
+  # attribute = 'name'
+  # message = 'cannot be left blank'
+  @sign_up_create.errors.each do |error|
+
+  message = error.message 
+  attribute = error.attribute 
+  puts message 
+  puts attribute 
+    # do stuff for each error
+  end
+
+  # Or if you prefer, you can get the full message in single string, like so:
+  # message = 'Name cannot be left blank'
+  @sign_up_create.errors.each do |message|
+    # do stuff for each error
+    puts message.message 
+    puts message.attribute 
+  end
+
+  # To get all errors associated with a single attribute, do the following:
+  if @sign_up_create.errors.include?(:name)
+    name_errors = @sign_up_create.errors[:name]
+
+    if name_errors.kind_of?(Array)
+      name_errors.each do |error|
+        # do stuff for each error on the name attribute
+      end
+    else
+      error = name_errors
+      # do stuff for the one error on the name attribute.
+    end
+  end
+  
+
+%>
+<%= render "shared/sign_up_create" %>

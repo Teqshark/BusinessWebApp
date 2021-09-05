@@ -15,8 +15,16 @@
       <h1>Segura Construction Co,
         Pour<b> professional commercial</b> concrete retaining walls. 
       </h1>
-      <h1> With over 30 years of experience we offer unmatched quality cast in place retaining walls for medium and large scale commercial and residential projects. 
-      </h1>
+       <p>commercial + residential RETAINING WALLS </p>
+
+ <h4>commercial + residential <h4>
+ <h3>Concrete Retaining Walls </h3>
+ <h4>High Performance </h4>
+ <h5>Unparalled strength </h5>
+ <h5>up to 30000 lbs of lateral resistane<h5>
+
+      <h3> With over 30 years of experience we offer unmatched quality cast in place retaining walls for medium and large scale commercial and residential projects. 
+      </h3>
 
       <div class="container top-img" style="background-image: url(<%= asset_path 'retaining-wall-curved' %>);border: 2px dashed red;width: 100vw;">
     <%= image_tag("retaining-wall-curved-inside.jpg", {:style => "width:100%;margin-top: 5rem; margin-bottom: 5rem;display:none;"}) %>
@@ -66,35 +74,34 @@
       
                         <!-- <li><i class="fas fa-envelope"></i><a class="" href="mailto:office@myzoomauto.com">office@myzoomauto.com</a></li> -->
   <!-- Contact -->
-    <div id="project-form" class="form">
+
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+         
+             
             <%# <!- Contact Form  %>
          <% if user_signed_in? %>
-    <h3>This is the partial project form </h3>
+    <h3>Add a project using this project form </h3>
     <%= render 'shared/project'%>
 
 
     <% else %>
-    <%= render 'shared/create_project_signup'%>
-
-    <h2> Create a free account first or log in to create a project and get an estimate</h2>
+       <h2> Create a free account first or log in to create a project and get an estimate</h2>
+       <%= render 'shared/sign_up_create'%>
+  <br>
+ 
      <%# <%= render 'shared/project'%>
       <%# <p>Register or Log in to submit a project, schedule it, check its progress and receive an estimate via email/call</p> %>
         <%= link_to 'Register', new_user_registration_path %>  or <%= link_to 'Sign in', new_user_session_path %>
     <% end %> 
            
 
-                    </ul>
+                 
                 </div> <!-- end of col -->
-            </div> <!-- end of row -->
-             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                </div>
-            </div>
-        </div> <!-- end of container -->
-    </div> <!-- end of form -->
+           <!-- end of row -->
+             
+        
+        <!-- end of container -->
+     <!-- end of form -->
     <!-- end of contact -->
 
 

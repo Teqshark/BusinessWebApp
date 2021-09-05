@@ -1,0 +1,116 @@
+<div>
+   <h2>Create a project and an account in one step</h2>
+<%# <%= form_with(url: '/signup') do |f| %>
+ <%= form_with model: @sign_up_create, url: '/sign_up_create#create' do |f| %>
+<%# @sign_up_create.errors.full_messages.first if @sign_up_create.errors.any? if @sign_up_create.errors? %>   
+ <% if @sign_up_create %>
+    <p>devise/shared/error_messages </p>
+    <% render "devise/shared/error_messages", resource: @sign_up_create %>
+
+  <% if @sign_up_create.errors.any?%>
+    
+    <%# <h2> %>
+    <%# Input errors: %>
+    <%# </h2> %>
+      <% @sign_up_create.errors.each do |error|%>
+    
+      <%# <br> %>
+      <%# error.attribute %> 
+      <%# : <%= error.message %>  
+      <%# <br> %>
+      <%# <h3>error full message : </h3> %>
+      <%= error.full_message %> 
+      <br>
+      
+    
+      <%end%>
+  
+    <h2>Check your inputs and try again. </h2>
+  <% end%>
+
+  <% end%>
+
+  
+  <div class="field">
+    <%= f.label :email%>
+    <br>
+    <%= f.email_field :email, autofocus: true, placeholder: "email", autocomplete: "email" %>
+    <%= f.email_field  :email_confirmation, placeholder: 'confirm email', autocomplete: 'email' %>
+  </div>
+
+<div class="field">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, placeholder: "First name", autocomplete: "first name" %>
+</div>
+
+<div class="field">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, placeholder: "Last name", autocomplete: "last name" %>
+</div>
+
+<div class="field">
+<%= f.label :phone_number %>
+  <%= f.text_field :phone_number, placeholder: "(XXX)-XXX-XXXX", autocomplete: "phone number" %>
+</div>
+
+ 
+  <div class="field">
+    <%= f.label :password %>
+    <p><% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum; <%= @max_password_length %> characters maximum.)</em>
+    <% end %>
+    </p>
+    <br>
+    <%= f.password_field :password, class:"", placeholder:"password", autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"confirm password" %>
+  </div>
+
+
+
+  <div class="field form-group d-none">
+    <%= f.label :location, class:"label" %>
+    <%= f.text_field :location, class:"input" %>
+  </div>
+    <div class="field terms">
+    
+      <%= f.check_box :terms, class:"mr-2" %>
+      <%= f.label :terms, "I agree to the terms and conditions", class:"label" %>
+    </div>
+
+
+ <br>
+<h3>Enter your project details below. </h3>
+<div class="field"> 
+   <%= f.label :project_location_zip_code%>
+  <%= f.number_field :zip_code %>
+</div>
+
+<div class="field">
+  <%= f.label :length_in_feet %>
+  <%= f.number_field :length %>
+</div>
+<div class="field">
+ <%= f.label :average_height_in_feet %>
+  <%= f.number_field :height %>
+</div>
+<div class="field">
+  <%= f.label :average_width_in_inches %>
+  <%= f.number_field :width %>
+</div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+   <%# submit_tag("Create user & project") %>
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+ <% end %>
+
+</div>
+
+
+

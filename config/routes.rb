@@ -2,16 +2,16 @@ Rails.application.routes.draw do
 
 
   devise_for :users, controllers: { users: 'users',
-    confirmations: 'devise/confirmations'
+    confirmations: 'devise/confirmations', sign_up_create: 'home'
   }
   
   resources :dashboard, only: [:index]
-  resources :home, only: [:index]
+  resources :home, only: [:index, :our_mission]
   
   resources :user,:project 
 
   root 'home#index'
-
+get 'home/our_mission'
   devise_scope :user do
 get "/users/sign_out" => "devise/sessions#destroy"
 end
@@ -38,7 +38,13 @@ end
   get 'dashboard/index'
   post 'dashboard/index'
   post 'dashboard/create'
+  get '/dashboard/new'
   get 'users/index'
+
+  resources :sign_up_create
+  
+  post "/signupcreate", to: "sign_up_create#create"
+
   # resdaer
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # root 'dashboard#index'
