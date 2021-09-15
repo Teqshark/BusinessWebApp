@@ -4425,13 +4425,16 @@ input[type="button"].btn-block {
   position: relative;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* padding: 0.5rem 1rem; */
 }
 
 .navbar > .container,
@@ -4451,9 +4454,11 @@ input[type="button"].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1em;
+  font-size: 0.5em;
   line-height: inherit;
   white-space: nowrap;
+  /* border:2px dashed red;  */
+  margin-right: 20px;
 }
 
 .navbar-brand:hover,
@@ -4464,11 +4469,12 @@ input[type="button"].btn-block {
 .navbar-nav {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  font-size: 0.75rem;
 }
 
 .navbar-nav .nav-link {

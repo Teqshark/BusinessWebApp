@@ -223,8 +223,7 @@ a.white {
 .btn-outline-reg:hover {
   background-color: rgb(245, 114, 98);
   color: #fff;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .btn-outline-lg {
   display: inline-block;
@@ -695,7 +694,17 @@ input[type="checkbox"] {
 /**************************/
 /*     03. Navigation     */
 /**************************/
-
+.nav-title {
+  display: inline-block;
+  /* display: flexbox; */
+  /* font: 500 2em/3rem; */
+  font-size: 1rem;
+  align-self: center;
+  vertical-align: middle;
+  height: auto;
+  /* border: 2px dashed yellow; */
+  margin: auto;
+}
 .navbar-custom {
   /* background-color: rgb(253, 211, 59); */
   /* background-color: rgb(254, 211, 125); */
@@ -705,7 +714,17 @@ input[type="checkbox"] {
   box-shadow: 0 0.0625rem 0.375rem 0 rgba(255, 255, 255, 0.1);
   font: 700 0.75rem/2rem "Montserrat", sans-serif;
   transition: all 0.2s ease;
+  border:2px dashed green;
+  padding: 30px 10px;
+  height: 2rem;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
 }
+
 
 .navbar-custom .navbar-brand.logo-image img {
   width: 112px;
@@ -724,7 +743,7 @@ input[type="checkbox"] {
 }
 
 .navbar-custom .navbar-nav {
-  margin-top: 0.75rem;
+  /* margin-top: 0.75rem; */
 }
 
 .navbar-custom .nav-item .nav-link {
@@ -1394,12 +1413,35 @@ a:hover.back-to-top {
 /*****************************/
 /*     18. Media Queries     */
 /*****************************/
-/* Min-width width 768px */
-@media (max-width: 599px) {
-  .navbar-custom .navbar-brand.logo-text {
-    font: 700 1.775rem/0.5rem "Montserrat", sans-serif;
+ /* Min-width width 768px */
+  @media (max-width: 489px) {
+     .navbar-nav {
+    font-size: 0.5rem;
+    display: none;  
+  }
+  
+  .navbar-custom {
+
+    /* justify-content: flex-start; */
+    /* font-size: 0.6rem; */
   }
 }
+ @media (max-width: 512px) {
+     .navbar-nav {
+    font-size: 0.6rem;
+  }
+}
+ @media (min-width: 512px) {
+     .navbar-nav {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 600px) {
+     .navbar-nav {
+    font-size: 1.1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .p-heading {
     width: 85%;
@@ -1413,12 +1455,10 @@ a:hover.back-to-top {
   /* end of general styles */
 
   /* Navigation */
+  .navbar-nav {
+    font-size: 1.4rem;
+  }
 
-  .navbar-custom {
-    padding: 2rem 1.5rem 2rem 2rem;
-    box-shadow: none;
-    /* background: transparent; */
-    height: 2rem;
   }
 
   .navbar-custom .navbar-brand.logo-text {
@@ -1577,10 +1617,14 @@ a:hover.back-to-top {
   #foreigns {
     display: none;
   }
+ 
 }
 /* Min-width width 992px */
 @media (min-width: 992px) {
   /* Navigation */
+    .navbar-nav {
+    font-size: 1.6rem;
+  }
   .navbar-custom .social-icons {
     display: block;
     margin-left: 0.5rem;
@@ -1771,6 +1815,10 @@ a:hover.back-to-top {
   /* Navigation */
   .navbar-custom {
     padding: 2.125rem 5rem 2.125rem 5rem;
+  }
+
+    .navbar-nav {
+    font-size: 1.8rem;
   }
 
   .navbar-custom.top-nav-collapse {

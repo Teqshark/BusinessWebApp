@@ -1,18 +1,34 @@
-  <%# <% if user_signed_in? %> 
- 
-   <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+
+   <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top justify-content-center align-content-center align-items-center"
+     style="margin: auto;"
+   >
     <!-- Text Logo - Use this if you don't have a graphic logo -->
-    <div class="sigmas">
+    <div class="navbar-brand"
+      style="">
+      
+                <%= image_tag("construction-elements/forms.png", alt: "My logo", size: '50x50', :style => "padding: 10px 5px;") %>
+
+                
      
-    <%= link_to 'Segura Construction Co,', root_path, class:"navbar-brand logo-text page-scroll" %>
-     
+    <%= link_to 'SEGURA Construction Co,', root_path, class:"nav-title" %>
+
+     <button class="hamburger hamburger--elastic d-none" type="button"
+        aria-label="Menu" aria-controls="navigation">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
     </div>
  
  
     
- 
+ <div class="button d-none">
+ </div>
     
-      <ul class="navbar-nav">
+      <ul class="navbar-nav"
+        style="border:2px dashed yellow; "
+      >
+
         <%# <li class="nav-item d-none"> %>
           <%# <a class="nav-link active" aria-current="page" href="#">About</a> %>
         <%# <%= link_to 'About Us', home_about_path, class:"nav-link" %>
@@ -40,7 +56,7 @@
 
         </li>
         <li class="nav-item">
-          <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link", id: "logout" %>
+          <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link d-desktop", id: "logout" %>
 
         </li>
       
@@ -56,11 +72,16 @@
         <% end %>
           <li class="nav-item">
           <%= link_to 'Our mission', home_our_mission_url, class:"nav-link"%>
+          </li>
   <li class="nav-item">
           <%# <%= link_to 'Contact Us', contact_us class:"nav-link"%> 
           <a href="tel:13432212" id="call-now" >62384<i class="fa fa-phone fa-2x contact-us-btn"></i>  </a>
+          </li>
+        
+        <li class="nav-item">
  
  <a href="email:SeguraConstruction Co"  id="call-now" ><i class="fa fa-phone fa-2x contact-us-btn"></i>  </a>
+ </li>
 
         <%# <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>

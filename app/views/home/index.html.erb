@@ -1,24 +1,23 @@
   <%# <div class="centered"> %>
 
-    <div class="top-cont">
-      <div class="container">
-    <%= link_to root_path do %>
-      <%# <img class="logo" src="/images/SigmasCoin.png" /> %>
-      <%#= image_tag("SigmasCoin.png", class:"logo") %>
-      <p class="name d-none">Segura Construction Co</p>
-      <% end %>  
+    <div class="top-cont flex-column" 
+    <%# style="border:2px dashed green;" %>
+    >
+     <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>. Hello <%= current_user.full_name%>
 
-       <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>. Hello <%= current_user.full_name%> 
     <% end %> 
-    </div>
-      <h1>Segura Construction Co,
-        Pour<b> professional commercial</b> concrete retaining walls. 
-      </h1>
-       <p>commercial + residential RETAINING WALLS </p>
+       <div class="centered" 
+       <%# style="border:2px dashed red;" %>
+       >
+                <%= image_tag("construction-elements/forms.png", alt: "My logo", size: '200x200', :style => "padding: 10px 20px;") %>
 
- <h4>commercial + residential <h4>
+ <h1 class="headline" >SEGURA Construction Co</h1>
+ <h4>commercial + residential </h4>
  <h3>Concrete Retaining Walls </h3>
+                </div>
+
+ 
  <h4>High Performance </h4>
  <h5>Unparalled strength </h5>
  <h5>up to 30000 lbs of lateral resistane<h5>
@@ -26,8 +25,8 @@
       <h3> With over 30 years of experience we offer unmatched quality cast in place retaining walls for medium and large scale commercial and residential projects. 
       </h3>
 
-      <div class="container top-img" style="background-image: url(<%= asset_path 'retaining-wall-curved' %>);border: 2px dashed red;width: 100vw;">
-    <%= image_tag("retaining-wall-curved-inside.jpg", {:style => "width:100%;margin-top: 5rem; margin-bottom: 5rem;display:none;"}) %>
+  <div class="container top-img" style="background-image: url(<%= asset_path 'retaining-wall-curved' %>);border: 2px dashed red;width: 100vw;">
+    <% image_tag("retaining-wall-curved-inside.jpg", :style => "width:100%;margin-top: 5rem; margin-bottom: 5rem;border:2px dashed blue;") %>
             
           <div class="text-container">
             <p class="title" style="display: none;">Sigmas Coin </p>
@@ -35,9 +34,9 @@
            <!-- <img class="img-fluid logo" 
                          id="coin-img" src="../../images/SigmasCoin.png" alt="sigmas" />
                          -->
-            <h1 class="intro top fadeInLong" style="background: blue; border-radius: 6px;width: 80%; margin: auto;" >Segura Construction Co,</h1>
+            <h1 class="intro top " style="background: blue; border-radius: 6px;width: 80%; margin: auto;" >Concrete Solutions</h1>
             
-            <svg id="ico-arrow-large" viewBox="0 0 24 24" width="100%" height="100%">
+            <svg class="d-none" id="ico-arrow-large" viewBox="0 0 24 24" width="40px" height="40px">
   <g fill="none" fill-rule="evenodd">
     <path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59a.996.996 0 0 0 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z" fill="currentColor"></path>
   </g>
@@ -49,11 +48,11 @@
 
           </div>
           </div>
-      <a class="btn-primary"> get quote</a>
+      <%# <a class="btn-primary"> get quote</a> %>
 
-     <button class="btn-light">get quote</button>
+     <%# <button class="btn-light">get quote</button> %>
 
-     <button class="btn-dark">get quote</button>
+     <button class="btn-primary">get quote</button>
     <!-- <img class="logo" src="/images/Sigma_logotype_var_09 copy.png" /> -->
        <%#= video_tag "/videos/Sigmas_Coin.mp4" , poster:'ScreenShot-sigmas-video.png', class:'video', controls:true %>
         
