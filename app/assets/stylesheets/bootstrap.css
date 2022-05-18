@@ -1,10 +1,42 @@
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
+ * Copyright
+ 
+ 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
 :root {
+  --black: #000000ff;
+  --eerie-black: #212121ff;
+  --eerie-black-2: #222222ff;
+  --onyx: #404040ff;
+  --davys-grey: #565656ff;
+  --quick-silver: #a6a6a6ff;
+  --gray-x-11-gray: #b9b9b9ff;
+  --light-gray: #d7d7d7ff;
+  --platinum: #e9e9e9ff;
+  --cultured: #f7f7f7ff;
+
+  --silver-metallic: #b3b3bdff;
+  --upsdell-red: #a9232aff;
+  --sweet-brown: #ac383aff;
+  --lavender-gray: #d0d2dbff;
+  --raisin-black: #23181cff;
+
+  --rich-black-fogra-29: #000814ff;
+  --oxford-blue: #001d3dff;
+  --prussian-blue: #003566ff;
+  --mikado-yellow: #ffc300ff;
+  --gold-web-golden: #ffd60aff;
+
+  --space-cadet: #2b2d42ff;
+  --manatee: #8d99aeff;
+  --cultured: #edf2f4ff;
+  --imperial-red: #ef233cff;
+  --amaranth-red: #d90429ff;
+
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -26,7 +58,7 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
-  --breakpoint-xs: 0;
+  --breakpoint-xs: 322px ;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
@@ -72,9 +104,122 @@ body {
   font-size: 1rem;
   font-weight: 400;
   /* line-height: 1.5; */
-  color: #212529;
+  color: var(--lavender-gray);
   /* text-align: left; */
-  /* background-color: #fff; */
+  /* background-color: var(--space-cadet);
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+  /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+  /* background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply; */
+
+  /* background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply; */
+
+  /* background: hsla(186, 33%, 94%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1 ); */
+
+  /* background: hex(2b2d42); */
+  /* background: hsla(208, 7%, 55%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(208, 7%, 55%, 1) 29%,
+    hsla(191, 5%, 40%, 1) 93%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(208, 7%, 55%, 1) 29%,
+    hsla(191, 5%, 40%, 1) 93%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(208, 7%, 55%, 1) 29%,
+    hsla(191, 5%, 40%, 1) 93%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858e96", endColorstr="#60696b", GradientType=1 );
+
+   */
+
+  background-color: rgb(230, 230, 230);
+
+  /* linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.5) 50%); */
+  /* 255, 0.5) 50%); */
+  /* linear-gradient(135deg, #eceddc 25%, transparent 25%) */
+
+  /* 
+  
+  gray background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
+    radial-gradient(
+      88% 271%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(254, 254, 254, 0.25) 1%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    radial-gradient(
+      50% 100%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  background-blend-mode: normal, lighten, soft-light; */
+
+  /* background: hsla(60, 1%, 32%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(60, 1%, 32%, 1) 0%,
+    hsla(200, 15%, 69%, 1) 66%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(60, 1%, 32%, 1) 0%,
+    hsla(200, 15%, 69%, 1) 66%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(60, 1%, 32%, 1) 0%,
+    hsla(200, 15%, 69%, 1) 66%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#525251", endColorstr="#A4B4BC", GradientType=1 ); */
 }
 
 [tabindex="-1"]:focus {
@@ -4334,17 +4479,90 @@ input[type="button"].btn-block {
   margin-bottom: 0;
   list-style: none;
 }
+.navbar-res {
+  /* display: flex; */
+  flex-direction: column;
+  overflow-x: hidden;
+  position: fixed;
 
-.nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
+  /* background-color: var(--bg-primary);  %> */
+  width: 5rem;
+  height: 100vh;
+  transition: width 600ms ease;
+}
+.navbar-res:hover {
+  width: 11rem;
+}
+.navbar-res:hover .logo-text {
+  display: inline-block;
+}
+.logo {
+  /* display: ; */
+  /* list-style-type: none; */
+  /* list-style-image: url("../images/icons/blueprint-pencil-128x128.png"); */
+  /* width: 100%; */
+  /* display: flex
+  ; */
+  /* width: auto;
+  position: relative;
+  left: 0; */
+  /* position: fixed; */
+  /* margin-left: 0px; */
+  /* flex-direction: row; */
+  /* overflow: hidden; */
+  border: 2px solid pink;
+}
+.logo-text {
+  /* display: inline-block; */
+  transition: 1000ms;
+  font-size: 1rem;
+  display: none;
+  /* float: right; */
+  /* margin-left: 10px; */
 }
 
+.navbar-nav-res {
+  height: 100%;
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  background: green;
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
+  /* align-content: center; */
+  /* padding: 0.5em; */
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+/* .nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+} */
+.nav-icon {
+  display: block;
+  position: relative;
+  left: 0;
+}
+.nav-link {
+  /* color: white; */
+  font-size: 1rem;
+  position: relative;
+  float: right;
+  /* display: inline-block; */
+  /* z-index: 0; */
+  font-family: Roboto;
+  /* text-indent: -20em; */
+  white-space: nowrap;
+  transition: text-indent 400ms ease-in-out;
+}
+.nav-item {
+  position: static;
+  border: 4px dashed green;
+}
 .nav-link:hover,
 .nav-link:focus {
   text-decoration: none;
 }
-
 .nav-link.disabled {
   color: #6c757d;
   pointer-events: none;
@@ -4411,6 +4629,8 @@ input[type="button"].btn-block {
   -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: center;
+  /* justify-content: center; */
+  /* justify-items: center; */
 }
 
 .tab-content > .tab-pane {
@@ -4451,14 +4671,14 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+  /* padding-top: 0.3125rem; */
+  /* padding-bottom: 0.3125rem; */
+  /* margin-right: 1rem; */
   font-size: 0.5em;
   line-height: inherit;
   white-space: nowrap;
   /* border:2px dashed red;  */
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .navbar-brand:hover,
@@ -5420,7 +5640,7 @@ a.badge-dark.focus {
   z-index: 9999;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 .alert-heading {

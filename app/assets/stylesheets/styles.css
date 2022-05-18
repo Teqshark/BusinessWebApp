@@ -43,13 +43,13 @@ rgb(184, 57, 63)
 
 /* @font-face {
   font-family: "Exodar"; */
-  /* src: url('webfont.eot'); IE9 Compat Modes */
-  /* src: url('webfont.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
-  /* url('webfont.woff2') format('woff2'), Super Modern Browsers */
-  /* url('webfont.woff') format('woff'), Pretty Modern Browsers */
-  /* src: url("Exodar.ttf") format("truetype"); Safari, Android, iOS */
-  /* url('webfont.svg#svgFontName') format('svg'); Legacy iOS */
-}
+/* src: url('webfont.eot'); IE9 Compat Modes */
+/* src: url('webfont.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
+/* url('webfont.woff2') format('woff2'), Super Modern Browsers */
+/* url('webfont.woff') format('woff'), Pretty Modern Browsers */
+/* src: url("Exodar.ttf") format("truetype"); Safari, Android, iOS */
+/* url('webfont.svg#svgFontName') format('svg'); Legacy iOS */
+/* } */
 /* @font-face {
   font-family: "Exodar-Outline";
   src: url("Exodar-Outline.ttf") format("truetype");
@@ -223,7 +223,8 @@ a.white {
 .btn-outline-reg:hover {
   background-color: rgb(245, 114, 98);
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .btn-outline-lg {
   display: inline-block;
@@ -714,24 +715,30 @@ input[type="checkbox"] {
   box-shadow: 0 0.0625rem 0.375rem 0 rgba(255, 255, 255, 0.1);
   font: 700 0.75rem/2rem "Montserrat", sans-serif;
   transition: all 0.2s ease;
-  border:2px dashed green;
-  padding: 30px 10px;
-  height: 2rem;
+  /* border: 2px dashed green; */
+  /* padding: 30px 10px; */
+  height: auto;
   align-content: center;
   justify-items: center;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  
 }
 
+.border-element {
+  border: 4px dashed pink;
+}
 
 .navbar-custom .navbar-brand.logo-image img {
-  width: 112px;
-  height: 34px;
+  /* display: inline;
+
+  height: 3rem;
+  margin-right: 1rem;
+  width: auto;
   /* margin-bottom: 1px; */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden; */
+  /* backface-visibility: hidden; */
+  /* border: 2px dashed red; */
 }
 
 .navbar-custom .navbar-brand.logo-text {
@@ -747,7 +754,7 @@ input[type="checkbox"] {
 }
 
 .navbar-custom .nav-item .nav-link {
-  padding: 0 0.75rem 0 0.75rem;
+  /* padding: 0 0.75rem 0 0.75rem; */
   /* color: white; */
   /* rgb(73, 41, 56); */
   text-decoration: none;
@@ -864,6 +871,8 @@ rgb(241, 104, 104, 0)
 
 .header {
   background-size: cover;
+  /* border: rgb(0, 126, 180) dashed 10px;
+  background-color: red; */
 }
 /* , url('../images/header.background.jpg') center center no-repeat */
 
@@ -1413,31 +1422,33 @@ a:hover.back-to-top {
 /*****************************/
 /*     18. Media Queries     */
 /*****************************/
- /* Min-width width 768px */
-  @media (max-width: 489px) {
-     .navbar-nav {
+/* Min-width width 768px */
+@media (max-width: 489px) {
+  .navbar-nav {
     font-size: 0.5rem;
-    display: none;  
+    display: none;
   }
-  
-  .navbar-custom {
 
+  .navbar-custom {
     /* justify-content: flex-start; */
     /* font-size: 0.6rem; */
   }
+  .top-logo {
+    max-width: 90%;
+  }
 }
- @media (max-width: 512px) {
-     .navbar-nav {
+@media (max-width: 512px) {
+  .navbar-nav {
     font-size: 0.6rem;
   }
 }
- @media (min-width: 512px) {
-     .navbar-nav {
+@media (min-width: 512px) {
+  .navbar-nav {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 600px) {
-     .navbar-nav {
+  .navbar-nav {
     font-size: 1.1rem;
   }
 }
@@ -1456,9 +1467,7 @@ a:hover.back-to-top {
 
   /* Navigation */
   .navbar-nav {
-    font-size: 1.4rem;
-  }
-
+    font-size: 1.1rem;
   }
 
   .navbar-custom .navbar-brand.logo-text {
@@ -1617,12 +1626,11 @@ a:hover.back-to-top {
   #foreigns {
     display: none;
   }
- 
 }
 /* Min-width width 992px */
 @media (min-width: 992px) {
   /* Navigation */
-    .navbar-nav {
+  .navbar-nav {
     font-size: 1.6rem;
   }
   .navbar-custom .social-icons {
@@ -1814,10 +1822,10 @@ a:hover.back-to-top {
 @media (min-width: 1200px) {
   /* Navigation */
   .navbar-custom {
-    padding: 2.125rem 5rem 2.125rem 5rem;
+    /* padding: 2.125rem 5rem 2.125rem 5rem; */
   }
 
-    .navbar-nav {
+  .navbar-nav {
     font-size: 1.8rem;
   }
 

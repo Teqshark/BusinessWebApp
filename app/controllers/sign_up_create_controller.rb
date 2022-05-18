@@ -1,4 +1,7 @@
 class SignUpCreateController < ApplicationController
+  def index 
+    render :new
+  end
 
   def new 
     @sign_up_create |= SignUpCreate.new
@@ -20,11 +23,11 @@ class SignUpCreateController < ApplicationController
     # if @user.save 
       # @project.save 
       redirect_to dashboard_index_url, notice: 'Success! You signed up and created your first project!'
-      flash[:color] = "invalid"
+      # flash[:color] = "invalid"
     else 
-      flash[:notice] = "Invalid Input!"
+      flash.now[:alert] = "Invalid Input! "
       # flash[:notice] = @sign_up_create.errors.details
-        flash[:color] = "invalid"
+        flash.now[:color] = "invalid"
       render :new
     end
 
@@ -33,7 +36,7 @@ class SignUpCreateController < ApplicationController
   private 
 
   def sign_up_create_params 
-    params.permit(:email, :first_name, :last_name, :phone_number, :password, :zip_code, :width, :height, :length)
+    params.permit(:email, :first_name, :last_name, :phone_number, :password, :terms, :zip_code, :width, :height, :length, :remember_me, :terms)
   end
   # private
   # def signup_params_for_create

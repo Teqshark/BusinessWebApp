@@ -1,0 +1,120 @@
+
+
+
+
+<%# 
+HTML CSS JSResult Skip Results Iframe
+EDIT ON %>
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+
+
+@media (max-width: 1600px) {
+  .top-cont {
+ background-image: url(<%= asset_path 'backgrounds/banner-abstract-hexagons-white-gray-1900x600.jpg' %>);
+
+    <%# background-image: image-url( %>
+      <%# "../images/backgrounds/banner-abstract-geometric-white-gray-gradient1-1900x600.jpg" %>
+    <%# ); %>
+    <%# border: 4px solid blue; %>
+  }
+}
+.navbar-background {
+  z-index: 50;
+  background-image: url(<%= asset_path 'backgrounds/bg-grey-motion-abstract-3840x2160.jpg' %>);
+  <%# position: relative; %>
+  <%# bottom: 0; %>
+  background-position: bottom;
+}
+
+.blurred-transparent {
+   transition: 1s;
+   background: 'none';
+}
+
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+#flashdiv {
+  float:left;
+  margin-left:20px;
+  margin-top:10px;
+}
+.flash{
+  padding:10px;
+  margin-bottom: 1em;
+}
+.warning{
+  background:#f3b9ba;
+  border: 1px solid #d8aeaf;
+}
+.notice{
+  background-color:#c8f4ba;
+  border: 1px solid #b0d6a3;
+}
+.notice strong{
+  background-color:#bee4b2;
+  padding: 2px;
+}
+.error{
+  background:#ff0000;
+  
+
+<%# 
+.navbar-nav-res {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: middle;
+  height: 100%;
+    text-align: center;
+    
+  justify-content: center;
+  justify-items: center;
+} %>
+<%# 
+.logo {
+
+  display: flex;
+  flex-direction: row;
+  border: 2px dashed red; 
+  align-items: center;
+
+} %>
+<%# .nav-item {
+  width: auto;
+  overflow: hidden;
+  <%# position: relative; %>
+  <%# display: flex; %>
+  <%# float: right; %>
+} %>
+
+
+
+/* Pull up  */
+div.pullUp a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullUp a:hover:before
+{
+    height: 100%;
+    font-family: raleway;
+} 
+
+

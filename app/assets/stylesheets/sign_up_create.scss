@@ -1,3 +1,75 @@
 // Place all the styles related to the SignUp_Create controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$gradient-top: linear-gradient(
+  0deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);
+$gradient-radial: radial-gradient(
+  #000814ff,
+  #001d3dff,
+  #003566ff,
+  #ffc300ff,
+  #ffd60aff
+);

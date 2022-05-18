@@ -27,14 +27,14 @@ class DashboardController < ApplicationController
     puts @project.errors.inspect
     if @project.save 
       puts 'project saved'
-      flash[:notice] = "project successfully created"  
+      flash.now[:notice] = "project successfully created"  
       redirect_to dashboard_index_url
     else 
       puts 'project unable to save'
-      flash[:notice] = "warning: project was not saved"
+      flash.now[:alert] = "warning: project was not saved"
       render 'index'
     end
-    flash["notice"] = "Test notice"
+    flash.now["notice"] = "Test notice"
   end
 
   # def create 

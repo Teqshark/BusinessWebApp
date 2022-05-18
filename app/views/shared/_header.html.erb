@@ -1,32 +1,60 @@
+<script>
+    window.onscroll = function() {scrollFunction()};
 
-   <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top justify-content-center align-content-center align-items-center"
+function scrollFunction() {
+  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+    
+    document.getElementById("navbar").classList.add('blurred-transparent')
+      document.getElementById("navbar").classList.remove('navbar-background');
+  } else {
+   
+     document.getElementById("navbar").classList.remove('blurred-transparent');
+        document.getElementById("navbar").classList.add('navbar-background');
+  }
+}
+</script>
+   <nav id="navbar" class="navbar-res
+
+   border-element
+   <%# navbar-expand-md  %>
+   <%# navbar-custom  %>
+   <%# fixed-top  %>
+   <%# justify-content-center  %>
+   <%# align-content-center  %>
+   <%# align-items-center %>
+   "
      style="margin: auto;"
    >
+   
     <!-- Text Logo - Use this if you don't have a graphic logo -->
-    <div class="navbar-brand"
+    <div class="navbar-brand logo-image mt-1" 
       style="">
-      
-                <%= image_tag("construction-elements/forms.png", alt: "My logo", size: '50x50', :style => "padding: 10px 5px;") %>
+              <a href="<%= root_path %>" >
+                <%= image_tag("logo/final-logos-nobg/logo-notitle-spaced-nobg.png", alt: "My logo", class: '', size: '75x75', :style => "padding-bottom: 5px;") %>
 
-                
+<%= image_tag("logo/final-logos-nobg/logo-title-straight-black-red-nobg.png", alt: "Segura & Co Logo", class: '', :style => "padding: 0px 0px;") %>
+
+            </a>    
      
-    <%= link_to 'SEGURA Construction Co,', root_path, class:"nav-title" %>
+    <% link_to 'SEGURA Construction Co,', root_path, class:"nav-title" %>
 
-     <button class="hamburger hamburger--elastic d-none" type="button"
+     <button class="hamburger hamburger--elastic 
+        d-none" type="button"
         aria-label="Menu" aria-controls="navigation">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
-    </div>
+        <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+          </span>
+    </button>
+    
+  </div>
  
  
     
  <div class="button d-none">
  </div>
     
-      <ul class="navbar-nav"
-        style="border:2px dashed yellow; "
+      <ul class="navbar-nav-res"
+        <%# style="border:2px dashed yellow; " %>
       >
 
         <%# <li class="nav-item d-none"> %>
@@ -34,28 +62,68 @@
         <%# <%= link_to 'About Us', home_about_path, class:"nav-link" %>
 
         <%# </li> %>
-     
+<div class="logo" >
+      <%# <div class="nav-item"> %>
+       <%# link_to home_our_mission_url do %>
+  <%# image_tag("mission.png", alt: 'Logo',class: 'te')%>
+<%# end %>    <%= link_to home_our_mission_url, class:'nav-icon' do %>
+    <%= image_tag("icons/wall-outline-64x64.png", class:'
+    nav-icon', alt: "mission-icon", size: '', :style => "padding: 0px 0px; margin: auto;") %>
+<% end %>
 
 
+          <%= link_to 'Our mission', home_our_mission_url, class:"link-text logo-text"%>
+          <%# </div> %>
+          </div>
+
+        <div class="logo">
+        <a class="nav-item">
+        
+          <%# <%= link_to 'Contact Us', contact_us class:"nav-link"%> 
+          <%# <a href="tel:13432212" id=""  %>
+          <%# > %>
+           <%= image_tag("icons/phone-call.png", class:'
+    nav-icon', alt: "call-now", size: '64', :style => "padding: 0px 0px; margin: auto;") %>
+          <h4 class="link-text logo-text">
+          Contact
+       
+</h4>
+</a>
+          </div>
+        
+        <div class="logo">
+  <%= link_to home_our_mission_url do %>
+ <a href="email:SeguraConstruction Co"  id="" class="nav-item" > <%= image_tag("icons/phone-message.png", class:'
+    nav-icon', alt: "phone-icon", size: "64x64", :style => "padding: 0px 0px; margin: auto;margin-left: 10px;") %> 
+     </a>
+     <h4 class="logo-text">email us </h4>
+<% end %>
+
+ </div>
         <% if user_signed_in?%>
         <!--<li class="nav-item">
           <%= link_to 'dashboard', 'dashboard/index', class:"nav-link" %>
         </li> -->
         <% if current_user.admin %>
            <li class="nav-item ">
+
           <%# <a class="nav-link" href="#">Features</a> %>
           <%= link_to 'see users', users_index_path, class:"nav-link " %>
         </li>
         <% end %>
         <li class="nav-item ">
+          <svg class="nav-icon"></svg>
           <%= link_to 'Dashboard', dashboard_index_path, class:"nav-link" %>
         </li>
       
         <li class="nav-item">
-          <%= link_to 'Edit Profile', edit_user_registration_path,class:"nav-link"%>
+          <%= link_to edit_user_registration_path image_tag("icon/edit-user-icon.png", class:'
+    nav-icon nav-link', alt: "edit-user-icon", size: '', :style => "padding: 0px 0px; margin: auto;")%>
+          <%#% link_to 'Edit Profile', edit_user_registration_path,class:"nav-link"%>
 
         </li>
         <li class="nav-item">
+        
           <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link d-desktop", id: "logout" %>
 
         </li>
@@ -64,24 +132,14 @@
         <% else %>
   
         
-        <li class="nav-item">
+        <li class="">
           <%= link_to 'Log In', new_user_session_path, class:"nav-link"%>
 
         </li>
   
         <% end %>
-          <li class="nav-item">
-          <%= link_to 'Our mission', home_our_mission_url, class:"nav-link"%>
-          </li>
-  <li class="nav-item">
-          <%# <%= link_to 'Contact Us', contact_us class:"nav-link"%> 
-          <a href="tel:13432212" id="call-now" >62384<i class="fa fa-phone fa-2x contact-us-btn"></i>  </a>
-          </li>
-        
-        <li class="nav-item">
- 
- <a href="email:SeguraConstruction Co"  id="call-now" ><i class="fa fa-phone fa-2x contact-us-btn"></i>  </a>
- </li>
+          
+
 
         <%# <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>

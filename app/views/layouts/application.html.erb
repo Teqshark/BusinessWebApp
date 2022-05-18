@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SEGURA Construction Co</title>
+    <title>SEGURA & CO LLC concrete Retaining Walls</title>
     
 
 
@@ -11,8 +11,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <meta name="description"
-    content="SEGURA Construction Co is family owned concrete constructoion company focused on the completion of commercial and residential professional retaining walls in the central Arkansas region. ">
-  <meta name="SEGURA Retaining Walls " content="landing page">
+    content="SEGURA & CO is family owned concrete constructoion company focused on the completion of commercial and residential professional pured concrete retaining and foundational walls in the central Arkansas region. ">
+  <meta name="SEGURA Retaining Walls " content="business landing page. Concrete construction services ">
 
   <!-- OG Meta Tags to iporve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
   <meta property="og:site_name" content="SEGURA Construction " /> <!-- website name -->
@@ -52,22 +52,39 @@
   <body>
 
 
-
+<%= render 'shared/sidenav' %>
      <div class="centered">
-     <div class="container">
-     <%= render 'shared/header'%>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+     <%# <div class=" "> %>
+    <%# notice %>    
+    <%# <p class="notice" style="bacg: ;display: ;border: 5px solid green;"><%= notice</p> %> 
+    <%# <p class="alert" style="position: ;display: ;border: 5px solid green;" %>
+    <%# alert%>
+    <%# </p> %>
+    <%# flash.each do |type, msg| %>
+  <%# <div class="alert"> %>
+    <%# <%= msg %> 
+  <%# </div> %>
+<%# end %>
 
-    
+       <% if flash[:alert] -%>
+  <p class='error'><%=h flash.now[:alert] %></p>
+<% end -%>
+<% if flash[:notice] -%>
+  <p class='notice'><%=h flash.now[:notice] %></p>
+<% end -%>
+
+    <div id="page-wrapper-padding-left" 
+    class="centered" style="">
+
     <%= yield %>
 
-    
-    </div>
-    </div>
-     <footer  >
-   <%= render 'shared/copyright'%>
-    </footer>
-  </body>
 
+    
+ 
+    <%= render 'shared/copyright'%>
+   
+    </div>
+    </div>
+  </body>
+   
 </html>

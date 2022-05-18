@@ -1,17 +1,17 @@
 class SignUpCreate 
   include ActiveModel::Model 
-  attr_accessor :email, :first_name, :last_name, :phone_number, :password, :zip_code, :width, :length, :height
+  attr_accessor :email, :first_name, :last_name, :phone_number, :password, :zip_code, :width, :length, :height, :remember_me, :terms
 
   
 
-}
+# }
   # def initialize
   #   @errors = ActiveModel::Errors.new(self)
   # end
-  def initialize
-    @maximum_password_length = 20
-    @minimum_password_length = 6
-  end 
+  # def initialize
+  #   # @maximum_password_length = 20
+  #   # @minimum_password_length = 6
+  # end 
 
 
   def save 

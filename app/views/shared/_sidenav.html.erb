@@ -1,0 +1,117 @@
+
+<header class="main-head">
+      <nav class="head-nav">
+        <div class="" 
+          style="">
+          <%# <a href="<%= root_path %>
+          <%# " >  %>
+              <%= image_tag("logo/gradient-logo-icon-75x75.png", alt: "My logo", class: 'sidebar-logo', size: '75x75', :style => "padding-bottom: ;") %>
+
+              <%# image_tag("logo/final-logos-nobg/logo-title-straight-black-red-nobg.png", alt: "Segura & Co Logo", class: '', :style => "padding: 0px 0px;") %>
+          <%# </a>     %>
+          <%# link_to 'SEGURA Construction Co,', root_path, class:"nav-title" %>
+        </div>
+        
+        <ul class="menu">
+          <% if !user_signed_in? %>
+          <li>      
+            <%= link_to new_user_session_path do %>
+              <%= image_tag("icons/sign-in-64x64", class:"sidebar-icon" , alt:"sign-in icon" ) %>
+              <h4 class="navbar-text">Log In </h4>
+              <%# link_to 'Log In', new_user_path, class:"nav-link" %>
+            <% end %>
+          </li>
+          <%end  %>
+          <% if user_signed_in? %>
+          <li>   
+            <%= link_to 'Logout', destroy_user_session_path, method:"delete" do %>
+              <%= image_tag("icons/log-out-64x64", class:"sidebar-icon" , alt:"logout icon", ) %>
+              <h4  class="navbar-text">Log out</h4> 
+            <% end %>
+          </li>
+          <br>
+          <%# if user_signed_in %>
+          <li>
+            <%= link_to 'dashboard', dashboard_index_path do %>
+              <%= image_tag("icons/blueprint-blue-64x64.png", class:"sidebar-icon" , alt:"dashboard icon", ) %>
+              <h4  class="navbar-text">Dashboard</h4>
+              <%# link_to 'dashboard', users_index_path, class:"nav-link " %>
+            <% end %>       
+          </li>
+            <% if  current_user.admin %>
+            <li>
+                <%= link_to 'see users', users_index_path do %>
+                  <%= image_tag("icons/clients-64x64.png", class:"sidebar-icon" , alt:"see users icon") %>
+                  <h4  class="navbar-text"> see users </h4>
+                  <%# link_to 'see users', users_index_path, class:"nav-link " %>
+                <% end %>
+            </li>
+            <% end %>
+          <% end %>     
+          <li style="display: flex;">
+            <%= link_to home_our_mission_url, class:'' do %>
+              <%= image_tag("icons/concrete-color-soft-64x64.png", class:'
+              sidebar-icon', alt: "mission-icon", size: '', :style => "padding: 0px 0px; ") %>
+              <h4  class="navbar-text">Our Mission</h4>
+              <%# link_to 'Our mission', home_our_mission_url, class:"nav-link", style: ""%>
+            <% end %>
+          </li>  
+
+                <li style="width: auto; height: 100%;" class="mobile-only">
+            <%= link_to root_path, class:'' do %>
+              <%= image_tag("logo/gradient-logo-icon-50x50.png", class:'
+              mobile-logo', alt: "segura & company logo", size: '', :style => "padding: 0px 0px; position: relative; bottom: 0;") %>
+            <% end %>
+          </li>  
+           
+          <li>   
+            <a href="tel:13432212" >
+              <%= image_tag("icons/phone-call.png", class:'sidebar-icon', alt: "call/text now", size:"" , :style => "padding: 0px 0px;") %>
+
+              <h4  class="navbar-text">
+              Call/Text
+              </h4>
+            </a>      
+          </li>
+          <li class="horizontal-bottom-button-group">
+            <%# link_to home_our_mission_url, class:'' do %>
+            <a class="button" href="mailto:email@email.de">
+              <%= image_tag("icons/email-send-64x64.png", class:'
+            sidebar-icon', alt: "email-icon", size: '', :style => "padding: 0px 0px; ") %>
+            
+            <h4  class="navbar-text">Email </h4>
+            </a>
+          </li>   
+        </ul>
+      </nav>
+</header> <!-- //main-head -->
+<div class="wrap-all-the-things d-none"></div>
+
+<script>
+
+// function changeColor() {
+//     this.classList.toggle('red');
+//     this.classList.toggle('green');
+// }
+
+//  document.querySelector('#btn').addEventListener('mouseenter', changeColor);
+//  document.querySelector('#btn').addEventListener('mouseleave', changeColor );
+
+var sidenav = document.querySelector(".main-head");
+
+function toggleSidenav() {
+
+  // var firstP = document.getElementById("firstParagraph");
+  sidenav.id? sidenav.removeAttribute('id'): sidenav.setAttribute("id","widenav");
+    sidenav.id? console.log('id was set') : console.log('id was removed');
+    console.log(sidenav.id);
+
+
+// firstP.id="newPracPara";
+// console.log(document.getElementById("newPracPara").id);
+  // document.getElementById('formId').submit();
+ }
+ sidenav.addEventListener('click', toggleSidenav);
+
+ 
+</script>

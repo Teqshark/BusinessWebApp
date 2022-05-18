@@ -1,5 +1,6 @@
  <div class="container-short" style="width: auto;margin: auto;"><p  id="notice" style="background: red;width: auto;margin: auto;">
- <% if @sign_up_create.errors.any?%>
+ <% if !@sign_up_create %>
+ <% elsif @sign_up_create.errors && @sign_up_create.errors.any?%>
     
     <%# <h2> %>
     <%# Input errors: %>
@@ -18,7 +19,8 @@
       <%end%>
   
     <h2>Check your inputs and try again. </h2>
-  <% end%>
+  
+  <% end %>
 <%# @sign_up_create.errors.messages if @sign_up_create.errors.messages if @sign_up_create.errors.any? %> 
  
 </p>
