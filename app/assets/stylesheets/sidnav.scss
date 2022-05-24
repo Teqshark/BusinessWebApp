@@ -21,6 +21,14 @@
 $color-1: #1a1a1a;
 $color-2: #fefefe;
 $pad: 0.925rem;
+.text {
+  display: contents;
+}
+.middle {
+  position: relative;
+  margin: auto;
+}
+
 .labeled-img {
   src: "assets/no-bg-elements/complete-wall-labeled-removebg.png";
 }
@@ -153,9 +161,8 @@ $pad: 0.925rem;
   width: auto;
 }
 
-
 .mobile-logo {
- display: none;
+  display: none;
 }
 #page-wrapper-padding-left {
   padding-left: 4rem;
@@ -203,7 +210,7 @@ $pad: 0.925rem;
     row-gap: 3%;
     height: 85vh;
     flex-direction: column;
-    
+
     margin: {
       // top: $pad * 1;
       right: 0;
@@ -222,7 +229,6 @@ $pad: 0.925rem;
     align-content: space-between;
     // justify-items: stretch;
     // border: 4px solid pink;
-
   }
 
   li {
@@ -233,7 +239,7 @@ $pad: 0.925rem;
     transition: background 400ms;
     a {
       display: flex;
-      margin:auto;
+      margin: auto;
       padding: {
         // top: 2vh;
         // bottom: 2vh;
@@ -372,11 +378,11 @@ $pad: 0.925rem;
 #mobile-logo {
   display: none;
 }
-.field.remember, .field.terms {
+.field.remember,
+.field.terms {
   margin-top: 3rem;
-  margin-bottom: 3rem ;
+  margin-bottom: 3rem;
   // border: 2px dashed cyan;
-  
 }
 @media screen and (max-height: 500px) {
   #top-logo {
@@ -389,10 +395,9 @@ $pad: 0.925rem;
 }
 @media screen and (max-width: 300px) {
   #top-logo {
-    content: url("logo/gradient-logo-160x")
+    content: url("logo/gradient-logo-160x");
   }
-} 
-
+}
 
 @media screen and (min-width: 701px) {
   #wall-img-png {
@@ -407,13 +412,12 @@ $pad: 0.925rem;
     margin-top: 5rem;
   }
   .round-card {
-    
     width: 45vw;
     flex-direction: column;
     justify-content: space-between;
     // overflow: hidden;
     .text {
-      height: auto;
+      // height: auto;
       // border: 3px dashed blue;
     }
   }
@@ -423,21 +427,20 @@ $pad: 0.925rem;
     min-height: 300px;
     margin-top: 10%;
     .form-image {
-    // display: flex;
-    position: absolute;
-    right: -60%;
-    top: 10%;
-    width: 90%;
+      // display: flex;
+      position: absolute;
+      right: -60%;
+      top: 10%;
+      width: 90%;
     }
     .form-image.right {
       position: absolute;
-    right: -123%;
-    top: 4%;
-    width: 105%;
+      right: -123%;
+      top: 4%;
+      width: 105%;
     }
-    
   }
- 
+
   .round-card.second {
     // border: 4px solid pink;
     position: relative;
@@ -447,18 +450,17 @@ $pad: 0.925rem;
     min-height: 350px;
     max-height: 400px;
 
-    .form-image {
+    .formwork-image {
       position: absolute;
       top: 0px;
       width: 110%;
       left: -120%;
-
     }
     .text {
       // display: block;
     }
   }
-  
+
   .round-card.third {
     margin: initial;
     margin-left: 2%;
@@ -478,12 +480,10 @@ $pad: 0.925rem;
   }
 
   .container {
-  // top: 10rem;
-  display: block;
-  position: relative;
+    // top: 10rem;
+    display: block;
+    position: relative;
   }
-
-
 
   .round-card {
     width: 45%;
@@ -492,24 +492,19 @@ $pad: 0.925rem;
   //   flex-direction: row;
   // } {
 
- 
   .round-card.third {
-
   }
-  
 }
 
 // @media screen and (orientation: landscape) and (min-width: 600px) {
-  
 
 // }
 .round-card {
-  button {
+  .card-button {
     background-color: var(--red);
   }
 }
 @media screen and (min-width: 1100px) {
-
   .round-card.first {
     position: relative;
     min-height: 400px;
@@ -528,17 +523,17 @@ $pad: 0.925rem;
       max-width: 500px;
     }
     .text {
-
     }
-    button {
+    .card-button {
       // position: relative;
       // display: flex;
       // justify-self: end;
       // bottom: 2rem;
-     // width: 6rem;
-     margin-top: 3rem;
-     padding: 1rem 2rem;
-
+      // width: 6rem;
+      // border: 4px solid yellow;
+      margin-top: 3rem;
+      top: 50%;
+      padding: 1rem 2rem;
     }
   }
 
@@ -548,8 +543,8 @@ $pad: 0.925rem;
     margin-top: 60%;
     min-height: 300px;
     height: auto;
-    
-    .form-image {
+
+    .formwork-image {
       position: absolute;
       top: -38%;
       width: 100%;
@@ -559,11 +554,10 @@ $pad: 0.925rem;
     // .text {
 
     // }
-    button {
+    .card-button {
       // width: 6rem;
       margin-top: 1.5rem;
       padding: 1rem 2rem;
-
     }
   }
   .round-card.third {
@@ -571,129 +565,165 @@ $pad: 0.925rem;
     position: relative;
     min-height: 400px;
     margin-bottom: 10%;
-   .form-image {
-
-    position: absolute;
-    left: 120%;
-    top: -10%;
-    width: 70%;
-   } 
-   .form-image1 {
-    position: absolute;
-    left: 220%;
-    top: -10%;
-    width: 70%;
-   }
-   button {
-     // width: 6rem;
-     margin-top: 4rem;
-     padding: 1rem 2rem;
-
-   }
+    .form-image {
+      position: absolute;
+      left: 120%;
+      top: -10%;
+      width: 70%;
+    }
+    .form-image1 {
+      position: absolute;
+      left: 220%;
+      top: -10%;
+      width: 70%;
+    }
+    .card-button {
+      // width: 6rem;
+      margin-top: 4rem;
+      padding: 1rem 2rem;
+    }
   }
 }
 @media screen and (max-width: 700px) {
+  .middle-mobile {
+    width: calc(100% - 10px);
+  }
   .copyright {
     padding-bottom: 80px;
   }
-  
+
   .round-card.first {
-    // position: relative;
+    position: relative;
     height: auto;
-     flex-direction: column;
-     align-items: center;
-    
-  // .round-card.first {
+    flex-direction: column;
+    align-items: center;
+
+    // .round-card.first {
     margin-top: 12rem;
-  // }
+    // }
     // width: 95%;
     .text {
       display: block;
       position: relative;
-       top: -7rem;
+      margin-top: 3rem;
     }
-    button {
-      position: relative;
-      top: 2rem;
+
+    .form-image {
+      position: absolute;
+
+      // top: -8rem;
+      left: 16%;
+      top: -35%;
+      width: 45%;
+    }
+    .form-image.right {
+      // border: 4px dashed navy;
+      position: absolute;
+      left: 40%;
+      width: 52%;
+      top: -39%;
+    }
+    .card-button {
       display: block;
+      position: relative;
+      padding: 1rem 2rem;
       // position: relative;
       // border: 4px dashed red;
       margin: auto;
       // top: -4rem;
-      height: 4rem;
+      // height: 4rem;
       width: 8rem;
-  
     }
-    .form-image{
-      // position: absolute;
-      
-      top: -8rem;
-      // right: 20%;
-    }
- 
   }
-  
-  
-  .round-card.second {
-    margin-top: 10rem;
-    // border: 4px dashed green;
-    
-    .form-image {
-      top: -7rem;
-      width: 70%;
-    }
-    .text {
-      position: relative;
-      top: -7rem;
-    }
-    button {
-      position: relative;
-        // border: 4px dashed red;
-        top: 2rem;
-        height: 4rem;
-        width: 8rem;
-    }
-    
-  }
-  .round-card.third {
-    margin-top: 8rem;
-    display: block;
-    .form-image {
-      top: -4rem;
 
-    }
+  .round-card.second {
+    position: relative;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80%;
+    // border: 4px dashed green;
+
     .text {
+      display: block;
       position: relative;
-      top: -4rem;
+      // top: 3rem;
+      margin-top: 3rem;
     }
-    button {
+    .formwork-image {
+      position: absolute;
+      // border: 2px dashed black;
+      // left: 16%;
+      top: -35%;
+      width: 75%;
+    }
+    .card-button {
+      display: block;
       position: relative;
       // border: 4px dashed red;
-      top: 2rem;
-      height: 4rem;
-      width: 8rem;
-  
+      // top: 2rem;
+      padding: 1rem 2rem;
+      // height: 4rem;
+      // width: 8rem;
+      // position: relative;
+      // top: 2rem;
+      // display: block;
+      // position: relative;
+      // border: 4px dashed red;
+      margin: auto;
+      // top: -4rem;
+      // height: 4rem;
+      width: 9rem;
     }
   }
-  .form-image {
-  position: relative;
-  top: -10rem; 
-  height: auto; 
-  width: 50%;
-  // border: 2px dashed red;
+  .round-card.third {
+    height: auto;
+    margin-top: 18rem;
+    // display: block;
+    position: relative;
+    .form-image {
+      position: absolute;
+      // top: -5%;
+      height: auto;
+      left: 30%;
+      top: -45%;
+      width: 50%;
+      // border: 2px dashed red;
+    }
+
+    .text {
+      display: block;
+      position: relative;
+      // top: 2rem;
+      margin-top: 2rem;
+      // text-align: center;
+    }
+    .card-button {
+      border-radius: 8px;
+      display: block;
+      position: relative;
+      // text-align: center;
+      padding: 1rem 2rem;
+      // border: 4px dashed red;
+      // top: 2rem;
+      margin: auto;
+      // height: 4rem;
+      width: 8rem;
+    }
   }
+
   .mobile-only {
     display: flex;
   }
   #wall-img-png {
-      width: auto;
-      max-width: 100%;
-      height: 100%;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
   }
   #wall-img {
     height: 300px;
     width: 100%;
-}
+  }
   #top-logo {
     content: url("logo/gradient-logo-260x160.png");
   }

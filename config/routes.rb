@@ -6,16 +6,20 @@ Rails.application.routes.draw do
   }
   
   resources :dashboard, only: [:index]
-  resources :home, only: [:index, :our_mission]
+  resources :home, only: [:index, :our_mission, :process]
   
   resources :user,:project 
 
-  root 'home#index'
+root 'home#index'
+get 'home/about', to: 'home#about'
 get 'home/our_mission'
   devise_scope :user do
-get "/users/sign_out" => "devise/sessions#destroy"
-end
+    get "/users/sign_out" => "devise/sessions#destroy"
+  end
   # get 'users/sign_out', to: 'devise/sessions#destroy'
+
+
+
 
   get '/users', to: 'users#index'
   # devise_for :users, controllers: {sessions: 'devise/sessions', users: 'users'}

@@ -49,14 +49,13 @@
           <h5>Fire & Water Resistant  </h5>
           <h5> </h5>
           
-          <button>
-          More Info
-          </button>
+          <%= link_to 'See More', home_about_url, class:'card-button' %>
+        
         </span>
       </div>
   
       <div class="round-card second" style="" >
-        <%= image_tag("no-bg-elements/framework-basement-top-nobg.png",alt: "formed walls foundation, basement, house" , class:"form-image", :style => "") %>
+        <%= image_tag("no-bg-elements/framework-basement-top-nobg.png",alt: "formed walls foundation, basement, house" , class:"formwork-image", :style => "") %>
         <span class="text" style="">
           <h3 class='card-title' style="">Medium and Large Projects </h3>
           <%# <h4 class="card-subtitle">Built with industry leading efficenty and performance</h4> %>
@@ -64,9 +63,8 @@
         <h5 class="gray">Basement concrete walls </h3>
         <h5 class="gray">Lake Seawalls </h3>
         <h5 class="gray">Residential and commercial retaining wall</h3>
-        <button>
-          See more
-         </button>
+
+         <%= link_to 'See Projects', home_about_url, class:'card-button' %>
         </span>
       </div>
 
@@ -89,9 +87,7 @@ exhibiting greater strength than fir plywood.
            Sealed Birch plywood face prevents moisture absorption, eliminates
 grain transfer for a smooth finish after removal.
           </h6> %>
-        <button>
-          More Info
-        </button>
+         <%= link_to 'Our Forms', home_about_url, class:'card-button' %>
         </span>
        
       </div>
@@ -112,6 +108,14 @@ grain transfer for a smooth finish after removal.
           </p>
         <% end %> 
       </div> <!-- end of col -->
+      <div class="
+      <%# container %>
+       col-12">
+
+       <%# Retainging walls explained  %>
+       <div class="mobile">
+      <iframe width="90%" height="500" src="https://www.youtube.com/embed/UummY_mo85Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
            <!-- end of row -->
           <!-- end of container -->
           <!-- end of form -->
@@ -124,9 +128,9 @@ grain transfer for a smooth finish after removal.
   
       var skinnyDevice = window.matchMedia("(max-width: 600px)");
       var shortDevice = window.matchMedia("(max-height: 400px)");
-      const logoSrcDesktop = "modern-blue-logos/modern-logo-nobg/modern-logo-full-shortname-bg-nobg.png"
+      var logoSrcDesktop = "modern-blue-logos/modern-logo-nobg/modern-logo-full-shortname-bg-nobg.png"
 
-      const logoSrcMobile = "modern-blue-logos/modern-logo-nobg/modern-logo-name-short-bg-nobg-250x200.png"
+      var logoSrcMobile = "modern-blue-logos/modern-logo-nobg/modern-logo-name-short-bg-nobg-250x200.png"
       var responsiveLogo = skinnyDevice.matches? logoSrcMobile : logoSrcDesktop; 
 
         // handleDeviceChange(smallDevice);
@@ -136,23 +140,42 @@ grain transfer for a smooth finish after removal.
         // at scroll 400 change background img. 
         // at 800 change to static and set position. 
         
-      const imgEl = document.getElementById("wall-img-png");
+      var imgEl = document.getElementById("wall-img-png");
    
       var imgCont = document.getElementById("wall-img");
       console.log(imgCont)
       console.log('imgCont logged');
       var imgContParent = imgCont.parentNode;
       console.log(imgContParent);    
-      const imgWallFront = "assets/no-bg-elements/wall-front-nobg.png"
+      var imgWallFront = "assets/no-bg-elements/wall-front-nobg.png"
       var imgWallFrontFull = 'assets/no-bg-elements/wall-front-full-nobg.png';
-      const imgWallAngleFront = 'assets/images/no-bg-elements/wall-front-angle-nobg.png';
-      const imgWallLabeled = 'assets/no-bg-elements/wall-labeled-nobg.png';
-      const imgWallSide = 'assets/no-bg-elements/wall-side-nobg.png';
-      const imgWallSideTop = 'assets/images/no-bg-elements/wall-side-top-nobg.png.png';
-      const imgWallBackDirtLeft = 'assets/images/no-bg-elements/wall-rear-left-dirt-nobg.png';
-      const imgWallBackDirtRight ='assets/images/no-bg-elements/wall-rear-right-dirt-nobg.png';
-      const imgWallBackRight = 
-      'assets/images/no-bg-elements/wall-rear-right-nobg.png';
+      var imgWallAngleFront = 'assets/no-bg-elements/wall-front-angle-nobg.png';
+      var imgWallLabeled = 'assets/no-bg-elements/wall-labeled-nobg.png';
+      var imgWallSide = 'assets//no-bg-elements/wall-side-nobg.png';
+      var imgWallSideTop = 'assets/no-bg-elements/wall-side-nobg.png';
+      var imgWallBackDirtLeft = 'assets/no-bg-elements/wall-rear-left-dirt-nobg.png';
+      var imgWallBackDirtRight ='assets/no-bg-elements/wall-rear-right-dirt-nobg.png';
+      var imgWallBackRight = 
+      'assets/no-bg-elements/wall-rear-right-nobg.png';
+
+
+      //   n 3.1 you just get rid of the 'images' part of the path. So an image that lives in /assets/images/example.png will actually be accessible in a get request at this url - /assets/example.png
+
+      // Because the assets/images folder gets generated along with a new 3.1 app, this is the convention that they probably want you to follow. I think that's where image_tag will look for it, but I haven't tested that yet.
+      //You'll want to change the extension of your css file from .css.scss to .css.scss.erb and do:
+
+      // background-image:url(<%=asset_path "no-bg-elements/wall-side-nobg.png"%>);
+      // You may need to do a "hard refresh" to see changes. CMD+SHIFT+R on OSX browsers.
+
+      // In production, make sure
+
+      // rm -rf public/assets    
+      // bundle exec rake assets:precompile RAILS_ENV=production
+      // happens upon deployment.
+
+      // Share
+      // Improve this answer
+
 
       function getElPos() {
         var contPos = imgCont.getBoundingClientRect();
@@ -195,7 +218,7 @@ grain transfer for a smooth finish after removal.
           console.log(x, y);
           console.log(width, height);
           console.log('scrollTop > 100');
-          imgEl.src = 'assets/no-bg-elements/wall-front-angle-nobg.png';
+          imgEl.src = imgWallAngleFront;
           changedImage = true;
         }
         if (skinnyDevice.matches? scrollTop > 200 : scrollTop > 150){

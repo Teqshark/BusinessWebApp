@@ -3,12 +3,12 @@
       <nav class="head-nav">
         <div class="" 
           style="">
-          <%# <a href="<%= root_path %>
-          <%# " >  %>
+          <a href="<%= root_path %>
+          " >  
               <%= image_tag("logo/gradient-logo-icon-75x75.png", alt: "My logo", class: 'sidebar-logo', size: '75x75', :style => "padding-bottom: ;") %>
 
               <%# image_tag("logo/final-logos-nobg/logo-title-straight-black-red-nobg.png", alt: "Segura & Co Logo", class: '', :style => "padding: 0px 0px;") %>
-          <%# </a>     %>
+          </a>    
           <%# link_to 'SEGURA Construction Co,', root_path, class:"nav-title" %>
         </div>
         
@@ -88,7 +88,21 @@
 <div class="wrap-all-the-things d-none"></div>
 
 <script>
+// helper function t0 add styles to element
+function css(element, style) {
+    for (const property in style)
+        element.style[property] = style[property];
+}
 
+/*
+
+const note = document.querySelector('.note');
+css(note, {
+    'background-color': 'yellow',
+    color: 'red'
+});
+
+*/
 // function changeColor() {
 //     this.classList.toggle('red');
 //     this.classList.toggle('green');
