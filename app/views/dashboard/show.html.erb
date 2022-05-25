@@ -14,7 +14,7 @@
  </p>
 
  <p>
- <strong>Scheudled Completion Date: </strong>
+ <strong>Scheduled Completion Date: </strong>
  <%= @project.scheduled_end_date%>
  </p>
 
@@ -35,5 +35,5 @@
  <%= @project.width%>
 
  </p>
- <%= lik_to 'Edit', edit_project_path(@project)%> |
+ <%= link_to 'Edit', edit_project_path(@project)%> |
  <%= link_to 'Back', projects_path %>

@@ -28,7 +28,10 @@
           <h2 class="display text-uppercase
             text-break font-weight-bolder mt-2">Concrete Retaining Walls 
           </h2> 
-          <button class="cta-schedule" >Schedule your project now</button>
+          <button class="cta-schedule" >
+            <%= link_to 'Schedule a Project', dashboard_new_url, class:'', style:'font-size: 1rem;color: white;' %>
+          </button>
+          
         </div>
       </div>
 
@@ -64,7 +67,9 @@
         <h5 class="gray">Lake Seawalls </h3>
         <h5 class="gray">Residential and commercial retaining wall</h3>
 
-         <%= link_to 'See Projects', home_about_url, class:'card-button' %>
+<%# make see PRojects Project Consultation %>
+         <%= link_to 'Schedule a Project', dashboard_new_url, class:'card-button' %>
+         <%# <a class="card-button">Schedule a Project</a> %>
         </span>
       </div>
 
@@ -87,12 +92,14 @@ exhibiting greater strength than fir plywood.
            Sealed Birch plywood face prevents moisture absorption, eliminates
 grain transfer for a smooth finish after removal.
           </h6> %>
-         <%= link_to 'Our Forms', home_about_url, class:'card-button' %>
+
+          <a href="email:seguraco@gmail.com"class="card-button">Contact Us</a>
+         <%# link_to 'Our Forms', home_about_url, class:'card-button' %>
         </span>
        
       </div>
 
-      <div class="container" >
+      <div class="container mt-5" >
     
  
         <%# <!- Contact Form  %>

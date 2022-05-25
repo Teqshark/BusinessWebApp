@@ -51,22 +51,24 @@ sort by
  < -->
 
    <div class="field">
-    <%= f.label :project_zip_code%>
+    <%= f.label :project_location_zip_code%>
     <%= f.number_field :zip_code%>
   </div>
 
    <div class="field">
-    <%= f.label :average_length%>
+    <%= f.label :length_of_retaining_wall%>
+    <span class="subtitle" style="width: auto; color: black;">(in Feet) </span>
     <%= f.number_field :length%>
   </div>
 
    <div class="field">
-    <%= f.label :average_height%>
+    <%= f.label :average_height_in_feet %>
     <%= f.number_field  :height%>
   </div>
 
   <div class="field">
-    <%= f.label :average_width%>
+    <%= f.label :average_width_in_inches%>
+    <p class="subtitle" style="width: auto; color: black;">(ususally 12 inches wide) </p>
     <%= f.number_field  :width%>
   </div>
 

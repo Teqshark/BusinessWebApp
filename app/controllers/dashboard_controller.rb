@@ -13,7 +13,7 @@ class DashboardController < ApplicationController
     # @project = Project.new
       # client = Clinet.find(some_id) 
       # If you using resources just take id from params  
-  @project = user.projects.build
+    @project = user.projects.build
   end
 
   def create 

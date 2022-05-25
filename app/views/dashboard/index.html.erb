@@ -1,23 +1,6 @@
-<h1>Dashboard#index</h1>
-<h1>Welcome to your dashboard <%= current_user.full_name%>!</h1>
-
-
-<p>Find me in app/views/dashboard/index.html.erb</p>
-
-  <li class="nav-item">
-          <%= link_to 'Home', root_path, class:"nav-link" %>
-        </li>
-        
-        <li class="nav-item">
-          <%= link_to 'Edit Profile', edit_user_registration_path,class:"nav-link"%>
-
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link", id: "logout" %>
-
-        </li>
-      
-        <% if current_user.admin?%>
+<%# <h1>Dashboard#index</h1> %>
+<h1 class="mt-5 mb-3">Welcome to your dashboard <%= current_user.full_name%>!</h1>
+<% if current_user.admin?%>
          <h1>Welcome Admin!
 
         <% else %>
@@ -27,22 +10,104 @@
 
         <% end %>
 
+<%# <p>Find me in app/views/dashboard/index.html.erb</p> %>
+      <div class="col-12">
+        <div class="col-2 float-right position-absolute d-none" style="right: 0;">
+        <li class="nav-item d-none">
+          <%= link_to 'Home', root_path, class:"nav-link" %>
+        </li>
+        
+        <li class="nav-item d-flex flex-row">
+          <%= link_to edit_user_registration_path,class:"nav-link" do %>
+            <%= image_tag 'icons/settings-64x64.png', class: 'sidebar-icon', size: '' %>
+            <%# <h4> Edit Profile</h4> %>
+          <%end%>
+          <h4 class="d-inline-flex"> Edit Profile </h4>
 
-<%= link_to 'Create a Project & get a free estimate', dashboard_new_url %>
+        </li>
+        <li class="nav-item d-none">
+          <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link", id: "logout" %>
 
-<h3>projects list: </h3>
-  <h4>projects: </h4>
-  <%= @projects %>
-  <h5>projects loop </h5>
-  <ul>
-        <% @projects.each do |project| %>
-          <li>
-          <%= project.height %>
-          <%= project.width %>
-          <%= project.zip_code%>
-          <h2>project owner:</h2>
-          <%= project.user_id%>
-          </li>
-          <% end %>
-  </ul>
-  <h3>end project list </h3>
+        </li>
+      
+   
+        </div>
+             
+      </div>
+
+      <%= link_to 'Create a Project & get a free estimate', dashboard_new_url, class: 'card-button button-primary' %> 
+      <div class="col-md-4 m-auto">
+        <%# <h3>projects list: </h3> %>
+           <%# <h4>projects: </h4> %>
+          <%# @projects  %>
+          <%# <h5>projects loop </h5> %>
+          
+          <ul class="projects-list">
+          <h1><%= current_user.first_name %>'s projects:</h1>
+            <% @projects.each do |project| %>
+              <li class="">
+                <h2>project user_id: <%= project.user_id%></h2>
+              </li>
+              <li class="">
+                <h2>project id:<%= project.id%></h2>
+              </li>
+              <li>
+              <h2>project height: <%= project.height %></h2>
+               
+              </li>
+              <li class="">
+              <h2>project width: <%= project.width %></h2>
+              </li>
+              <li class="">
+              <h2>project zipcode: <%= project.zip_code%></h2>
+              </li>
+                <br>
+              <% end %>
+          </ul>
+
+          <h3>end project list </h3>
+           <%# link_to 'edit project', path %>
+          <%= link_to 'projects', project_index_url %>
+
+        </div>
+  <style>
+  .projects-list {
+  counter-reset: li; 
+  list-style: none; 
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.projects-list li {
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em 2em;
+  margin: .5em 0;
+  background: #DAD2CA;
+  color: #444;
+  text-decoration: none;
+  border-radius: .3em;
+  transition: .3s ease-out;
+}
+
+.projects-lists li:hover { background: #E9E4E0; }
+.projects-lists li:before { transform: rotate(360deg); }
+.projects-lists li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #f9dd94;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: .3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all .3s ease-out;
+}
+    
+  </style>

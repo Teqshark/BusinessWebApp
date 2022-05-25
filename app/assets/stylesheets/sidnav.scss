@@ -21,6 +21,48 @@
 $color-1: #1a1a1a;
 $color-2: #fefefe;
 $pad: 0.925rem;
+.modal-visible {
+  display: block;
+  position: absolute;
+  opacity: 1;
+}
+.modal-hidden {
+  display: none;
+}
+#termsModal {
+
+}
+.projects-list {
+  border-radius: 12px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--gray);
+  padding: 1rem 1rem;
+  li {
+    width: 15rem;
+    margin: unset;
+    margin: auto;
+    // font-size: 1rem;
+  }
+}
+#modalButton {
+  width: auto;
+  background-color: var(--info);
+  border-radius: 8px;
+  display: block;
+  position: relative;
+  // text-align: center;
+  padding: 1rem 2rem;
+  // border: 4px dashed red;
+  // top: 2rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  // height: 4rem;
+  // width: 8rem;
+  color: white;
+}
 .text {
   display: contents;
 }
@@ -384,22 +426,21 @@ $pad: 0.925rem;
   margin-bottom: 3rem;
   // border: 2px dashed cyan;
 }
-@media screen and (max-height: 500px) {
-  #top-logo {
-    content: url("logo/gradient-logo-260x160.png");
-    // border: 4px solid pink;
-  }
-}
-.form-image {
-  // position: relative;
-}
-@media screen and (max-width: 300px) {
-  #top-logo {
-    content: url("logo/gradient-logo-160x");
-  }
-}
 
 @media screen and (min-width: 701px) {
+  .card-button {
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    // text-align: center;
+    padding: 1rem 2rem;
+    // border: 4px dashed red;
+    // top: 2rem;
+    margin: auto;
+    // height: 4rem;
+    // width: 8rem;
+    color: white;
+  }
   #wall-img-png {
     // border: 3px solid green;
     width: auto;
@@ -426,18 +467,30 @@ $pad: 0.925rem;
     height: 100%;
     min-height: 300px;
     margin-top: 10%;
+
     .form-image {
       // display: flex;
       position: absolute;
-      right: -60%;
+      right: -70%;
       top: 10%;
-      width: 90%;
+      width: 70%;
     }
+    // top: -8rem;
+    // left: 16%;
+    // top: -12rem;
+    // width: 200px;
+    // }
+    // .form-image.right {
+    // border: 4px dashed navy;
+    // position: absolute;
+    // left: 185px;
+    // width: 234px;
+    // top: -13.3rem;
     .form-image.right {
       position: absolute;
-      right: -123%;
+      right: -118%;
       top: 4%;
-      width: 105%;
+      width: 82%;
     }
   }
 
@@ -462,19 +515,27 @@ $pad: 0.925rem;
   }
 
   .round-card.third {
-    margin: initial;
-    margin-left: 2%;
-    margin-top: 15%;
     position: relative;
-    height: 300px;
+
+    // margin . /: initial;
+    // margin-left: 2%;
+    margin: unset;
+    margin-left: 3%;
+    margin-top: 15%;
+
+    height: auto;
     // width: 46%;
     // top: 400px;
     .form-image {
       position: absolute;
       // top: -8rem;
-      right: -110%;
-      top: -15%;
+      // margin: auto;
+      // right: -100%;
+      bottom: -10%;
       width: 100%;
+      max-width: 300px;
+      transform: translate(120%, 0%);
+      margin-left: 20%;
       // border: 4px solid purple;
     }
   }
@@ -505,22 +566,27 @@ $pad: 0.925rem;
   }
 }
 @media screen and (min-width: 1100px) {
+  .card-button {
+    color: white;
+  }
   .round-card.first {
     position: relative;
     min-height: 400px;
     .form-image {
       position: absolute;
-      top: 0;
-      right: -50%;
+      top: -2%;
+      right: -68%;
       width: 70%;
       max-width: 500px;
+      transform: translate(0%, 0%);
     }
     .form-image.right {
       position: absolute;
       top: -11%;
       right: -100%;
-      width: 90%;
+      width: 82%;
       max-width: 500px;
+      transform: translate(20%, 0%);
     }
     .text {
     }
@@ -555,7 +621,7 @@ $pad: 0.925rem;
 
     // }
     .card-button {
-      // width: 6rem;
+      width: 9rem;
       margin-top: 1.5rem;
       padding: 1rem 2rem;
     }
@@ -567,16 +633,14 @@ $pad: 0.925rem;
     margin-bottom: 10%;
     .form-image {
       position: absolute;
-      left: 120%;
-      top: -10%;
-      width: 70%;
+      // left: 20%;
+      // bottom: -10%;
+      width: 400px;
+      max-width: 300px;
+      transform: translate(150%, 0%);
+      margin-left: 30%;
     }
-    .form-image1 {
-      position: absolute;
-      left: 220%;
-      top: -10%;
-      width: 70%;
-    }
+
     .card-button {
       // width: 6rem;
       margin-top: 4rem;
@@ -593,13 +657,15 @@ $pad: 0.925rem;
   }
 
   .round-card.first {
+    width: 95%;
+    max-width: 600px;
     position: relative;
-    height: auto;
+    // height: auto;
     flex-direction: column;
     align-items: center;
 
     // .round-card.first {
-    margin-top: 12rem;
+    margin-top: 15rem;
     // }
     // width: 95%;
     .text {
@@ -610,19 +676,24 @@ $pad: 0.925rem;
 
     .form-image {
       position: absolute;
-
+      top: -15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       // top: -8rem;
-      left: 16%;
-      top: -39%;
-      width: 200px;
+      // left: 10%;
+      // top: -20%;
+      width: 70%;
+      min-width: 150px;
+      max-width: 250px;
     }
-    .form-image.right {
-      // border: 4px dashed navy;
-      position: absolute;
-      left: 40%;
-      width: 200px;
-      top: -39%;
-    }
+    // .form-image.right {
+    //   // border: 4px dashed navy;
+    //   position: absolute;
+    //   left: 185px;
+    //   // width: 234px;
+    //   width: 45vw;
+    //   top: -13.3rem;
+    // }
     .card-button {
       display: block;
       position: relative;
@@ -638,10 +709,11 @@ $pad: 0.925rem;
 
   .round-card.second {
     position: relative;
-    height: auto;
+    width: 95%;
+    max-width: 600px;
     flex-direction: column;
     align-items: center;
-    margin-top: 80%;
+    margin-top: 12rem;
     // border: 4px dashed green;
 
     .text {
@@ -654,8 +726,13 @@ $pad: 0.925rem;
       position: absolute;
       // border: 2px dashed black;
       // left: 16%;
-      top: -35%;
-      width: 75%;
+      // width: 250px;
+      top: -10%;
+      left: 50%;
+      width: 80%;
+      min-width: 140px;
+      max-width: 400px;
+      transform: translate(-50%, -50%);
     }
     .card-button {
       display: block;
@@ -677,17 +754,21 @@ $pad: 0.925rem;
     }
   }
   .round-card.third {
-    height: auto;
+    width: 95%;
+    max-width: 600px;
     margin-top: 18rem;
     // display: block;
     position: relative;
     .form-image {
       position: absolute;
       // top: -5%;
-      height: auto;
-      left: 30%;
-      top: -45%;
-      width: 50%;
+      width: 80%;
+      min-width: 140px;
+      max-width: 300px;
+
+      top: -25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       // border: 2px dashed red;
     }
 
@@ -712,6 +793,19 @@ $pad: 0.925rem;
     }
   }
 
+  .card-button {
+    border-radius: 8px;
+    display: block;
+    color: white;
+    position: relative;
+    // text-align: center;
+    padding: 1rem 2rem;
+    // border: 4px dashed red;
+    // top: 2rem;
+    margin: auto;
+    // height: 4rem;
+    width: 8rem;
+  }
   .mobile-only {
     display: flex;
   }
@@ -1002,5 +1096,24 @@ button.cta-schedule {
 @keyframes gradient {
   50% {
     background-position: 100% 0;
+  }
+}
+@media screen and (max-height: 500px) {
+  #top-logo {
+    content: url("logo/gradient-logo-260x160.png");
+    // border: 4px solid pink;
+  }
+}
+// @media screen and (max-width: 330px) {
+//   #top-logo {
+//     content: url("logo/gradient-logo-160x98.png");
+//   }
+// }
+.form-image {
+  // position: relative;
+}
+@media screen and (max-width: 300px) {
+  #top-logo {
+    content: url("logo/gradient-logo-160x98.png");
   }
 }

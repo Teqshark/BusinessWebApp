@@ -23,30 +23,40 @@
           </li>
           <%end  %>
           <% if user_signed_in? %>
-          <li>   
-            <%= link_to 'Logout', destroy_user_session_path, method:"delete" do %>
-              <%= image_tag("icons/log-out-64x64", class:"sidebar-icon" , alt:"logout icon", ) %>
-              <h4  class="navbar-text">Log out</h4> 
-            <% end %>
-          </li>
-          <br>
-          <%# if user_signed_in %>
-          <li>
-            <%= link_to 'dashboard', dashboard_index_path do %>
-              <%= image_tag("icons/blueprint-blue-64x64.png", class:"sidebar-icon" , alt:"dashboard icon", ) %>
-              <h4  class="navbar-text">Dashboard</h4>
-              <%# link_to 'dashboard', users_index_path, class:"nav-link " %>
-            <% end %>       
-          </li>
-            <% if  current_user.admin %>
-            <li>
-                <%= link_to 'see users', users_index_path do %>
-                  <%= image_tag("icons/clients-64x64.png", class:"sidebar-icon" , alt:"see users icon") %>
-                  <h4  class="navbar-text"> see users </h4>
-                  <%# link_to 'see users', users_index_path, class:"nav-link " %>
-                <% end %>
+            <li>   
+              <%= link_to destroy_user_session_path, method: :delete do %>
+              <%# link_to 'Logout', destroy_user_session_path, method:"delete" do %>
+                <%= image_tag("icons/log-out-64x64", class:"sidebar-icon" , alt:"logout icon", ) %>
+                <h4  class="navbar-text">Log out</h4>  
+              <% end %>
+          
             </li>
-            <% end %>
+            <br>
+            <%# if user_signed_in %>
+            <li>
+              <%= link_to dashboard_index_path, class:'' do %>
+        
+                <%= image_tag("icons/blueprint-blue-64x64.png", class:"sidebar-icon" , alt:"dashboard icon", ) %>
+                <h4  class="navbar-text">Dashboard</h4>
+              <% end %>       
+            </li>
+              <% if  current_user.admin %>
+              <li>
+                  <%= link_to 'see users', users_index_path do %>
+                    <%= image_tag("icons/clients-64x64.png", class:"sidebar-icon" , alt:"see users icon") %>
+                    <h4  class="navbar-text"> see users </h4>
+                    <%# link_to 'see users', users_index_path, class:"nav-link " %>
+                  <% end %>
+              </li>
+              <% end %>
+              <% if current_page?('/dashboard') %>
+                <li>   
+                <%= link_to edit_user_registration_path,class:"nav-link" do %>
+                  <%= image_tag 'icons/settings-64x64.png', class: 'sidebar-icon', size: '' %>
+                  <h4  class="navbar-text">Edit Profile</h4>  
+                <% end %>
+                </li>
+              <% end %>
           <% end %>     
           <li style="display: flex;">
             <%= link_to home_our_mission_url, class:'' do %>
