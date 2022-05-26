@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index]
   resources :home, only: [:index, :our_mission, :process]
   
-  resources :user,:project 
+  resources :user do 
+    resources :project 
+  end
 
 root 'home#index'
 get 'home/about', to: 'home#about'

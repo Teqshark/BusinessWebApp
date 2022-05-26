@@ -17,9 +17,9 @@ class DashboardController < ApplicationController
   end
 
   def create 
-     @projects = Project.where(user_id: current_user.id)
+    #  @projects = Project.where(user_id: current_user.id)
     # @project = Project.new(project_params)
-    @project = current_user.projects.build(project_params)
+    @project = current_user.projects.create(project_params)
 
     puts 'printing project object '
     puts @project 
@@ -36,7 +36,19 @@ class DashboardController < ApplicationController
     end
     flash.now["notice"] = "Test notice"
   end
+  def show 
+    @project = Project.find(params[:id])
+  end
 
+  def list 
+    @projects = Project.all 
+  end
+  def edit 
+
+  end
+
+  def delete 
+  end
   # def create 
   #   @project = Project.new(params[:project_params)
   #   if @project.save 
@@ -47,23 +59,11 @@ class DashboardController < ApplicationController
   
   #   end
   # end
-
+  private
   def  project_params 
-    params.require(:project).permit(:zip_code, :length, :height, :width )
+    params.require(:project).permit(:length, :height, :width, address: [:street_address, :city, :state, :zip_code] )
   end
-    def show 
-      @project = Project.find(params[:id])
-    end
-
-    def list 
-      @projects = Project.all 
-    end
-    def edit 
-
-    end
-
-    def delete 
-    end
+   
 
   
 end

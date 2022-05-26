@@ -5,7 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  has_many :projects
+  has_many :projects, dependent: :destroy
   accepts_nested_attributes_for :projects, limit: 10
 
   # validates :terms_of_service, :acceptance => true

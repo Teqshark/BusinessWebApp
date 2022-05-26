@@ -58,6 +58,14 @@
                 </li>
               <% end %>
           <% end %>     
+         
+
+          <li style="width: auto; height: 100%;" class="mobile-only">
+            <%= link_to root_path, class:'' do %>
+              <%= image_tag("logo/gradient-logo-icon-50x50.png", class:'
+              mobile-logo', alt: "segura & company logo", size: '', :style => "padding: 0px 0px; position: relative; bottom: 0;") %>
+            <% end %>
+          </li>  
           <li style="display: flex;">
             <%= link_to home_our_mission_url, class:'' do %>
               <%= image_tag("icons/concrete-color-soft-64x64.png", class:'
@@ -66,14 +74,6 @@
               <%# link_to 'Our mission', home_our_mission_url, class:"nav-link", style: ""%>
             <% end %>
           </li>  
-
-                <li style="width: auto; height: 100%;" class="mobile-only">
-            <%= link_to root_path, class:'' do %>
-              <%= image_tag("logo/gradient-logo-icon-50x50.png", class:'
-              mobile-logo', alt: "segura & company logo", size: '', :style => "padding: 0px 0px; position: relative; bottom: 0;") %>
-            <% end %>
-          </li>  
-           
           <li>   
             <a href="tel:13432212" >
               <%= image_tag("icons/phone-call.png", class:'sidebar-icon', alt: "call/text now", size:"" , :style => "padding: 0px 0px;") %>

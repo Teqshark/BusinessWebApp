@@ -1,4 +1,9 @@
 class SignUpCreateController < ApplicationController
+  before_action :not_logged_in
+
+  
+  
+
   def index 
     render :new
   end
@@ -34,9 +39,15 @@ class SignUpCreateController < ApplicationController
   end
 
   private 
-
+  def not_logged_in
+    if user_signed_in? 
+       redirect_to dashboard_new_path
+    else 
+       # do something else ...
+    end
+  end
   def sign_up_create_params 
-    params.permit(:email, :first_name, :last_name, :phone_number, :password, :terms, :zip_code, :width, :height, :length, :remember_me, :terms)
+    params.permit(:email, :first_name, :last_name, :phone_number, :password, :terms, :width, :height, :length,  :zip_code, :remember_me, :terms)
   end
   # private
   # def signup_params_for_create
