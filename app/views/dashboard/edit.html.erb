@@ -1,7 +1,77 @@
 <h1> Editing Project</h1>
 
-<%= render 'shared/project', project: @project%>
+<%# not using shared bc form we dont have projectController set up  %>
+<%# render 'shared/project', project: @project %>
+<%= form_with(model: @project, url: dashboard_path ) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being created</h2>
+      <ul>
+        <% @project.errors.each do |error|%>
+          <li><%= error.full_message %></li>
+        <%end%>
+      </ul>
+    </div>
+  <%end%>
 
-<%= link_to 'Show', @project %>
+<div>Questions</div>
 
-<%=link_to 'Back', projects_path %>
+  <div class="field">
+    <%= f.label :street_number_and_name %>
+    <%= f.text_field :street_name, required: true, class: 'form-control' %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :project_location_city %>
+    <%= f.text_field  :city, required: true, class:'form-control', value: 'Hot Springs' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project_location_state %>
+    <%= f.text_field  :state, required: true, class:'form-control', value: 'Arkansas' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project_location_zip_code%>
+    <%= f.number_field :zip_code%>
+  </div>
+
+  <div class="field">
+    <%= f.label :length_of_retaining_wall%>
+    <span class="subtitle" style="width: auto; color: black;">(in Feet) </span>
+    <%= f.number_field :length%>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_height_in_feet %>
+    <%= f.number_field  :height%>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_width_in_inches%>
+    <p class="subtitle" style="width: auto; color: black;">(ususally 12 inches wide) </p>
+    <%= f.number_field  :width%>
+  </div>
+  <div class="field">
+    <%= f.label :desired_start_date%>
+    <p class="subtitle" style="width: auto; color: black;">(when would you like this project to be started ?) </p>
+    <%= f.date_field  :desired_start_date%>
+  </div>
+   <div class="field">
+    <%= f.label :desired_completion_date%>
+    <p class="subtitle" style="width: auto; color: black;">(when would you like this project to be completed?) </p>
+    <%= f.date_field :desired_completion_date%>
+  </div>
+
+
+  <div class="actions">
+   <%# <div class="input_box button"> %>
+    <%= f.submit %>
+    <%# </div> %>
+  </div>
+  
+  <% end%>
+
+<%# link_to 'Show', @project,  %>
+
+<%= link_to 'Back'  %>

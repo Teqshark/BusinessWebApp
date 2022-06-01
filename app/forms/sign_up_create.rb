@@ -30,7 +30,7 @@ class SignUpCreate
 
    
       # @Useruser.projects.create!(zip_code: zip_code, length: length, height: height, width: width)
-      @project = Project.create(user_id: @user.id, zip_code: zip_code, length: length, height: height, width: width) 
+      @project = Project.create(user_id: @user.id, steet_name: street_name, city: city, state: state, zip_code: zip_code, length: length, height: height, width: width) 
            puts @project 
       puts @project.errors 
       puts @project.invalid?
@@ -44,37 +44,36 @@ class SignUpCreate
 
       @project.save!
     end
-  rescue ActiveRecord::RecordInvalid => exception
-    puts 'printing caught exception message'
-    puts exception.message 
+    
+    rescue ActiveRecord::RecordInvalid => exception
+      puts 'printing caught exception message'
+      puts exception.message 
 
 
-       puts ' errors user :
+      puts ' errors user :
       from user 
       errors:
       '
       puts errors.details
       
-
-
-     puts 'error details :'
+      puts 'error details :'
       puts errors.details
       puts 'error full messages'
       puts errors.full_messages
 
-    return false
-  end
+      return false
+    end
 
-  private
+    private
 
-  def add_errors(model_errors)
-    model_errors.each do |error|
-      attribute = error.attribute 
-      message = error.message 
-      errors.add(attribute, message)
+    def add_errors(model_errors)
+      model_errors.each do |error|
+        attribute = error.attribute 
+        message = error.message 
+        errors.add(attribute, message)
+      end
     end
   end
-end
 
       # add_errors(@user.errors) if @user.invalid?
       

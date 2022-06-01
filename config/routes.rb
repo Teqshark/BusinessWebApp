@@ -5,8 +5,8 @@ Rails.application.routes.draw do
     confirmations: 'devise/confirmations', sign_up_create: 'home'
   }
   
-  resources :dashboard, only: [:index]
-  resources :home, only: [:index, :our_mission, :process]
+  resources :dashboard
+  resources :home, only: [:index, :our_mission, :about]
   
   resources :user do 
     resources :project 
@@ -15,11 +15,13 @@ Rails.application.routes.draw do
 root 'home#index'
 get 'home/about', to: 'home#about'
 get 'home/our_mission'
-  devise_scope :user do
-    get "/users/sign_out" => "devise/sessions#destroy"
-  end
+  
+devise_scope :user do
+  get "/users/sign_out" => "devise/sessions#destroy"
+end
   # get 'users/sign_out', to: 'devise/sessions#destroy'
 
+  # post "/dashboard", to: "sign_up_create#update"
 
 
 
@@ -41,10 +43,16 @@ get 'home/our_mission'
 
   # get 'devise/registrations#new'
   # (.:format) 
-  get 'dashboard/index'
-  post 'dashboard/index'
-  post 'dashboard/create'
-  get '/dashboard/new'
+  # get 'dashboard/index'
+  # post 'dashboard/index'
+
+  # get '/dashboard/new'
+  # get 'dashboard/show'
+  # get 'dashboard/edit'
+  # post 'dashboard/create'
+  # post 'dashboard/update',  to 'dashboard#update'
+
+
   get 'users/index'
 
   resources :sign_up_create

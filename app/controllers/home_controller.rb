@@ -18,7 +18,7 @@ class HomeController < ApplicationController
   private 
 
 
-    helper_method :resource_name, :resource, :devise_mapping, :resource_class
+  helper_method :resource_name, :resource, :devise_mapping, :resource_class
 
   def resource_name
     :user

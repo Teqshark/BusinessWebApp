@@ -1,6 +1,3 @@
-
-  
-
     <div class="top-cont 
       container-fluid 
       row" 
@@ -26,10 +23,10 @@
             <small>Commercial</small> + <small>Residential </small>
           </h1>
           <h2 class="display text-uppercase
-            text-break font-weight-bolder mt-2">Concrete Retaining Walls 
+            text-break font-weight-bolder mt-2">Poured Concrete Foundation Retaining Walls 
           </h2> 
           <button class="cta-schedule" >
-            <%= link_to 'Schedule a Project', dashboard_new_url, class:'', style:'font-size: 1rem;color: white;' %>
+            <%= link_to 'Schedule a Project', new_dashboard_url, class:'', style:'font-size: 1rem;color: white;' %>
           </button>
           
         </div>
@@ -63,12 +60,12 @@
           <h3 class='card-title' style="">Medium and Large Projects </h3>
           <%# <h4 class="card-subtitle">Built with industry leading efficenty and performance</h4> %>
         <h5>Structural retaining walls<h4>
-        <h5 class="gray">Basement concrete walls </h3>
-        <h5 class="gray">Lake Seawalls </h3>
+        <h5 class="gray">Basement concrete walls </h5>
+        <h3 class="gray">Lake Seawalls </h3>
         <h5 class="gray">Residential and commercial retaining wall</h3>
 
 <%# make see PRojects Project Consultation %>
-         <%= link_to 'Schedule a Project', dashboard_new_url, class:'card-button' %>
+         <%= link_to 'Schedule a Project', new_dashboard_url, class:'card-button' %>
          <%# <a class="card-button">Schedule a Project</a> %>
         </span>
       </div>
@@ -158,7 +155,7 @@ grain transfer for a smooth finish after removal.
       var imgWallFrontFull = 'assets/no-bg-elements/wall-front-full-nobg.png';
       var imgWallAngleFront = 'assets/no-bg-elements/wall-front-angle-nobg.png';
       var imgWallLabeled = 'assets/no-bg-elements/wall-labeled-nobg.png';
-      var imgWallSide = 'assets//no-bg-elements/wall-side-nobg.png';
+      var imgWallSide = 'assets/no-bg-elements/wall-side-nobg.png';
       var imgWallSideTop = 'assets/no-bg-elements/wall-side-nobg.png';
       var imgWallBackDirtLeft = 'assets/no-bg-elements/wall-rear-left-dirt-nobg.png';
       var imgWallBackDirtRight ='assets/no-bg-elements/wall-rear-right-dirt-nobg.png';
@@ -230,7 +227,7 @@ grain transfer for a smooth finish after removal.
         }
         if (skinnyDevice.matches? scrollTop > 200 : scrollTop > 150){
           console.log('psition > 200/150');
-          imgEl.src = imgWallFront;
+          imgEl.src = imgWallFrontFull;
           console.log(imgEl.src);
         }
         if (skinnyDevice.matches? scrollTop > 300 : scrollTop > 200 ) {
@@ -238,7 +235,7 @@ grain transfer for a smooth finish after removal.
             imgEl.classList.add('flipped');
           }
           console.log('scrollposition > 300/200') ;
-          imgEl.src = imgWallFrontFull;
+          imgEl.src = imgWallFront;
           console.log(imgEl.src);
         }
         if (skinnyDevice.matches? scrollTop > 350 : scrollTop > 250) {

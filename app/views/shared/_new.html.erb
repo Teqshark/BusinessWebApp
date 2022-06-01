@@ -44,17 +44,42 @@
   </div>
     <div class="field terms">
     
-      <%= f.check_box :terms, class:"mr-2" %>
+      <button type="button" id="modalButton"class="" data-toggle="modal" data-target="#termsModal" onClick="toggleModal()">
+        Read Terms and Conditions
+      </button>
+      <%= f.check_box :terms, class:"" %>
       <%= f.label :terms, "I agree to the terms and conditions", class:"label" %>
     </div>
 
-  <%# </div> %>
+        <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <div class="modal-hidden" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">User Terms and Conditions</h5>
+              <button type="button" onClick="toggleModal()" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>The user assumes all responsibility and risk for the use of this website/webapp and the Internet generally. We accept no liability or responsibility to any person as a consequence of any reliance upon the information contained in this site. Under no circumstances, including negligence, shall anyone involved in creating or maintaining this web app/ website be liable for any direct, indirect, incidental, special or consequential damages, or loss profits that result from the use or inability to use the website/webapp and/or nay other websites which are linked to this site/app. Nor shall they be liable for any such damages including, but not limited to, reliance by a member or visitor on any information obtained via the website; or that result from mistakes, omissions, interruptions, deletion of files, viruses, errors, defects, or failure of performance, communications failure, theft, destruction or unauthorized access. States or Countries which do not allow some or all of the above limitations of liability, liability shall be limited to the greatest extend allowed by law. </p>
+            </div>
+            <div class="modal-footer">
+              <button onClick="toggleModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <%# <button type="button" class="btn btn-primary">Save changes</button> %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
 
   <div class="actions">
   <div class="input_box button">
 
 
-    <%= f.submit "Join the Revolution", class:"btn btn-join" %>
+    <%= f.submit "Create your client account", class:"btn btn-join" %>
   
   </div>
 

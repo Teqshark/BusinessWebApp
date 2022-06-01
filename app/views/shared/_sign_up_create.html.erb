@@ -99,10 +99,25 @@
 
     <br>
     
-    <h3>Enter your project details below. </h3>
-    <div class="field"> 
+    <h3>Enter your project details below. </h3>   
+    <div class="field">
+      <%= f.label :street_number_and_name %>
+      <%= f.text_field :street_name, required: true, class: 'form-control' %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :project_location_city %>
+      <%= f.text_field  :city, required: true, class:'form-control', value: 'Hot Springs' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :project_location_state %>
+      <%= f.text_field  :state, required: true, class:'form-control', value: 'Arkansas' %>
+    </div>
+
+    <div class="field">
       <%= f.label :project_location_zip_code%>
-      <%= f.number_field :zip_code %>
+      <%= f.number_field :zip_code%>
     </div>
 
     <div class="field">
@@ -119,6 +134,17 @@
       <%= f.label :average_width_in_inches %>
       <%= f.number_field :width %>
     </div>
+    <div class="field">
+    <%= f.label :desired_start_date%>
+    <p class="subtitle" style="width: auto; color: black;"> When would you like this project to be started ?(Optiona; in case you have a strict timeline.  ) </p>
+    <%= f.date_field  :desired_start_date%>
+    </div>
+
+   <div class="field">
+    <%= f.label :desired_completion_date%>
+    <p class="subtitle" style="width: auto; color: black;">When would you like this project to be completed? \n (Optiona; in case you have a strict timeline.) </p>
+    <%= f.date_field :desired_completion_date%>
+  </div>
 
     <% if devise_mapping.rememberable? %>
       <div class="field remember">
@@ -136,49 +162,17 @@
 <script>
 
 var termsModal = document.getElementById("termsModal");
-// console.log(termsModal);
-// var termsButton = document.querySelector('#modalButton');
-// console.log(termsButton);
 
 function toggleModal() {
   termsModal.toggle
   if (termsModal.classList) {
-  termsModal.classList.toggle("modal-hidden");    
-termsModal.classList.toggle("modal-visiblel");
-} else {
-// var c = e.className.split(" ");
-// var x = c.indexOf("sample");
-// if (x >= 0)
-// c.splice(x, 1);
-// else
-// c.push("sample");
-// e.className = classes.join(" ");
-console.log('!termsModal.classList')
+    termsModal.classList.toggle("modal-hidden");    
+    termsModal.classList.toggle("modal-visiblel");
+  } else {
+    console.log('!termsModal.classList')
+  }
 }
-}
-// termsButton.addEventListener('click', function() {var is_visible = false; return function(e) {
-//     e.preventDefault();
-//     if(!is_visible) {
-//       console.log('!is_visible');
-//       console.log(is_visible);
-//       termsModal.classList.add('modal-visible');
-//       termsModal.classList.remove('modal-hidden');
-//       termsModal.setAttribute('aria-hidden', !is_visible);
-//       is_visible = true;
-//     } else {
-//         console.log('else');
-//       console.log(is_visible);
-//       termsModal.classList.remove('modal-visible');
-//       termsModal.classList.add('modal-hidden');
-//       termsModal.setAttribute('aria-hidden', !is_visible);
-//       is_visible = false;
-//     }
-// }});
-//  $(document).ready(function(){
-//   $("#modalButton").click(function(){
-//     $("#termsModal").modal("toggle");
-//   });
-// });
+
 </script>
 
 
