@@ -12,24 +12,25 @@
 
 <%# <p>Find me in app/views/dashboard/index.html.erb</p> %>
       <div class="col-12">
+
         <div class="col-2 float-right position-absolute d-none" style="right: 0;">
-        <li class="nav-item d-none">
-          <%= link_to 'Home', root_path, class:"nav-link" %>
-        </li>
+          <li class="nav-item d-none">
+            <%= link_to 'Home', root_path, class:"nav-link" %>
+          </li>
+          
+          <li class="nav-item d-flex flex-row">
+            <%= link_to edit_user_registration_path,class:"nav-link" do %>
+              <%= image_tag 'icons/settings-64x64.png', class: 'sidebar-icon', size: '' %>
+              <%# <h4> Edit Profile</h4> %>
+            <%end%>
+            <h4 class="d-inline-flex"> Edit Profile </h4>
+
+          </li>
+          <li class="nav-item d-none">
+            <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link", id: "logout" %>
+
+          </li>
         
-        <li class="nav-item d-flex flex-row">
-          <%= link_to edit_user_registration_path,class:"nav-link" do %>
-            <%= image_tag 'icons/settings-64x64.png', class: 'sidebar-icon', size: '' %>
-            <%# <h4> Edit Profile</h4> %>
-          <%end%>
-          <h4 class="d-inline-flex"> Edit Profile </h4>
-
-        </li>
-        <li class="nav-item d-none">
-          <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link", id: "logout" %>
-
-        </li>
-      
    
         </div>
              
@@ -96,7 +97,7 @@
                 <br>
             
               <tr>
-              <td><%# link_to 'Show User', [@user] %></td>
+              <td><%= link_to 'Show Project', dashboard_url(project) %></td>
               <td><%= link_to 'Edit Project', edit_dashboard_url(project) %></td>
         
               <td>

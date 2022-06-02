@@ -1,26 +1,47 @@
 <p id="notice">
   <%= notice %>
 </p>
-
+  <h1>Project Details </h1>
 <p>
-<strong>Project name: </strong>
-<%= @project.title%>
+<strong>Project id: </strong>
+<%= @project.id%>
 </p>
 
-<p>
- <strong>Scheudled Start Date: </strong><br>
+<p style=''>
+ <strong> Start Date: </strong><br>
  (subject to change)
- <%= @project.scheduled_start_date%>
+ <%# @project.desired_completion_date%>
+  <% if !@project.desired_start_date.blank? %> 
+    <h3>Desired:</h3><%= @project.desired_start_date%>
+    <%else %>
+    <h4>No desired start date has been provided</h4>
+  <%end %>
+  <% if !@project.scheduled_start_date.blank? %>
+    <h3>Scheduled:</h3><%= @project.scheduled_start_date%>
+    <%else %>
+    <h4>No scheduled Start date has been set for this project yet</h4>
+  <%end %>
+
+</p>
+
+ <p style=''>
+ <strong>Scheduled/Desired Completion Date: </strong>
+ <% if !@project.desired_completion_date.blank? %> 
+  <h3>Desired completion date:</h3><%= @project.desired_completion_date%>
+   <%else %>
+    <h4>No desired completion date has been provided</h4>
+  <%end %>
+ <% if !@project.scheduled_completion_date.blank? %>
+  <h3>Scheduled:</h3><%= @project.scheduled_completion_date%>
+   <%else %>
+    <h4>No scheduled completion date has been set</h4>
+ <%end %>
+
  </p>
 
- <p>
- <strong>Scheduled Completion Date: </strong>
- <%= @project.scheduled_end_date%>
- </p>
-
- <p>
+ <p >
  <strong>Project Location: </strong>
- <%= @project.address  %> <%= @project.zip_code%>
+ <%= @project.full_address  %>
  </p>
 
  <p>
@@ -35,5 +56,6 @@
  <%= @project.width%>
 
  </p>
- <%= link_to 'Edit', edit_project_path(@project)%> |
- <%= link_to 'Back', projects_path %>
+ <%= link_to 'Edit', edit_dashboard_path(@project)%> |
+ <%# link_to 'Back', dashboard_path %>
+ <%= link_to 'Back', :back  %>

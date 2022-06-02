@@ -40,16 +40,17 @@
       <div class="round-card first" style="">
          <%= image_tag("no-bg-elements/concrete-wall.png", alt: "steel birchwood form", class: 'form-image',:style => "") %> <%= image_tag("no-bg-elements/concrete-wall.png", alt: "steel birchwood form", class: 'form-image right',:style => "") %>
           <span class="text" style="">
-          <h3 class='card-title' style="">Rebar reinforced solid concrete walls</h3>
-          <h6 class="card-subtitle">Has an ultimate flexural strength that is greater than block,  </h6>
-          <h5>up to 30000 lbs of lateral resistance<h5>
-          <h5 class="gray">1-4 weeks completion time depending on size</h5>
+          <h3 class='card-title' style="">Reinforced Concrete Retaining Walls</h3>
+          <h5>Steel Rebar Reinforcement </h5>
+          <h5 class="card-subtitle">Has ultimate flexural strength greater than block  </h5>
+          <h5>up to 30000 lbs of lateral resistance</h5>
+          <h5 class="">1-4 weeks completion time depending on size</h5>
           <h5>Poured in one day</h5>
           <h5>Low maintainance </h5>
           <h5>Fire & Water Resistant  </h5>
-          <h5> </h5>
           
-          <%= link_to 'See More', home_about_url, class:'card-button' %>
+           <%= link_to 'Schedule a Project', new_dashboard_url, class:'card-button' %>
+          
         
         </span>
       </div>
@@ -58,39 +59,39 @@
         <%= image_tag("no-bg-elements/framework-basement-top-nobg.png",alt: "formed walls foundation, basement, house" , class:"formwork-image", :style => "") %>
         <span class="text" style="">
           <h3 class='card-title' style="">Medium and Large Projects </h3>
-          <%# <h4 class="card-subtitle">Built with industry leading efficenty and performance</h4> %>
-        <h5>Structural retaining walls<h4>
-        <h5 class="gray">Basement concrete walls </h5>
-        <h3 class="gray">Lake Seawalls </h3>
-        <h5 class="gray">Residential and commercial retaining wall</h3>
-
-<%# make see PRojects Project Consultation %>
-         <%= link_to 'Schedule a Project', new_dashboard_url, class:'card-button' %>
-         <%# <a class="card-button">Schedule a Project</a> %>
+        <h5>Structural Projects</h5> 
+        <h5>Foundation Walls</h5>
+        <h5 class="">Basement Walls </h5>
+        <h5>Home Walls</h5>
+        <h5>Parking Structure Walls</h5>
+        <h5 class="">Lake Seawalls </h5>
+        <%# <h5 class="gray">Residential and commercial retaining wall</h3> %>
+        <%= link_to 'Project Gallery', home_gallery_url, class: 'card-button'%>
         </span>
       </div>
 
       <div class="round-card third" style="" >
         <%= image_tag("no-bg-elements/cgi-red-forms-standing-nobg.png",alt: "finished poured concrete retaining wall" , class:"form-image", :style => "") %>
             <span class="text" style="">
-          <h3 class='card-title' style="">Concrete Steel Forms</h3>
-          <h4 class="card-subtitle">Industry Leading Performance </h4>
-          <h6>
+          <h3 class='card-title' style="">Concrete Steel Forms / Panels</h3>
+          <h5 class="card-subtitle d-none">Industry Leading Performance </h5>
+          <h5>
           Full 2”x2” crossmember support angle every foot for extra reinforcement.
-          </h6>
-          <h6>
-          Allowable 1,000 psf load-rated system
-          </h6>
-            <h6>
-          100% sealed birch plywood face prevents moisture absorption,
-exhibiting greater strength than fir plywood.
-          </h6>
+          </h5>
+          <h5>
+           1,000 psf load-rated system
+          </h5>
+            <h5>
+          100% sealed birch plywood face prevents moisture absorption</h5>
+          <h5>
+            stronger than fir plywood.
+          </h5>
           <%# <h6>
            Sealed Birch plywood face prevents moisture absorption, eliminates
 grain transfer for a smooth finish after removal.
           </h6> %>
+         <%= link_to 'Video Gallery', home_about_url, class:'card-button' %>
 
-          <a href="mailto:seguraretainingwalls@gmail.com"class="card-button">Contact Us</a>
          <%# link_to 'Our Forms', home_about_url, class:'card-button' %>
         </span>
        
@@ -112,14 +113,15 @@ grain transfer for a smooth finish after removal.
           </p>
         <% end %> 
       </div> <!-- end of col -->
+      <%= render 'shared/cost' %>
       <div class="
       <%# container %>
        col-12">
 
        <%# Retainging walls explained  %>
-       <div class="mobile">
-      <iframe width="90%" height="500" src="https://www.youtube.com/embed/UummY_mo85Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+       <%# <div class="mobile"> %>
+      <iframe width="90%" height="500" src="https://www.youtube.com/embed/UummY_mo85Y" title="YouTube video player" frameborder="0" allow=" encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      <%# </div> %>
            <!-- end of row -->
           <!-- end of container -->
           <!-- end of form -->

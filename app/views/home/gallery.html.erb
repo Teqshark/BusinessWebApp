@@ -1,0 +1,64 @@
+<div class="row my-5">
+    <h1 class="mx-auto my-5">Recent Projects</h1>
+    <div class="col-12">
+        <h2 class="my-5" >Lake House Foundation Wall</h2>
+        <div style="" class="project-cont">
+            <%= image_tag('wall-lake.jpg', alt: 'Lake Foundation wall')%>
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <h2 class="my-5" >Rebar Reinforcement</h2>
+        <div style="" class="project-cont">
+            <%= image_tag('retaining-wall-rebars.jpeg', alt: 'Rebar Reinforcements inside set forms')%>
+        </div>
+    </div>
+    <br>
+    <div class="col-12 d-none">
+        <h2 class="my-5" >Rebar Reinforcement installation</h2>
+        <div style="" class="project-cont">
+            <%= image_tag('retaining-wall-rebars.jpeg', alt: 'Rebar installation')%>
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <h2 class="my-5" >Project Basement Walls</h2>
+        <div style="" class="project-cont">
+            <%= image_tag('retaining-wall-outside-tall.jpeg', alt: 'Tall wall project')%>
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <h2 class="my-5" >Project Featuring Tall Walls</h2>
+        <div style="" class="project-cont">
+            <%= image_tag('retaining-wall-straight.jpeg', alt: 'Straight Retaining wall')%>
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <h2 class="my-5">Poured Wall Corner</h2>
+        <div style="" class="project-cont">
+            <%= image_tag('retaining-wall-corner-nobg.png', alt: 'Retaining Wall Corner Poured')%>
+        </div>
+    </div>
+
+    <%= link_to 'Home', home_index_url %>
+    <%# <%= link_to :back %>
+</div>
+
+<style>
+    .project-cont{
+        overflow-x: scroll; 
+        /* min-height: 150px; */
+    /* min-width: 150px; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* display: table-cell; */
+    vertical-align: middle;
+    }
+    .project-cont > img {
+        width: 100%;
+    }
+</style>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: { users: 'users',
     confirmations: 'devise/confirmations', sign_up_create: 'home'
   }
@@ -13,8 +14,10 @@ Rails.application.routes.draw do
   end
 
 root 'home#index'
-get 'home/about', to: 'home#about'
+get 'home/about'
+# , to: 'home#about'
 get 'home/our_mission'
+get 'home/gallery'
   
 devise_scope :user do
   get "/users/sign_out" => "devise/sessions#destroy"

@@ -18,22 +18,22 @@
 
   <div class="field">
     <%= f.label :street_number_and_name %>
-    <%= f.text_field :street_name, required: true, class: 'form-control' %>
+    <%= f.text_field :street_name, required: true, class: '' %>
   </div>
   
   <div class="field">
     <%= f.label :project_location_city %>
-    <%= f.text_field  :city, required: true, class:'form-control', value: 'Hot Springs' %>
+    <%= f.text_field  :city, required: true, class:'', value: 'Hot Springs' %>
   </div>
 
   <div class="field">
     <%= f.label :project_location_state %>
-    <%= f.text_field  :state, required: true, class:'form-control', value: 'Arkansas' %>
+    <%= f.text_field  :state, required: true, class:'', value: 'Arkansas' %>
   </div>
 
   <div class="field">
     <%= f.label :project_location_zip_code%>
-    <%= f.number_field :zip_code%>
+    <%= f.number_field :zip_code, value:'71901' %>
   </div>
 
   <div class="field">
@@ -54,12 +54,12 @@
   </div>
   <div class="field">
     <%= f.label :desired_start_date%>
-    <p class="subtitle" style="width: auto; color: black;">(when would you like this project to be started ?) </p>
+    <p class="subtitle" style="width: auto; color: black;">(Optional) </p>
     <%= f.date_field  :desired_start_date%>
   </div>
    <div class="field">
     <%= f.label :desired_completion_date%>
-    <p class="subtitle" style="width: auto; color: black;">(when would you like this project to be completed?) </p>
+    <p class="subtitle" style="width: auto; color: black;">(Optional) </p>
     <%= f.date_field :desired_completion_date%>
   </div>
 
@@ -74,4 +74,4 @@
 
 <%# link_to 'Show', @project,  %>
 
-<%= link_to 'Back'  %>
+<%= link_to 'Back', :back  %>

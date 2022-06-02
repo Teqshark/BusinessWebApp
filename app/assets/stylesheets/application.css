@@ -52,6 +52,7 @@
   /* background: gray; */
   /* border: 4px dashed green; */
   display: flex;
+  color: var(--platinum);
   flex-direction: column;
   align-items: center;
   justify-items: center;
@@ -426,7 +427,7 @@ form a:hover {
 }
 .actions > input {
   /* display:  */
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: var(--primary);
 
   /* border: 5px solid salmon; */

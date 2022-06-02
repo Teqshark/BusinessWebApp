@@ -18,7 +18,10 @@ class DashboardController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show 
-    @project = Project.find(params[:id])
+    # @project = Project.find(params[:id])
+    @projects = Project.all 
+    puts @project
+    @project = @projects.find(params[:id])
     # render json: @project.to_json(include: [:user, :projct])
   end
 
@@ -83,7 +86,12 @@ class DashboardController < ApplicationController
       flash.now[:alert] = "warning: project was not saved"
       render 'index'
     end
-    flash.now["notice"] = "Test notice"
+
+    rescue 
+      ActiveRecord::NestedAttributes::TooManyRecords
+      flash.now[:error] = 'you have reached the 10 project limit'
+      flash.now[:notice] = 'delete a project before you try to add another project'
+      flash.now["notice"] = "Test notice"
 
     # not working didn't no user_projects_path and //no :id provided when ran. //becaue this is not projectsController?? its dashboardController
     # respond_to do |format|
@@ -108,6 +116,10 @@ class DashboardController < ApplicationController
       flash.now[:notice] = "project could not be saved"
       redirect_to :back
     end
+  
+    rescue ActiveRecord::NestedAttributes::TooManyRecords
+    flash.now[:error] = 'you have reached the 10 project limit'
+    flash.now[:notice] = 'delete a project before you try to add another project'
   end
 
   # DELETE /posts/1
