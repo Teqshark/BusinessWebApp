@@ -5,8 +5,8 @@
   <%# @sign_up_create.errors.full_messages.first if @sign_up_create.errors.any? if @sign_up_create.errors? %>   
     <% if @sign_up_create %>
       <%# <p>devise/shared/error_messages </p> %>
-      <% render "devise/shared/error_messages", resource: @sign_up_create %>
       <% if @sign_up_create.errors%>
+      <% render "devise/shared/error_messages", resource: @sign_up_create %>
         <% if @sign_up_create.errors.any?%>
         <%# <h2> %>
         <%# Input errors: %>

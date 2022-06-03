@@ -1,4 +1,4 @@
-<div class="d-flex flex-column" style="margin-top: 100px; margin-bottom: 6em;">
+<div class="d-flex flex-column col-12" style="margin-top: 100px; margin-bottom: 6em;">
     <div class="cost-top ">
     <h1 class="cost-title">Reinforced Concrete Retaining Wall Cost </h1>
     <h2>(With footer already poured)</h2>
@@ -8,7 +8,7 @@
     <div class="cost-bottom">
         
         <h3 class="top-float">Starting From</h3>
-        <h1 class="top-float" >$7.50 / ft ^2</h1>
+        <h1 class="top-float" >$7.50 / ft²</h1>
         <%= link_to 'Schedule now', new_dashboard_url, class: 'new-project top-float' %>
         <span class="bubble first">20,000 psi strength</span>
         <span class="bubble second">Highest quality materials</span>
@@ -29,6 +29,7 @@
     z-index: 2;
 }
 .new-project {
+    
     display: block;
     margin: auto;
     font-size: xx-large;
@@ -38,6 +39,9 @@
     background-color: var(--onyx);
     border-radius: 8px;
     padding: 1em 2em;
+}
+.new-project:hover {
+text-decoration: none;
 }
 .cost-top {
     display: flex;

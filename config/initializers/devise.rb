@@ -27,6 +27,7 @@ Devise.setup do |config|
   config.mailer_sender = 'seguraretainingwalls@mail.com'
 
   # Configure the class responsible to send e-mails.
+  config.mailer = 'UserMailer'
   # config.mailer = 'Devise::Mailer'
 
   # Configure the parent class responsible to send e-mails.

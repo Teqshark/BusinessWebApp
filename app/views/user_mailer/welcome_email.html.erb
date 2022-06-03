@@ -4,7 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to seguraconstruction.com, <%= @user.first_name %></h1>
+    <h1>Welcome to <%= url %>, <%= @user.first_name %></h1>
     <h2>Commercial and Residential Poured in place retaining walls. 
     <h3>building foundation walls</h3>
     <h3>basement walls</h3>
@@ -14,7 +14,7 @@
       your user email is: <%= @user.email %>.<br>
     </p>
     <p>
-      To login to the web app, just follow this link: <%= @url %>.
+      To login to the web app, just follow this link: <%= @loginurl %>.
       To get started create a project by logging in and visiting your dashboard. 
 
       </p>
@@ -26,9 +26,9 @@
     </p>
 
     
-    <p>Thanks for joining and have a great day!</p>
+    <p>Thanks for joining we look forward to working with you!</p>
     <br>
     <br>
-    <p>Segura & Co</p>
+    <b>Segura & Co</b>
   </body>
 </html>

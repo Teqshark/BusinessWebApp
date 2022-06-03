@@ -23,6 +23,11 @@ class User < ApplicationRecord
 
   validates :email, :first_name, :last_name, :password,  :presence => true
 
+  after_create :welcome_email
+  def welcome_email
+    UserMailer.welcome_email(self).deliver
+  end
+
   def full_name 
     "#{first_name} #{last_name}"
   end

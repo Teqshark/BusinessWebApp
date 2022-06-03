@@ -2,10 +2,14 @@ Rails.application.routes.draw do
 
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users, controllers: { users: 'users',
+  devise_for :users, controllers: {
     confirmations: 'devise/confirmations', sign_up_create: 'home'
   }
-  
+
+  # to verride registrations controller 
+  # devise_for :users, controllers: {registrations: 'users/registrations',
+  #   confirmations: 'devise/confirmations', sign_up_create: 'home'
+  # }
   resources :dashboard
   resources :home, only: [:index, :our_mission, :about]
   
@@ -27,8 +31,8 @@ end
   # post "/dashboard", to: "sign_up_create#update"
 
 
-
-  get '/users', to: 'users#index'
+  #not using /users route
+  # get '/users', to: 'users#index'
   # devise_for :users, controllers: {sessions: 'devise/sessions', users: 'users'}
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -42,7 +46,8 @@ end
   # get '/users/sign_up'
 
   # new devise registrations//missing controller?
-  get 'devise/registrations/index'
+  # registration page route?
+  # get 'devise/registrations/index'
 
   # get 'devise/registrations#new'
   # (.:format) 
@@ -55,12 +60,12 @@ end
   # post 'dashboard/create'
   # post 'dashboard/update',  to 'dashboard#update'
 
-
-  get 'users/index'
+  # not using users page
+  # get 'users/index'
 
   resources :sign_up_create
   
-  post "/signupcreate", to: "sign_up_create#create"
+  # post "/signupcreate", to: "sign_up_create#create"
 
   # resdaer
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
