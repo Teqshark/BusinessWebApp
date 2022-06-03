@@ -1,6 +1,7 @@
 class Project < ApplicationRecord
   belongs_to :user
   
+  attr_accessor :street_name
   validates_presence_of :length, :height, :width, :zip_code, :street_name, :city, :state 
   # validates_numericality_of :length, :height, :width
   validates :zip_code, numericality: { in: 71862..72306 }

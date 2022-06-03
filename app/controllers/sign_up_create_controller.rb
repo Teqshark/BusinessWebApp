@@ -4,9 +4,9 @@ class SignUpCreateController < ApplicationController
   
   
 
-  # def index 
-  #   render :new
-  # end
+  def index 
+    render :new
+  end
 
   def new 
     @sign_up_create |= SignUpCreate.new
@@ -47,7 +47,7 @@ class SignUpCreateController < ApplicationController
     end
   end
   def sign_up_create_params 
-    params.require(:user).permit(:email, :first_name, :last_name, :phone_number, :password, :terms, :length, :height, :width, :street_name, :city, :state, :zip_code, :desired_start_date, :desired_completion_date, :remember_me, :terms)
+    params.permit(:email, :first_name, :last_name, :phone_number, :password, :terms, :length, :height, :width, :street_name, :city, :state, :zip_code, :desired_start_date, :desired_completion_date, :remember_me, :terms)
     
   end
   # private

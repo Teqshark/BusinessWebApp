@@ -35,8 +35,8 @@
         </div>
              
       </div>
-
-      <%= link_to 'Create a Project & get a free estimate', new_dashboard_url, class: 'card-button button-primary' %> 
+      <h3 style="margin: 2rem 2em;">add a project and get a free estimate in your email</h3>
+      <%= link_to 'Add a Project', new_dashboard_url, class: 'add-button' %> 
 
       <%# alt link %>
       <%# route doesnt work projectController not initialized 
@@ -95,19 +95,22 @@
                   <%= project.full_address %>
               </li>
                 <br>
-            
+              <table>
               <tr>
-              <td><%= link_to 'Show Project', dashboard_url(project) %></td>
-              <td><%= link_to 'Edit Project', edit_dashboard_url(project) %></td>
-        
+              <td><%# link_to 'Show Project', dashboard_url(project), class:'show-button' %>
+              
+              <%= link_to 'Edit', edit_dashboard_url(project), class:'edit-button' %></td>
+              
+              
               <td>
-              <%= link_to 'Delete', dashboard_path(project), method: :delete, data: {confirm: "Are you sure"} %>
-              <%# link_to 'Delete Project', dashboard_index_path(project), :controller => 'dashboard', :method => :delete, :confirm => "Are you sure?" %>
-              <%# link_to 'Delete', 
-      { :controller => 'dashboard', :action => 'destroy', :id => @project.id }, # your URL details
-      { :confirm => 'Are you sure?', :method => :delete, :remote => true}  # your link options %>
-              <%# link_to 'Delete this project', [@user, project], :controller => 'dashboard_path',method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <%= link_to 'Delete', dashboard_path(project), method: :delete, data: {confirm: "Are you sure"}, class:'edit-button' %>
+              
+              
+
               </tr>
+              </table>
+              <br>
+              <br>
             <% end %>
           </ul>
 
@@ -117,6 +120,54 @@
 
         </div>
   <style>
+
+  .add-button {
+    display: block;
+    position: relative;
+    padding: 1rem 2rem;
+    margin: auto;
+    width: 9rem;
+    color: white;
+    background-color: var(--primary);
+    margin: 2em auto;
+  }
+  .edit-button {
+    display: block;
+    position: relative;
+    padding: 1rem 2rem;
+    /* margin: auto; */
+    width: 9rem;
+    color: white;
+    background-color: var(--primary);
+    margin: 1em auto;
+  }
+    .show-button {
+    display: block;
+    position: relative;
+    /* padding: 1rem 2rem; */
+    height: 6rem;
+    margin: auto;
+    width: 9rem;
+    color: white;
+    background-color: var(--primary);
+    /* margin: 1em auto; */
+  }
+    .delete-button {
+    /* display: inline-block; */
+    display: block;
+    position: relative;
+    /* padding: 1rem 2rem; */
+    margin: auto;
+    height: 6rem;
+    width: 9rem;
+    color: white;
+    background-color: var(--primary);
+    /* margin: 1em auto; */
+    /* margin: auto; */
+  }
+  .edit-button:hover {
+    text-decoration: none;
+  }
   .projects-list {
   counter-reset: li; 
   list-style: none; 
