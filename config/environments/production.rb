@@ -46,7 +46,7 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Include generic and useful information about system operation, but avoid logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII).
@@ -69,6 +69,22 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
 
+  require 'tlsmail'    
+Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.perform_deliveries = true
+ActionMailer::Base.raise_delivery_errors = true
+ActionMailer::Base.smtp_settings = {
+  :enable_starttls_auto => true,  
+  :address            => 'smtp.gmail.com',
+  :port               => 587,
+  :tls                  => true,
+  :domain             => 'gmail.com', #you can also use google.com
+  :authentication     => :plain,
+  :user_name          => ENV['GMAIL_USERNAME'],
+  :password           => ENV['GMAIL_PASSWORD']
+}
   # config.action_mailer_host 
   # config.action_mailer.default_url_options = { host: 'accounts@sigmas.com', port: 3000 }
 

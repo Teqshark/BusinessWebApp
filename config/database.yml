@@ -18,8 +18,8 @@ default: &default
   timeout: 5000
   encoding: unicode
   database: wallstreetconstruction_development 
-  username: wallstreetconstruction
-  password: 'rubyAppPass'
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development:
   <<: *default
@@ -28,8 +28,8 @@ development:
   port: 5432
   # scoket: /tmp/.S.pgsql.3300
   # pool: 5
-  username: wallstreetconstruction
-  password: 'rubyAppPass'
+  # username: wallstreetconstruction
+  # password: 'rubyAppPass'
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -41,5 +41,5 @@ test:
 production:
   <<: *default
   database: wallstreetconstruction_production
-  username: wallstreetconstruction
-  password: 'rubyAppPass'
+  # username: wallstreetconstruction
+  # password: 'rubyAppPass'
