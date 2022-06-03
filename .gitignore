@@ -41,3 +41,5 @@ yarn-debug.log*
 
 #ignore DS_Store from Mac
 .DS_Store
+
+dummyscript
