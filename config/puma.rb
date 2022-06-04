@@ -24,8 +24,11 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
 const PORT = process.env.PORT || 6565;
+console.log('logging PORT VAR');
+console.log(PORT);
 app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+    console.log('in app.listen function')
+  console.log(`Server listening on ${PORT}`)
 });
 # app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
 #     console.log("Server is running.");
@@ -59,8 +62,8 @@ workers Integer(ENV['WEB_CONCURRENCY'] || 2)
 preload_app!
 
 
-# FROM HEROKU NOT NEEDED USING RAILS 6
-on_worker_boot do
+
+  on_worker_boot do
     # Worker specific setup for Rails 4.1+
     # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
     ActiveRecord::Base.establish_connection
