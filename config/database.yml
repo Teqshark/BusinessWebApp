@@ -42,4 +42,5 @@ production:
   <<: *default
   database: wallstreetconstruction_production
   # username: wallstreetconstruction
-  # password: 'rubyAppPass'
+  # password: 'hjk'
+  # password not used here set in default 

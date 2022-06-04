@@ -151,18 +151,29 @@ grain transfer for a smooth finish after removal.
       var imgCont = document.getElementById("wall-img");
       console.log(imgCont)
       console.log('imgCont logged');
+    
+
       var imgContParent = imgCont.parentNode;
       console.log(imgContParent);    
-      var imgWallFront = "assets/no-bg-elements/wall-front-nobg.png"
-      var imgWallFrontFull = 'assets/no-bg-elements/wall-front-full-nobg.png';
-      var imgWallAngleFront = 'assets/no-bg-elements/wall-front-angle-nobg.png';
-      var imgWallLabeled = 'assets/no-bg-elements/wall-labeled-nobg.png';
-      var imgWallSide = 'assets/no-bg-elements/wall-side-nobg.png';
-      var imgWallSideTop = 'assets/no-bg-elements/wall-side-nobg.png';
-      var imgWallBackDirtLeft = 'assets/no-bg-elements/wall-rear-left-dirt-nobg.png';
-      var imgWallBackDirtRight ='assets/no-bg-elements/wall-rear-right-dirt-nobg.png';
+      var imgWallFront = '<%= asset_path 'no-bg-elements/wall-front-nobg.png' %>';
+
+      var imgWallFrontFull = '<%= asset_path 'no-bg-elements/wall-front-full-nobg.png' %>';
+
+      var imgWallAngleFront = '<%= asset_path 'no-bg-elements/wall-front-angle-nobg.png' %>';
+
+      var imgWallLabeled = '<%= asset_path 'no-bg-elements/wall-labeled-nobg.png' %>';
+
+      // var imgWallSide = 'assets/no-bg-elements/wall-side-nobg.png';
+      var imgWallSide = '<%= asset_path 'no-bg-elements/wall-side-nobg.png' %>';
+
+      var imgWallSideTop = '<%= asset_path 'no-bg-elements/wall-side-nobg.png' %>';
+
+      var imgWallBackDirtLeft = '<%= asset_path 'no-bg-elements/wall-rear-left-dirt-nobg.png' %>';
+
+      var imgWallBackDirtRight ='<%= asset_path 'no-bg-elements/wall-rear-right-dirt-nobg.png' %>';
+
       var imgWallBackRight = 
-      'assets/no-bg-elements/wall-rear-right-nobg.png';
+      '<%= asset_path 'no-bg-elements/wall-rear-right-nobg.png'%>';
 
 
       //   n 3.1 you just get rid of the 'images' part of the path. So an image that lives in /assets/images/example.png will actually be accessible in a get request at this url - /assets/example.png
