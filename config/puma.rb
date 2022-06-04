@@ -26,10 +26,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 const PORT = process.env.PORT || 6565;
 console.log('logging PORT VAR');
 console.log(PORT);
-app.listen(PORT, () => {
-    console.log('in app.listen function')
-  console.log(`Server listening on ${PORT}`)
-});
+app.listen(PORT );
 # app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
 #     console.log("Server is running.");
 #   });
