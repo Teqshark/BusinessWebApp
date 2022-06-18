@@ -727,7 +727,7 @@ pre code {
   overflow-y: scroll;
 }
 
-.container {
+.container-bs {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -736,25 +736,25 @@ pre code {
 }
 
 @media (min-width: 576px) {
-  .container {
+  .container-bs {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container-bs {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container-bs {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .container-bs {
     max-width: 1140px;
   }
 }
@@ -4657,7 +4657,7 @@ input[type="button"].btn-block {
   /* padding: 0.5rem 1rem; */
 }
 
-.navbar > .container,
+.navbar > .container-bs,
 .navbar > .container-fluid {
   display: -ms-flexbox;
   display: flex;
@@ -5061,7 +5061,7 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
-.card {
+/* .card {
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -5073,7 +5073,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-}
+} */
 
 .card > hr {
   margin-right: 0;

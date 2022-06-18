@@ -1,125 +1,83 @@
-<%# <h1>Dashboard#index</h1> %>
-<h1 class="mt-5 mb-3">Welcome to your dashboard <%= current_user.full_name%>!</h1>
-<% if current_user.admin?%>
-         <h1>Welcome Admin!
 
-        <% else %>
 
-        <h2>Welcome back user </h2>
-       
 
-        <% end %>
 
-<%# <p>Find me in app/views/dashboard/index.html.erb</p> %>
-      <div class="col-12">
-
-        <div class="col-2 float-right position-absolute d-none" style="right: 0;">
-          <li class="nav-item d-none">
-            <%= link_to 'Home', root_path, class:"nav-link" %>
-          </li>
-          
-          <li class="nav-item d-flex flex-row">
-            <%= link_to edit_user_registration_path,class:"nav-link" do %>
-              <%= image_tag 'icons/settings-64x64.png', class: 'sidebar-icon', size: '' %>
-              <%# <h4> Edit Profile</h4> %>
-            <%end%>
-            <h4 class="d-inline-flex"> Edit Profile </h4>
-
-          </li>
-          <li class="nav-item d-none">
-            <%= link_to 'Logout', destroy_user_session_path, method:"delete", class:"nav-link", id: "logout" %>
-
-          </li>
-        
-   
-        </div>
+<div class="cont">
+  <%# <h1>Dashboard#index</h1> %>
+  <h2 class="mt-5">Welcome to your dashboard <%= current_user.full_name%>!</h2>
+  <% if current_user.admin?%>
+    <h2>Welcome Admin!</h2>
+  <% end %> 
+  <h4 style="margin: 2rem 2em;">add a project and get a free estimate in your email</h4>
+  <%= link_to 'Add a Project', new_dashboard_url, class: 'add-button' %> 
+  <h1><%= current_user.first_name %>'s projects:</h1>
              
-      </div>
-      <h3 style="margin: 2rem 2em;">add a project and get a free estimate in your email</h3>
-      <%= link_to 'Add a Project', new_dashboard_url, class: 'add-button' %> 
-
-      <%# alt link %>
-      <%# route doesnt work projectController not initialized 
-      path uses projectController  %>
-  
-      <div class="col-md-4 m-auto">
-        <%# <h3>projects list: </h3> %>
-           <%# <h4>projects: </h4> %>
-          <%# @projects  %>
-          <%# <h5>projects loop </h5> %>
+  <h2>user id: <%= current_user.id%></h2>
           
-          <ul class="projects-list">
-          <h1><%= current_user.first_name %>'s projects:</h1>
-            <% @projects.each do |project| %>
-              <li class="d-none">
-                <h2>project user_id: <%= project.user_id%></h2>
-              </li>
-              <li class="">
-                <h2>project id:<%= project.id%></h2>
-              </li>
-
-              <li>
-              <h2>project creator's name: <%= project.user.full_name %></h2>
-              </li>
-              <li>
-              <h2>project length: <%= project.length %> ft.</h2>
-              <li>
-              <h2>project height: <%= project.height %> ft.</h2>
-               </li>
-              </li>
-              <li class="">
-              <h2>project width: <%= project.width %> ft.</h2>
-              </li>
-             
-               <li class="">
-              <h2>desired start date: 
-               <% if project.desired_start_date %>
-                <%= project.desired_start_date %>
-                <%else %>
-                  <%= 'no date selected '%>
+  <div class="container-bs">
+    <table>
+      <thead>
+        <tr>
+          <th>project id</th>
+            <%# <th>owner's name</th> %>
+          <th>Length (ft)</th>
+          <th>Height (ft)</th>
+          <th>Width (ft)</th>
+          <th>Location</th>
+          <th>Desired Start Date</th>
+          <th>Desired Completion Date</th>
+          <th>Edit</th>
+          <th style="border: 2px dashed white;">Delete</th>
+        </tr>
+      </thead> 
+      <tbody class="tbody">
+        <% @projects.each do |project| %>
+          <tr>
+            <td> 
+              <%= project.id%>
+            </td>
+            <td>
+              <%= project. length%>
+            </td>
+            <td> 
+              <%= project.height %> 
+            </td>
+            <td>
+              <%= project.width %>
+            </td>
+            <td>
+              <%= project.street_name %> <%=project.city %>
+            </td>
+            <td>
+              <% if project.desired_start_date %>
+              <%= project.desired_start_date %>
+              <%else %>
+              <%= 'no date selected '%>
               <% end %>
-                </h2>
-              </li>
-              <%# if project.desired_start_date %>
-               <li class="">
-              <h2>desired completion date:
-               <% if project.desired_completion_date %>
+            </td>
+            <td>
+              <% if project.desired_completion_date %>
                 <%= project.desired_completion_date %>
-                <%else %>
-                  <%= 'no date selected '%>
+              <%else %>
+                <%= 'no date selected '%>
               <% end %> 
-              </h2>
-              </li>
-              <li class="">
-              <h2>project address: </h2>
-                  <%= project.full_address %>
-              </li>
-                <br>
-              <table>
-              <tr>
-              <td><%# link_to 'Show Project', dashboard_url(project), class:'show-button' %>
-              
-              <%= link_to 'Edit', edit_dashboard_url(project), class:'edit-button' %></td>
-              
-              
-              <td>
+            </td>
+            <td>
+              <%= link_to 'Edit', edit_dashboard_url(project), class:'edit-button' %>
+            </td>
+            <td>
               <%= link_to 'Delete', dashboard_path(project), method: :delete, data: {confirm: "Are you sure"}, class:'edit-button' %>
-              
-              
-
-              </tr>
-              </table>
-              <br>
-              <br>
-            <% end %>
-          </ul>
-
-          <h3>end project list </h3>
-           <%# link_to 'edit project', edit_dashboard(@user, project) %>
-          <%# link_to 'projects', project_index_url %>
-
-        </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>              
+<%# </div> %>
+<%# leave last div open so it overlaps with footer copyright partial  %>
   <style>
+
+
 
   .add-button {
     display: block;
@@ -130,6 +88,15 @@
     color: white;
     background-color: var(--primary);
     margin: 2em auto;
+  }
+  .add-button:hover {
+    text-decoration: none; 
+    /* color: black; */
+    border: 4px dashed red;
+     -webkit-filter: brightness(1.3);
+  -moz-filter: brightness(1.3);
+  -o-filter: brightness(1.3);
+  -ms-filter: brightness(1.3);
   }
   .edit-button {
     display: block;
@@ -152,6 +119,12 @@
     background-color: var(--primary);
     /* margin: 1em auto; */
   }
+  .delete-button:hover {
+     -webkit-filter: brightness(1.3);
+  -moz-filter: brightness(1.3);
+  -o-filter: brightness(1.3);
+  -ms-filter: brightness(1.3);
+  }
     .delete-button {
     /* display: inline-block; */
     display: block;
@@ -166,45 +139,12 @@
     /* margin: auto; */
   }
   .edit-button:hover {
-    text-decoration: none;
-  }
-  .projects-list {
-  counter-reset: li; 
-  list-style: none; 
-  padding: 0;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
+     -webkit-filter: brightness(1.3);
+  -moz-filter: brightness(1.3);
+  -o-filter: brightness(1.3);
+  -ms-filter: brightness(1.3);
+    /* text-decoration: none; */
+  } 
 
-.projects-list li {
-  position: relative;
-  display: block;
-  padding: .4em .4em .4em 2em;
-  margin: .5em 0;
-  background: #DAD2CA;
-  color: #444;
-  text-decoration: none;
-  border-radius: .3em;
-  transition: .3s ease-out;
-}
 
-.projects-lists li:hover { background: #E9E4E0; }
-.projects-lists li:before { transform: rotate(360deg); }
-.projects-lists li:before {
-  content: counter(li);
-  counter-increment: li;
-  position: absolute;
-  left: -1.3em;
-  top: 50%;
-  margin-top: -1.3em;
-  background: #f9dd94;
-  height: 2em;
-  width: 2em;
-  line-height: 2em;
-  border: .3em solid #fff;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 2em;
-  transition: all .3s ease-out;
-}
-    
   </style>

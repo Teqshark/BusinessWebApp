@@ -73,7 +73,8 @@ sort by
 
   <div class="field">
     <%= f.label :length_of_retaining_wall%>
-    <span class="subtitle" style="width: auto; color: black;">(in Feet) </span>
+    
+    <i class="" >(in Feet) </i>
     <%= f.number_field :length%>
   </div>
 
@@ -83,18 +84,21 @@ sort by
   </div>
 
   <div class="field">
-    <%= f.label :average_width_in_inches%>
-    <p class="subtitle" style="width: auto; color: black;">(ususally 12 inches wide) </p>
+    <%= f.label :average_width_in_inches %>
+    
+    <i class="" >(ususally 12 inches wide) </i>
     <%= f.number_field  :width%>
   </div>
   <div class="field">
     <%= f.label :desired_start_date%>
-    <p class="subtitle" style="width: auto; color: black;">(Optional) </p>
+    
+    <i class="" >(Optional) </i>
     <%= f.date_field  :desired_start_date%>
   </div>
    <div class="field">
     <%= f.label :desired_completion_date%>
-    <p class="subtitle" style="width: auto; color: black;">(Optional) </p>
+    
+    <i >(Optional) </i>
     <%= f.date_field :desired_completion_date%>
   </div>
 

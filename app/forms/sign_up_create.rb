@@ -18,29 +18,29 @@ class SignUpCreate
     return false if invalid?
     ActiveRecord::Base.transaction do
       @user = User.create!(email: email, first_name: first_name, last_name: last_name, phone_number: phone_number, password: password)
-       puts ' errors user :
-      from user 
-      errors:
-      '
-      puts @maximum_password_length
-      puts @user 
-      puts @user.errors 
-      puts @user.invalid?
+      #  puts ' errors user :
+      # from user 
+      # errors:
+      # '
+      # puts @maximum_password_length
+      # puts @user 
+      # puts @user.errors 
+      # puts @user.invalid?
       add_errors(@user.errors) if @user.invalid?
 
    
       # @Useruser.projects.create!(zip_code: zip_code, length: length, height: height, width: width)
       @project = Project.create(user_id: @user.id, steet_name: street_name, city: city, state: state, zip_code: zip_code, length: length, height: height, width: width) 
-           puts @project 
-      puts @project.errors 
-      puts @project.invalid?
+          #  puts @project 
+      # puts @project.errors 
+      # puts @project.invalid?
       
       # puts add_errors()
-      puts add_errors(@project.errors)
+      # puts add_errors(@project.errors)
       
       add_errors(@project.errors) if @project.invalid?
-      puts @project.errors.details 
-      puts @project.errors.messages 
+      # puts @project.errors.details 
+      # puts @project.errors.messages 
 
       @project.save!
     end

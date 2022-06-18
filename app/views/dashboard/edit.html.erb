@@ -1,4 +1,6 @@
-<h1> Editing Project</h1>
+
+
+<h1 class="pt-5 pb-3"> Editing Project</h1>
 
 <%# not using shared bc form we dont have projectController set up  %>
 <%# render 'shared/project', project: @project %>
@@ -14,7 +16,7 @@
     </div>
   <%end%>
 
-<div>Questions</div>
+<%# <div>Questions</div> %>
 
   <div class="field">
     <%= f.label :street_number_and_name %>
@@ -38,28 +40,35 @@
 
   <div class="field">
     <%= f.label :length_of_retaining_wall%>
-    <span class="subtitle" style="width: auto; color: black;">(in Feet) </span>
+    
+    <i >(in Feet) </i>
     <%= f.number_field :length%>
   </div>
 
   <div class="field">
-    <%= f.label :average_height_in_feet %>
+    <%= f.label :average_height %>
+    
+    <i>(in feet)</i>
     <%= f.number_field  :height%>
   </div>
 
   <div class="field">
-    <%= f.label :average_width_in_inches%>
-    <p class="subtitle" style="width: auto; color: black;">(ususally 12 inches wide) </p>
+    <%= f.label :average_width %>
+    
+    <i>(in inches <br/> 
+    ususally 12 inches wide) </i>
     <%= f.number_field  :width%>
   </div>
   <div class="field">
     <%= f.label :desired_start_date%>
-    <p class="subtitle" style="width: auto; color: black;">(Optional) </p>
+    
+    <i>(Optional) </i>
     <%= f.date_field  :desired_start_date%>
   </div>
    <div class="field">
     <%= f.label :desired_completion_date%>
-    <p class="subtitle" style="width: auto; color: black;">(Optional) </p>
+    
+    <i>(Optional) </i>
     <%= f.date_field :desired_completion_date%>
   </div>
 
@@ -73,5 +82,5 @@
   <% end%>
 
 <%# link_to 'Show', @project,  %>
-
+<br>
 <%= link_to 'Back', :back  %>

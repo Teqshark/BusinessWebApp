@@ -20,7 +20,7 @@ class DashboardController < ApplicationController
   def show 
     # @project = Project.find(params[:id])
     @projects = Project.all 
-    puts @project
+    # puts @project
     @project = @projects.find(params[:id])
     # render json: @project.to_json(include: [:user, :projct])
   end
@@ -52,12 +52,12 @@ class DashboardController < ApplicationController
     # @user
     # projects = projects.find(:id)
       # project = projects.find(id)
-      puts :id 
-      puts 'logged id'
+      # puts :id 
+      # puts 'logged id'
       @projects = Project.all 
-      puts @project
+      # puts @project
       @project = @projects.find(params[:id])
-      puts @project
+      # puts @project
 
       
       # console.log(:id);
@@ -72,10 +72,10 @@ class DashboardController < ApplicationController
     @project = @user.projects.build(project_params)
     # build vs create ; create is build and save combined; '.save' below
 
-    puts 'printing project object '
-    puts @project 
-    puts 'printing project errors'
-    puts @project.errors.inspect
+    # puts 'printing project object '
+    # puts @project 
+    # puts 'printing project errors'
+    # puts @project.errors.inspect
 
     if @project.save 
       puts 'project saved'

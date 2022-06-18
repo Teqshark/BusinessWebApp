@@ -2,8 +2,8 @@
   <p class="partial-title">Create a project and an account in one step</p>
     <%# <%= form_with(url: '/signup') do |f| %>
   <%= form_with model: @sign_up_create, url: '/sign_up_create#create' do |f| %>
-    <% puts '@sign_up_create'%>
-    <% puts @sign_up_create%>
+    <%# puts '@sign_up_create' %>
+    <%# puts @sign_up_create%>
   <%# @sign_up_create.errors.full_messages.first if @sign_up_create.errors.any? if @sign_up_create.errors? %>   
     <% if @sign_up_create %>
       <%# <p>devise/shared/error_messages </p> %>
@@ -138,13 +138,13 @@
     </div>
     <div class="field">
     <%= f.label :desired_start_date%>
-    <p class="subtitle" style="width: auto; color: black;"> When would you like this project to be started ?(Optiona; in case you have a strict timeline.  ) </p>
+    <i class="subtitle" > (Optional  in case you have a strict timeline.  ) </i>
     <%= f.date_field  :desired_start_date%>
     </div>
 
    <div class="field">
     <%= f.label :desired_completion_date%>
-    <p class="subtitle" style="width: auto; color: black;">When would you like this project to be completed? \n (Optiona; in case you have a strict timeline.) </p>
+    <i class="">(Optional) </i>
     <%= f.date_field :desired_completion_date%>
   </div>
 
@@ -160,7 +160,7 @@
     </div>
   <% end %> 
 </div>
-
+<br>
 <script>
 
 var termsModal = document.getElementById("termsModal");

@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
   accepts_nested_attributes_for :projects, limit: 10
 
-  # validates :terms_of_service, :acceptance => true
+  validates :terms_of_service, :acceptance => true
 
   validates :password, :confirmation => true
   validates :password_confirmation, :presence => true
