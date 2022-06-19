@@ -7,13 +7,13 @@
       
     
         <% if !user_signed_in? %>
-            <span class="top-buttons position-absolute mt-5 ml-5" style="z-index: 30;"> 
+            <span class="top-buttons position-absolute " style="z-index: 30;"> 
           <%# link_to 'Sign in', new_user_session_path %>
  
           <%# <h4 class="d-none"> Create a free account first or log in to create a project and get an estimate</h4> %>
           <%# render 'shared/sign_up_create'%>
           
-            <%= link_to 'Register', new_user_registration_path, class:"card__wish-list", style:"width: 12rem;" %>   
+            <%= link_to 'Register', new_user_registration_path, class:"card__wish-list card__wish-list--19", style:"" %>   
               </span>
               <% else %>
                 <%= phone_number_link("(587) 841-0708") %>
