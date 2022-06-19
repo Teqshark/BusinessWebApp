@@ -1,7 +1,7 @@
 
 <header class="main-head">
       <nav class="head-nav">
-        <div class="" 
+        <div class="sidebar-logo-cont" 
           style="">
           <a href="<%= root_path %>
           " >  
@@ -65,23 +65,23 @@
           <% end %>     
          
 
-          <li style="width: auto; height: 100%;" class="mobile-only">
+          <li class="mobile-only">
             <%= link_to root_path, class:'' do %>
               <%= image_tag("logo/gradient-logo-icon-50x50.png", class:'
-              mobile-logo', alt: "segura & company logo", size: '', :style => "padding: 0px 0px; position: relative; bottom: 0;") %>
+              mobile-logo', alt: "segura & company logo", size: '', :style => "") %>
             <% end %>
           </li>  
-          <li style="display: flex;">
+          <li style="">
             <%= link_to home_our_mission_url, class:'' do %>
               <%= image_tag("icons/concrete-color-soft-64x64.png", class:'
-              sidebar-icon', alt: "mission-icon", size: '', :style => "padding: 0px 0px; ") %>
+              sidebar-icon', alt: "mission-icon", size: '', :style => "") %>
               <h4  class="navbar-text">Our Mission</h4>
               <%# link_to 'Our mission', home_our_mission_url, class:"nav-link", style: ""%>
             <% end %>
           </li>  
           <li>   
             <a href="tel:13432212" >
-              <%= image_tag("icons/phone-call.png", class:'sidebar-icon', alt: "call/text now", size:"" , :style => "padding: 0px 0px;") %>
+              <%= image_tag("icons/phone-call.png", class:'sidebar-icon', alt: "call/text now", size:"" , :style => "") %>
 
               <h4  class="navbar-text">
               Call/Text
@@ -92,7 +92,7 @@
             <%# link_to home_our_mission_url, class:'' do %>
             <a class="button" href="mailto:seguraretainingwalls@gmail.com">
               <%= image_tag("icons/email-send-64x64.png", class:'
-            sidebar-icon', alt: "email-icon", size: '', :style => "padding: 0px 0px; ") %>
+            sidebar-icon', alt: "email-icon", size: '', :style => "") %>
             
             <h4  class="navbar-text">Email </h4>
             </a>
@@ -100,47 +100,47 @@
         </ul>
       </nav>
 </header> <!-- //main-head -->
-<div class="wrap-all-the-things d-none"></div>
+
 
 <script>
-// helper function t0 add styles to element
-function css(element, style) {
-    for (const property in style)
-        element.style[property] = style[property];
-}
+  // helper function t0 add styles to element
+  function css(element, style) {
+      for (const property in style)
+          element.style[property] = style[property];
+  }
 
-/*
+  /*
 
-const note = document.querySelector('.note');
-css(note, {
-    'background-color': 'yellow',
-    color: 'red'
-});
+  const note = document.querySelector('.note');
+  css(note, {
+      'background-color': 'yellow',
+      color: 'red'
+  });
 
-*/
-// function changeColor() {
-//     this.classList.toggle('red');
-//     this.classList.toggle('green');
-// }
+  */
+  // function changeColor() {
+  //     this.classList.toggle('red');
+  //     this.classList.toggle('green');
+  // }
 
-//  document.querySelector('#btn').addEventListener('mouseenter', changeColor);
-//  document.querySelector('#btn').addEventListener('mouseleave', changeColor );
+  //  document.querySelector('#btn').addEventListener('mouseenter', changeColor);
+  //  document.querySelector('#btn').addEventListener('mouseleave', changeColor );
 
-var sidenav = document.querySelector(".main-head");
+  var sidenav = document.querySelector(".main-head");
 
-function toggleSidenav() {
+  function toggleSidenav() {
 
-  // var firstP = document.getElementById("firstParagraph");
-  sidenav.id? sidenav.removeAttribute('id'): sidenav.setAttribute("id","widenav");
-    sidenav.id? console.log('id was set') : console.log('id was removed');
-    console.log(sidenav.id);
+    // var firstP = document.getElementById("firstParagraph");
+    sidenav.id? sidenav.removeAttribute('id'): sidenav.setAttribute("id","widenav");
+      sidenav.id? console.log('id was set') : console.log('id was removed');
+      console.log(sidenav.id);
 
 
-// firstP.id="newPracPara";
-// console.log(document.getElementById("newPracPara").id);
-  // document.getElementById('formId').submit();
- }
- sidenav.addEventListener('click', toggleSidenav);
+  // firstP.id="newPracPara";
+  // console.log(document.getElementById("newPracPara").id);
+    // document.getElementById('formId').submit();
+  }
+  sidenav.addEventListener('click', toggleSidenav);
 
  
 </script>

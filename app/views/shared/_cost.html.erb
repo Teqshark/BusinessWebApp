@@ -1,11 +1,11 @@
-<div class="d-flex flex-column col-12" style="margin-top: 100px; margin-bottom: 6em;">
-    <div class="cost-top ">
-    <h1 class="cost-title">Reinforced Concrete Retaining Wall Cost </h1>
+<div class="d-flex flex-column col-12 cost-partial" style="">
+    <div class="cost-top" style="">
+    <h1 class="cost-title"> Reinforced Concrete Retaining Wall Cost </h1>
     <h4>(With footer already poured)</h4>
-    <%= image_tag("no-bg-elements/wall-labeled-nobg.png", alt: "Reinforced Concrete Retaining Wall labeled illustration", class:"cost-image", :style=> "width: 100%") %>
+    <%= image_tag("no-bg-elements/wall-labeled-nobg.png", alt: "Reinforced Concrete Retaining Wall labeled illustration", class:"cost-image", :style=> "") %>
     <h2 class="cost-subtitle top-float" style="z-index: 20;">complete <br> solutions</h2>
     </div>
-    <div class="cost-bottom">
+    <div class="cost-bottom" style="">
         
         <h3 class="top-float">Starting From</h3>
         <h1 class="top-float" >$7.50 / ft²</h1>
@@ -17,11 +17,7 @@
 </div>
 
 <style>
-.cost-image {
-    width: 100%;
-    max-width: 800px;
-    
-}
+
 .top-float {
     z-index: 20;
 }
@@ -65,6 +61,9 @@ text-decoration: none;
     height: 350px;
     flex-direction: column;
     justify-content: center;
+    width: 90vw;
+    max-width: 600px;
+    margin: auto;
 }
 .bubble {
     z-index: 1;
@@ -75,7 +74,8 @@ text-decoration: none;
     border-radius: 50%;
     background-color: var(--primary);
     left: 0;
-    top: -25%;
+    /* transform: translateX(); */
+    top: -45%;
     display: flex;
     /* place items in column */
     flex-direction: column;
@@ -85,10 +85,10 @@ text-decoration: none;
     justify-content: center;
 }
 .second {
-    top: 25%;
+    top: 5%;
 }
 .third {
-    top: 75%
+    top: 55%;
 }
 .cost-title {
     font-size: 2em;
