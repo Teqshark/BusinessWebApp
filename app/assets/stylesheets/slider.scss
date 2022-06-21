@@ -1,3 +1,8 @@
+//
+//
+//
+//
+
 @font-face {
   font-family: "Euclid";
   src: url("Euclid-Circular-B-Regular.ttf") format("truetype");
@@ -75,20 +80,39 @@ a {
   }
 }
 
-// Colors
-$b1cd: #500033;
-$b1cl: #ff0077;
-$b2cd: #000050;
-$b2cl: #0033ff;
-$b3cd: #00501d;
-$b3cl: #00ff44;
-$b4cd: #554d00;
-$b4cl: #ff4e00;
-$b5cd: #300050;
-$b5cl: #8000ff;
+.mockclass {
+  color: #5680e9 #84ceeb #5ab9ea #c1c8e4 #8860d0 // #Effective Accent Colors
+    #faed26 #46344e #5a5560 #9d8d8f #9b786f // Vivid Blues and Orange
+    #10e7dc #0074e1 #1b9ce5 #6cdaee #f79e02;
+}
+// new Colors
+$b1cd: #5ab9ea;
+$b1cl: #84ceeb;
+$b2cd: #f97f51;
+$b2cl: #fea47f;
+$b3cd: #0074e1;
+$b3cl: #1b9ce5;
+$b4cd: #58b19f;
+$b4cl: #55e6c1;
+$b5cd: #f97f51;
+$b5cl: #fea47f;
 $black: #000;
 $white: #fff;
 $grey: #b5b4b4;
+// Colors
+// $b1cd: #500033;
+// $b1cl: #ff0077;
+// $b2cd: #000050;
+// $b2cl: #0033ff;
+// $b3cd: #00501d;
+// $b3cl: #00ff44;
+// $b4cd: #554d00;
+// $b4cl: #ff4e00;
+// $b5cd: #300050;
+// $b5cl: #8000ff;
+// $black: #000;
+// $white: #fff;
+// $grey: #b5b4b4;
 
 ////////// Mixin
 
@@ -136,7 +160,7 @@ html {
 // }
 
 .container {
-  margin-top: 10rem;
+  margin-top: 4rem;
   box-sizing: border-box;
   position: relative;
   height: 80vh;
@@ -145,8 +169,9 @@ html {
   overflow: hidden;
   border-radius: 5rem;
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 700px) {
     // border-radius: 0;
+    margin-top: 1rem;
   }
 
   @media only screen and (max-height: 450px) and (max-width: 900px) {
@@ -295,8 +320,9 @@ html {
       }
       p {
         z-index: 802;
-        font-size: calc(13px + 2vw);
+        // font-size: calc(13px + 2vw);
         line-height: calc(13px + 2.1vw);
+        font-size: clamp(12px, calc(0.4rem + 3.3333vw), 2rem);
 
         // border: 2px dashed pink;
         color: white;
@@ -536,14 +562,14 @@ html {
         border-radius: 3rem;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 1;
       }
 
       &::after {
-        // transform: translate(4rem, -1rem);
+        transform: translate(4rem, -1rem);
       }
       &::before {
-        // transform: translate(2rem, -2rem);
+        transform: translate(2rem, -2rem);
       }
     }
   }

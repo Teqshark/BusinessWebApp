@@ -18,47 +18,15 @@
 //   }
 // }\\
 // clean nd Energetic
-
-#5680E9
-#84CEEB
-#5AB9EA
-#C1C8E4
-#8860D0
-
-// #Effective Accent Colors 
-#FAED26
-#46344E
-#5A5560
-#9D8D8F
-#9B786F
-
-// Vivid Blues and Orange 
-
-#10E7DC
-#0074E1
-#1B9CE5
-#6CDAEE
-#F79E02
-
+.mockclass {
+  color: #5680e9 #84ceeb #5ab9ea #c1c8e4 #8860d0 // #Effective Accent Colors
+    #faed26 #46344e #5a5560 #9d8d8f #9b786f // Vivid Blues and Orange
+    #10e7dc #0074e1 #1b9ce5 #6cdaee #f79e02;
+}
 
 a {
   &:hover {
     text-decoration: none;
-  }
-}
-.cost-image {
-  height: auto;
-  max-height: 400px;
-  width: auto;
-  max-width: 100%;
-}
-.cost-partial {
-  // height: 90vh;
-  // max-height: 700px;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  @media screen and (max-width: 700px) {
-    margin-top: 4rem;
   }
 }
 
@@ -82,12 +50,6 @@ $pad: 0.925rem;
   // border: 2px dashed red;
 }
 
-.container {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-}
 table {
   display: table;
   // margin: auto;
@@ -596,17 +558,23 @@ tbody {
   .round-card.second {
     // border: 4px solid pink;
     position: relative;
-    margin-top: 100vh;
+    margin-top: 110%;
     margin-bottom: 5%;
     height: 60%;
     min-height: 350px;
     max-height: 400px;
+    @media screen and (min-width: 900px) {
+      margin-top: 90%;
+    }
 
     .formwork-image {
-      top: -250px;
+      // border: 2px dashed blue;
+      bottom: 80%;
       position: absolute;
       // top: 0px;
       width: 110%;
+      max-width: 400px;
+      max-height: 400px;
       // left: -120%;
     }
     .text {
@@ -620,7 +588,7 @@ tbody {
     // border: 4px solid pink;
     position: relative;
     // margin: unset;
-    margin-top: 27vh;
+    margin-top: 45vh;
     // margin . /: initial;
     // margin-left: 2%;
     margin-left: 3%;
@@ -635,15 +603,17 @@ tbody {
     // top: 400px;
     .formwork-image {
       position: absolute;
-      top: -250px;
+      bottom: 80%;
       // margin: auto;
       // right: -100%;
       // bottom: -10%;
       width: 120%;
+      max-width: 400px;
+      max-height: 400px;
       // max-width: 400px;
       // transform: translate(120%, 0%);
       // margin-left: 20%;
-      // border: 4px solid purple;
+      // border: 4px dashed purple;
     }
   }
 
@@ -671,10 +641,10 @@ tbody {
   .card-button {
     color: white;
     font-size: large;
-    background-color: var(--red);
+    background-color: var(--blue);
     &:hover {
       color: white;
-      background-color: var(--blue);
+      background-color: navy;
     }
   }
 }
@@ -719,14 +689,15 @@ tbody {
   .round-card.second {
     position: relative;
     // border: 4px solid pink;
-    // margin-top: -30%;
+    margin-top: 700px;
     min-height: 300px;
     height: auto;
-
+    // border: 2px dashed blue;
     .formwork-image {
       position: absolute;
       top: -100%;
       width: 100%;
+      // border: 4px solid pink;
       /* left: -111%; */
       // left: -121%;
     }
@@ -740,15 +711,18 @@ tbody {
     }
   }
   .round-card.third {
-    // margin-top: 10vh;
+    margin-top: 10vh;
+    // border: 2px solid purple;
     position: relative;
+    margin-top: -5px;
     min-height: 400px;
     margin-bottom: 10%;
     .formwork-image {
       position: absolute;
       // left: 20%;
-      top: -100%;
-      width: 110%;
+      bottom: 80%;
+      width: 100%;
+
       // max-width: 300px;
       // transform: translate(150%, 0%);
       // margin-left: 30%;
@@ -1225,6 +1199,8 @@ button.cta-schedule {
 /* margin-bottom: 2rem; */
 /* } */
 .round-card {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 13px 20px,
+    rgba(0, 0, 0, 0.24) 0px 13px 20px;
   /* background: gray; */
   /* border: 4px dashed green; */
   display: flex;
@@ -1232,7 +1208,7 @@ button.cta-schedule {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  box-shadow: 3px 6px 6px gray;
+  // box-shadow: 3px 6px 6px gray;
   /* min-height: 30vh; */
   height: auto;
   /* max-height: 80vh; */

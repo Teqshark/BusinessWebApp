@@ -186,7 +186,8 @@ body {
 }
 
 .card__wish-list:hover {
-  background-color: goldenrod;
+  background-color: #8850ff;
+  color: white;
 }
 
 .card__wish-list--19 {

@@ -1,3 +1,7 @@
+
+
+
+
     <div class="top-cont 
       container-fluid 
       row" 
@@ -28,7 +32,7 @@
         )%>
         </a>    
       </div> 
-      <div class="col-12">
+      <%# <div class="col-12">
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
       <defs>
       <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
@@ -40,7 +44,7 @@
       <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
       </g>
         </svg>
-      </div>
+      </div> %>
       <div class="col-md-6
        d-flex
        " 
@@ -66,7 +70,7 @@
 
       <div id='wall-img' class="col-md-6 d-block 
        align-items-center" style="" >
-        <%= image_tag("no-bg-elements/wall-side-nobg.png", alt: "poured concrete retaining wall illustration", id: 'wall-img-png', class: '',:style => "border-radius: 20px;margin: auto;") %>
+        <%= image_tag("no-bg-elements/wall-front-nobg.png", alt: "poured concrete retaining wall illustration", id: 'wall-img-png', class: '',:style => "border-radius: 20px;margin: auto;") %>
       </div>
 
       <%= render 'shared/cost' %>
@@ -89,82 +93,80 @@
       
     
 
-       <div class="row wrapper d-none">
-      <div class=" card col-lg-4 card--19">
-        <div class="card__header card__header--19">
-          <div class="card__watermark" data-watermark="Air"></div>
+      <div class="row wrapper d-none">
+        <div class=" card col-lg-4 card--19">
+          <div class="card__header card__header--19">
+            <div class="card__watermark" data-watermark="Air"></div>
 
-          <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
+            <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
 
-          <span class="card__price card__will-animate">$120</span>
+            <span class="card__price card__will-animate">$120</span>
 
-          <h1 class="card__title card__will-animate">Air Structure 1</h1>
-          <span class="card__subtitle card__will-animate">From the Flymesh upper to the triple-density foam midsole, the Nike Air Zoom Structure 19 Men's Running Shoe offers plenty of support and the response you need for a smooth, stable ride that feels ultra fast.</span>
+            <h1 class="card__title card__will-animate">Air Structure 1</h1>
+            <span class="card__subtitle card__will-animate">From the Flymesh upper to the triple-density foam midsole, the Nike Air Zoom Structure 19 Men's Running Shoe offers plenty of support and the response you need for a smooth, stable ride that feels ultra fast.</span>
+
+            </div>
+
+          <div class="card__body">
+            
+            <img src="https://i.ibb.co/R0Y8T8r/nike19.png" alt="Nike 19" class="card__image card__will-animate">
+            <div class="card__wish-list card__wish-list--19 card__will-animate">Wish List</div>
+
+            <span class="card__category card__will-animate">Men's running shoe</span>
+          </div>
+        </div>
+
+        <!-- Nike Solstice -->
+        <div class="card col-lg-4 card--solstice">
+          <div class="card__header card__header--solstice">
+            <div class="card__watermark" data-watermark="Classic"></div>
+
+            <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
+
+            <span class="card__price card__will-animate">$129</span>
+
+            <h1 class="card__title card__will-animate">Air Solstice QS</h1>
+            <span class="card__subtitle card__will-animate">The Nike Air Solstice draws inspiration from the swoosh's classic running shoes of the 1980's updating the style with premium materials and impressive production quality.</span>
 
           </div>
 
-        <div class="card__body">
+          <div class="card__body">
           
-          <img src="https://i.ibb.co/R0Y8T8r/nike19.png" alt="Nike 19" class="card__image card__will-animate">
-          <div class="card__wish-list card__wish-list--19 card__will-animate">Wish List</div>
+            <img src="https://i.ibb.co/ZMVHp6x/nike-air-solstice.png" alt="Nike Solstice" class="card__image card__will-animate">
+            <div class="card__wish-list card__wish-list--solstice card__will-animate">Wish List</div>
 
-          <span class="card__category card__will-animate">Men's running shoe</span>
+            <span class="card__category card__will-animate">Men's shoe</span>
+          </div>
+        </div>
+
+        <!-- Nike Huarache -->
+        <div class="card col-lg-4 card--huarache">
+          <div class="card__header card__header--huarache">
+            <div class="card__watermark" data-watermark="Safari"></div>
+
+            <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
+
+            <span class="card__price card__will-animate">$140</span>
+
+            <h1 class="card__title card__will-animate">Air Huarache Utility</h1>
+            <span class="card__subtitle card__will-animate">The Nike Air Huarache Utility Men's Shoe toughens up a famous running shoe with a nylon upper, fused mudguard and vibrant detail.</span>
+            
+          </div>
+          
+          <div class="card__body">
+          <img src="https://i.ibb.co/9bc3SYK/nike-safari.png" alt="Nike Huarache" class="card__image card__will-animate">
+            <a class="card__wish-list card__wish-list--solstice card__will-animate">Wish List</a>
+
+            <span class="card__category card__will-animate">Men's shoe</span>
+          </div>
         </div>
       </div>
 
-       <!-- Nike Solstice -->
-      <div class="card col-lg-4 card--solstice">
-        <div class="card__header card__header--solstice">
-          <div class="card__watermark" data-watermark="Classic"></div>
-
-          <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
-
-          <span class="card__price card__will-animate">$129</span>
-
-          <h1 class="card__title card__will-animate">Air Solstice QS</h1>
-          <span class="card__subtitle card__will-animate">The Nike Air Solstice draws inspiration from the swoosh's classic running shoes of the 1980's updating the style with premium materials and impressive production quality.</span>
-
-        </div>
-
-        <div class="card__body">
-         
-           <img src="https://i.ibb.co/ZMVHp6x/nike-air-solstice.png" alt="Nike Solstice" class="card__image card__will-animate">
-          <div class="card__wish-list card__wish-list--solstice card__will-animate">Wish List</div>
-
-          <span class="card__category card__will-animate">Men's shoe</span>
-        </div>
+      <div class="cards-placeholder d-none">
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
       </div>
-  
-
-      <!-- Nike Huarache -->
-      <div class="card col-lg-4 card--huarache">
-        <div class="card__header card__header--huarache">
-          <div class="card__watermark" data-watermark="Safari"></div>
-
-          <img src="https://i.ibb.co/q7RKcZk/nike.png" alt="Nike" class="card__logo card__will-animate">
-
-          <span class="card__price card__will-animate">$140</span>
-
-          <h1 class="card__title card__will-animate">Air Huarache Utility</h1>
-          <span class="card__subtitle card__will-animate">The Nike Air Huarache Utility Men's Shoe toughens up a famous running shoe with a nylon upper, fused mudguard and vibrant detail.</span>
-           
-        </div>
-        
-        <div class="card__body">
-         <img src="https://i.ibb.co/9bc3SYK/nike-safari.png" alt="Nike Huarache" class="card__image card__will-animate">
-          <a class="card__wish-list card__wish-list--solstice card__will-animate">Wish List</a>
-
-          <span class="card__category card__will-animate">Men's shoe</span>
-        </div>
-      </div>
-
-      </div>
-
-        <div class="cards-placeholder d-none">
-      <div class="cards-placeholder__item"></div>
-      <div class="cards-placeholder__item"></div>
-      <div class="cards-placeholder__item"></div>
-    </div>
 
       <div class="container"> 
             <div class="slider">
@@ -176,7 +178,7 @@
                       </div></div>
 
                     <div class="details col-md-6 d-flex flex-column">
-                        <h2 class='' style="">Reinforced Concrete Retaining Walls</h2>
+                        <h2 class='featurette-heading' style="">Reinforced Concrete Retaining Walls</h2>
                         <p class="first">
                          1-4 weeks completion time 
                          <br/>Poured in one day<br/>
@@ -299,443 +301,14 @@
       
       
       <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+      <%= javascript_pack_tag 'slider' %>
       
       <%# <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
          %>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script> -->
-<script>
-  (function () {
-    'use strict';
 
-    var BODY_BACKGROUNDS = [
-      '#8850FF',
-      '#FFBA00',
-      '#4054FF'
-    ];
-
-    function Slider () {
-      this.cards = document.querySelectorAll('.card');
-
-      this.currentIndex = 0;
-
-      this.isDragging = false;
-      this.startX = 0;
-      this.currentX = 0;
-
-      this.initEvents();
-      this.setActivePlaceholder();
-    }
-
-    // initialize drag events
-    Slider.prototype.initEvents = function () {
-      document.addEventListener('touchstart', this.onStart.bind(this));
-      document.addEventListener('touchmove', this.onMove.bind(this));
-      document.addEventListener('touchend', this.onEnd.bind(this));
-
-      document.addEventListener('mousedown', this.onStart.bind(this));
-      document.addEventListener('mousemove', this.onMove.bind(this));
-      document.addEventListener('mouseup', this.onEnd.bind(this));
-
-    };
-
-    // set active placeholder
-    Slider.prototype.setActivePlaceholder = function () {
-      var placeholders = document.querySelectorAll('.cards-placeholder__item');
-      var activePlaceholder = document.querySelector('.cards-placeholder__item--active')
-
-      if (activePlaceholder) {
-        activePlaceholder.classList.remove('cards-placeholder__item--active');
-      }
-
-      placeholders[this.currentIndex].classList.add('cards-placeholder__item--active');
-
-      // var bodyEl = document.querySelector('body');
-      // bodyEl.style.backgroundColor = BODY_BACKGROUNDS[this.currentIndex];
-    };
-
-    // mousedown event
-    Slider.prototype.onStart = function (evt) {
-      this.isDragging = true;
-
-      this.currentX = evt.pageX || evt.touches[0].pageX;
-      this.startX = this.currentX;
-
-      var card = this.cards[this.currentIndex];
-
-      // calculate ration to use in parallax effect
-      this.windowWidth = window.innerWidth;
-      this.cardWidth = card.offsetWidth;
-      this.ratio = this.windowWidth / (this.cardWidth / 4);
-    };
-
-    // mouseup event
-    Slider.prototype.onEnd = function (evt) {
-      this.isDragging = false;
-
-      var diff = this.startX - this.currentX;
-      var direction = (diff > 0) ? 'left' : 'right';
-      this.startX = 0;
-
-      if (Math.abs(diff) > this.windowWidth / 4) {
-        if (direction === 'left') {
-          this.slideLeft();
-        } else if (direction === 'right') {
-          this.slideRight();
-        } else {
-          this.cancelMoveCard();
-        }
-
-      } else {
-        this.cancelMoveCard();
-
-      }
-
-    };
-
-    // mousemove event
-    Slider.prototype.onMove = function (evt) {
-      if (!this.isDragging) return;
-
-      this.currentX = evt.pageX || evt.touches[0].pageX;
-      var diff = this.startX - this.currentX;
-      diff *= -1;
-
-      // don't let drag way from the center more than quarter of window
-      if (Math.abs(diff) > this.windowWidth / 4) {
-        if (diff > 0) {
-          diff = this.windowWidth / 4;
-        } else {
-          diff = - this.windowWidth / 4;
-        }
-      }
-
-      this.moveCard(diff);
-    };
-
-    // slide to left direction
-    Slider.prototype.slideLeft = function () {
-      // if last don't do nothing
-      if (this.currentIndex === this.cards.length - 1) {
-        this.cancelMoveCard();
-        return;
-      }
-
-      var self = this;
-      var card = this.cards[this.currentIndex];
-      var cardWidth = this.windowWidth / 2;
-
-      card.style.left = '-50%';
-
-      this.resetCardElsPosition();
-
-      this.currentIndex += 1;
-      this.setActivePlaceholder();
-      card = this.cards[this.currentIndex];
-
-      card.style.left = '50%';
-
-      this.moveCardEls(cardWidth * 3);
-
-      // add delay to resetting position
-      setTimeout(function () {
-        self.resetCardElsPosition();
-      }, 50);
-    };
-
-    // slide to right direction
-    Slider.prototype.slideRight = function () {
-      // if last don't do nothing
-      if (this.currentIndex === 0) {
-        this.cancelMoveCard();
-        return;
-      }
-
-      var self = this;
-      var card = this.cards[this.currentIndex];
-      var cardWidth = this.windowWidth / 2;
-
-      card.style.left = '150%';
-
-      this.resetCardElsPosition();
-
-      this.currentIndex -= 1;
-      this.setActivePlaceholder();
-      card = this.cards[this.currentIndex];
-
-      card.style.left = '50%';
-
-      this.moveCardEls(-cardWidth * 3);
-
-      // add delay to resetting position
-      setTimeout(function () {
-        self.resetCardElsPosition();
-      }, 50);
-    };
-
-    // put active card in original position (center)
-    Slider.prototype.cancelMoveCard = function () {
-      var self = this;
-      var card = this.cards[this.currentIndex];
-
-      card.style.transition = 'transform 0.5s ease-out';
-      card.style.transform = '';
-
-      this.resetCardElsPosition();
-    };
-
-    // reset to original position elements of card
-    Slider.prototype.resetCardElsPosition = function () {
-      var self = this;
-      var card = this.cards[this.currentIndex];
-
-      var cardLogo = card.querySelector('.card__logo');
-      var cardPrice = card.querySelector('.card__price');
-      var cardTitle = card.querySelector('.card__title');
-      var cardSubtitle = card.querySelector('.card__subtitle');
-      var cardImage = card.querySelector('.card__image');
-      var cardWishList = card.querySelector('.card__wish-list');
-      var cardCategory = card.querySelector('.card__category');
-      var cardWillAnimate = card.querySelectorAll('.card__will-animate');
-
-      // move card elements to original position
-      cardWillAnimate.forEach(function (el) {
-        el.style.transition = 'transform 0.5s ease-out';
-      });
-
-      cardLogo.style.transform = '';
-      cardPrice.style.transform = '';
-
-      cardTitle.style.transform = '';
-      cardSubtitle.style.transform = '';
-
-      cardImage.style.transform = '';
-      cardWishList.style.transform = '';
-      cardCategory.style.transform = '';
-
-      // clear transitions
-      setTimeout(function () {
-        card.style.transform = '';
-        card.style.transition = '';
-
-        cardWillAnimate.forEach(function (el) {
-          el.style.transition = '';
-        });
-      }, 500);
-
-    };
-
-    // slide card while dragging
-    Slider.prototype.moveCard = function (diff) {
-
-      var card = this.cards[this.currentIndex];
-
-      card.style.transform = 'translateX(calc(' + diff + 'px - 50%))';
-      diff *= -1;
-
-      this.moveCardEls(diff);
-    };
-
-    // create parallax effect on card elements sliding them
-    Slider.prototype.moveCardEls = function (diff) {
-      var card = this.cards[this.currentIndex];
-
-      var cardLogo = card.querySelector('.card__logo');
-      var cardPrice = card.querySelector('.card__price');
-      var cardTitle = card.querySelector('.card__title');
-      var cardSubtitle = card.querySelector('.card__subtitle');
-      var cardImage = card.querySelector('.card__image');
-      var cardWishList = card.querySelector('.card__wish-list');
-      var cardCategory = card.querySelector('.card__category');
-      var cardWillAnimate = card.querySelectorAll('.card__will-animate');
-
-      cardLogo.style.transform = 'translateX(' + (diff / this.ratio) + 'px)';
-      cardPrice.style.transform = 'translateX(' + (diff / this.ratio) + 'px)';
-
-      cardTitle.style.transform = 'translateX(' + (diff / (this.ratio * 0.90)) + 'px)';
-      cardSubtitle.style.transform = 'translateX(' + (diff / (this.ratio * 0.85)) + 'px)';
-
-      cardImage.style.transform = 'translateX(' + (diff / (this.ratio * 0.35)) + 'px)';
-
-      cardWishList.style.transform = 'translateX(' + (diff / (this.ratio * 0.85)) + 'px)';
-      cardCategory.style.transform = 'translateX(' + (diff / (this.ratio * 0.65)) + 'px)';
-
-    };
-
-    // crate listener here for when screen is larger than medium i.e. large, xl, xxl 
-    // if document.width > 800px create slider 
-    // append slide dots 
-    //  check if ther is slider and reset 
-    // else delte any sliders and d-none dots
-
-    // create slider
-    var slider = new Slider();
-
-  })();
-
-</script>
-           <!-- Nike 19 -->
-      <script >
-        // Slider(all Slides in a container)
-        const slider = document.querySelector(".slider")
-        // All trails 
-        const trail = document.querySelector(".trail").querySelectorAll("div")
-
-        // Transform value
-        let value = 0
-        // trail index number
-        let trailValue = 0
-        // interval (Duration)
-        let interval = 94000
-
-        // Function to slide forward
-        const slide = (condition) => {
-            // CLear interval
-            clearInterval(start)
-            // update value and trailValue
-            condition === "increase" ? initiateINC() : initiateDEC()
-            // move slide
-            move(value, trailValue)
-            // Restart Animation
-            animate()
-            // start interal for slides back 
-            start = setInterval(() => slide("increase"), interval);
-        }
-
-        // function for increase(forward, next) configuration
-        const initiateINC = () => {
-            // Remove active from all trails
-            trail.forEach(cur => cur.classList.remove("active"))
-            // increase transform value
-            value === 75 ? value = 0 : value += 25
-            // update trailValue based on value
-            trailUpdate()
-        }
-
-        // function for decrease(backward, previous) configuration
-        const initiateDEC = () => {
-            // Remove active from all trails
-            trail.forEach(cur => cur.classList.remove("active"))
-            // decrease transform value
-            value === 0 ? value = 75 : value -= 25
-            // update trailValue based on value
-            trailUpdate()
-        }
-
-        // function to transform slide 
-        const move = (S, T) => {
-            // transform slider
-            slider.style.transform = `translateX(-${S}%)`
-            //add active class to the current trail
-            trail[T].classList.add("active")
-        }
-
-        const tl = gsap.timeline({defaults: {duration: 0.6, ease: "power2.inOut"}})
-        tl.from(".bg", {x: "-100%", opacity: 0})
-          .from("p", {opacity: 0}, "-=0.3")
-          .from("h1", {opacity: 0, y: "30px"}, "-=0.3")
-          .from("button", {opacity: 0, y: "-40px"}, "-=0.8")
-
-        // function to restart animation
-        const animate = () => tl.restart()
-
-        // function to update trailValue based on slide value
-        const trailUpdate = () => {
-            if (value === 0) {
-                trailValue = 0
-            } else if (value === 25) {
-                trailValue = 1
-            } else if (value === 50) {
-                trailValue = 2
-            } else  {
-                trailValue = 3
-            } 
-            // else {
-                // trailValue = 4
-            // }
-        }   
-
-        // Start interval for slides
-        let start = setInterval(() => slide("increase"), interval)
-
-        // Next  and  Previous button function (SVG icon with different classes)
-        document.querySelectorAll("svg").forEach(cur => {
-            // Assign function based on the class Name("next" and "prev")
-            cur.addEventListener("click", () => cur.classList.contains("next") ? slide("increase") : slide("decrease"))
-        })
-
-        // function to slide when trail is clicked
-        const clickCheck = (e) => {
-            // CLear interval
-            clearInterval(start)
-            // remove active class from all trails
-            trail.forEach(cur => cur.classList.remove("active"))
-            // Get selected trail
-            const check = e.target
-            // add active class
-            check.classList.add("active")
-
-            // Update slide value based on the selected trail
-            if(check.classList.contains("box1")) {
-                value = 0
-            } else if (check.classList.contains("box2")) {
-                value = 25
-            } else if (check.classList.contains("box3")) {
-                value = 50
-            } else  {
-                value = 75
-            } 
-            // else {
-                // value = 80
-            // }
-            // update trail based on value
-            trailUpdate()
-            // transfrom slide
-            move(value, trailValue)
-            // start animation
-            animate()
-            // start interval
-            start = setInterval(() => slide("increase"), interval)
-        }
-
-        // Add function to all trails
-        trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)))
-
-        // Mobile touch Slide Section
-        const touchSlide = (() => {
-           let start, move, change, sliderWidth
-
-            // Do this on initial touch on screen
-            slider.addEventListener("touchstart", (e) => {
-                // get the touche position of X on the screen
-                start = e.touches[0].clientX
-                // (each slide with) the width of the slider container divided by the number of slides
-                sliderWidth = slider.clientWidth/trail.length
-            })
-            
-            // Do this on touchDrag on screen
-            slider.addEventListener("touchmove", (e) => {
-                // prevent default function
-                e.preventDefault()
-                // get the touche position of X on the screen when dragging stops
-                move = e.touches[0].clientX
-                // Subtract initial position from end position and save to change variabla
-                change = start - move
-            })
-
-            const mobile = (e) => {
-                // if change is greater than a quarter of sliderWidth, next else Do NOTHING
-                change > (sliderWidth/4)  ? slide("increase") : null;
-                // if change * -1 is greater than a quarter of sliderWidth, prev else Do NOTHING
-                (change * -1) > (sliderWidth/4) ? slide("decrease") : null;
-                // reset all variable to 0
-                [start, move, change, sliderWidth] = [0,0,0,0]
-            }
-            // call mobile on touch end
-            slider.addEventListener("touchend", mobile)
-        })();
-      </script>
-            
+    
     
         <div class="round-card first d-none" style="">
         
@@ -772,7 +345,7 @@
       </div>
       <br>
       <div class="round-card third" style="" >
-           <%= image_tag("no-bg-elements/framework-basement-top-nobg.png",alt: "formed walls foundation, basement, house" , class:"formwork-image", :style => "") %>
+           <%= image_tag("no-bg-elements/cgi-blue-standing-nobg.png",alt: "formed walls foundation, basement, house" , class:"formwork-image", :style => "") %>
            
             <span class="text" style="">
           <h3 class='card-title' style="">Concrete Steel Forms / Panels</h3>
@@ -848,20 +421,24 @@
 
       var imgContParent = imgCont.parentNode;
       console.log(imgContParent);    
+      
+        var imgWallCross = '<%= asset_path 'no-bg-elements/wall-cross-section-nobg.png' %>';
+
       var imgWallFront = '<%= asset_path 'no-bg-elements/wall-front-nobg.png' %>';
 
-      var imgWallFrontFull = '<%= asset_path 'no-bg-elements/wall-front-full-nobg.png' %>';
 
-      var imgWallAngleFront = '<%= asset_path 'no-bg-elements/wall-front-angle-nobg.png' %>';
+      // var imgWallFrontFull = '<%= asset_path 'no-bg-elements/wall-front-full-nobg.png' %>';
 
-      var imgWallLabeled = '<%= asset_path 'no-bg-elements/wall-labeled-nobg.png' %>';
+      // var imgWallAngleFront = '<%= asset_path 'no-bg-elements/wall-front-angle-nobg.png' %>';
 
-      // var imgWallSide = 'assets/no-bg-elements/wall-side-nobg.png';
-      var imgWallSide = '<%= asset_path 'no-bg-elements/wall-side-nobg.png' %>';
+      // var imgWallLabeled = '<%= asset_path 'no-bg-elements/wall-labeled-nobg.png' %>';
 
-      var imgWallSideTop = '<%= asset_path 'no-bg-elements/wall-side-nobg.png' %>';
+  
+      // var imgWallSide = '<%= asset_path 'no-bg-elements/wall-side-nobg.png' %>';
 
-      var imgWallBackDirtLeft = '<%= asset_path 'no-bg-elements/wall-rear-left-dirt-nobg.png' %>';
+      // var imgWallSideTop = '<%= asset_path 'no-bg-elements/wall-side-top-nobg.png' %>';
+
+      // var imgWallBackDirtLeft = '<%= asset_path 'no-bg-elements/wall-rear-left-dirt-nobg.png' %>';
 
       var imgWallBackDirtRight ='<%= asset_path 'no-bg-elements/wall-rear-right-dirt-nobg.png' %>';
 
@@ -911,50 +488,54 @@
           console.log('scrollTop > 50');
           // imgCont.style.position = 'static';
           console.log(changedImage);
-          if (changedImage == true) {
-            console.log('changing image below-----------');
-            console.log(changedImage)
-            imgEl.src = imgWallSide;
-            changedImage = false; 
-            console.log(changedImage)
-            setTimeout(function(){
-              imgEl.classList.remove('flipped');
-              flippedImage = false;
-            }, 1000);  
-          }
+          // if (changedImage == true) {
+          //   console.log('changing image below-----------');
+          //   console.log(changedImage)
+          //   imgEl.src = imgWallCross;
+          //   changedImage = false; 
+          //   console.log(changedImage)
+          //   setTimeout(function(){
+          //     imgEl.classList.remove('flipped');
+          //     flippedImage = false;
+          //   }, 1000);  
+          // }
         }
         
-        if ( skinnyDevice.matches? scrollTop > 100 : scrollTop > 100 ){
+        if ( skinnyDevice.matches? scrollTop > 100 : scrollTop > 150 ){
           console.log(x, y);
           console.log(width, height);
           console.log('scrollTop > 100');
-          imgEl.src = imgWallAngleFront;
-          changedImage = true;
-        }
-        if (skinnyDevice.matches? scrollTop > 200 : scrollTop > 150){
-          console.log('psition > 200/150');
-          imgEl.src = imgWallFrontFull;
-          console.log(imgEl.src);
-        }
-        if (skinnyDevice.matches? scrollTop > 300 : scrollTop > 200 ) {
-          if (flippedImage && !imgEl.classList.contains('flipped')) {
-            imgEl.classList.add('flipped');
-          }
-          console.log('scrollposition > 300/200') ;
           imgEl.src = imgWallFront;
+      
+        }
+        if (skinnyDevice.matches? scrollTop > 200 : scrollTop > 220){
+          console.log('psition > 200/150');
+          imgEl.src = imgWallCross;
+              // changedImage = true;
           console.log(imgEl.src);
         }
-        if (skinnyDevice.matches? scrollTop > 350 : scrollTop > 250) {
-        console.log('changing position to static after 350/250 scrolltop')
-            if (imgEl.classList.contains('flipped')) {
-              imgEl.classList.remove('flipped');
-            }
-            imgEl.src = imgWallLabeled;
-            imgEl.style.width = 
-            console.log(imgEl.src);
+        if (skinnyDevice.matches? scrollTop > 300 : scrollTop > 250 ) {
+          // if (flippedImage && !imgEl.classList.contains('flipped')) {
+          //   imgEl.classList.add('flipped');
+          // }
+          console.log('scrollposition > 300/200') ;
+          imgEl.src = imgWallBackDirtRight;
+          console.log(imgEl.src);
         }
-        if (skinnyDevice.matches? scrollTop > 400 : scrollTop > 300) {
-          flippedImage = true;
+        if (skinnyDevice.matches? scrollTop > 350 : scrollTop > 270) {
+        console.log('changing position to static after 350/250 scrolltop')
+            // if (imgEl.classList.contains('flipped')) {
+            //   imgEl.classList.remove('flipped');
+            // }
+
+            // imgEl.src = imgWallLabeled;
+          
+            // console.log(imgEl.src);
+        }
+        if (skinnyDevice.matches? scrollTop > 400 : scrollTop > 280) {
+            imgEl.src = imgWallBackRight;
+          // flippedImage = true;
+
         }
       }
   </script>
