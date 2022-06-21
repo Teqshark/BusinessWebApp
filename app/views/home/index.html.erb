@@ -501,20 +501,20 @@
           // }
         }
         
-        if ( skinnyDevice.matches? scrollTop > 100 : scrollTop > 150 ){
+        if ( skinnyDevice.matches? scrollTop > 100 : scrollTop > 80 ){
           console.log(x, y);
           console.log(width, height);
           console.log('scrollTop > 100');
           imgEl.src = imgWallFront;
       
         }
-        if (skinnyDevice.matches? scrollTop > 200 : scrollTop > 220){
+        if (skinnyDevice.matches? scrollTop > 200 : scrollTop > 120){
           console.log('psition > 200/150');
           imgEl.src = imgWallCross;
               // changedImage = true;
           console.log(imgEl.src);
         }
-        if (skinnyDevice.matches? scrollTop > 300 : scrollTop > 250 ) {
+        if (skinnyDevice.matches? scrollTop > 300 : scrollTop > 280 ) {
           // if (flippedImage && !imgEl.classList.contains('flipped')) {
           //   imgEl.classList.add('flipped');
           // }
@@ -532,7 +532,7 @@
           
             // console.log(imgEl.src);
         }
-        if (skinnyDevice.matches? scrollTop > 400 : scrollTop > 280) {
+        if (skinnyDevice.matches? scrollTop > 400 : scrollTop > 320) {
             imgEl.src = imgWallBackRight;
           // flippedImage = true;
 
