@@ -77,16 +77,16 @@ ActionMailer::Base.perform_deliveries = true
 ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto => true,  
-  :address            => 'smtp.gmail.com',
-  :port               => 587,
-  :tls                  => true,
-  :domain             => 'gmail.com', #you can also use google.com
+  :address            => 'mail.privateemail.com',
+  :port               => 465,
+  :tls                  => false,
+  :domain             => 'seguraconstruction.com', 
   :authentication     => :plain,
-  :user_name          => ENV['GMAIL_USERNAME'],
-  :password           => ENV['GMAIL_PASSWORD']
+  :user_name          => ENV['EMAIL_USERNAME'],
+  :password           => ENV['EMAIL_PASSWORD']
 }
   # config.action_mailer_host 
-  config.action_mailer.default_url_options = { host: 'seguraretainingwalls@gmail.com'}
+  config.action_mailer.default_url_options = { host: 'admin@seguraconstruction.com'}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

@@ -1,6 +1,6 @@
 
 
 class ApplicationMailer < ActionMailer::Base
-  default from: 'seguraretainingwall@gmail.com'
+  default from: 'admin@seguraconstruction.com'
   layout 'mailer'
 end

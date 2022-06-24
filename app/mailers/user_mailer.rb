@@ -1,8 +1,8 @@
 class UserMailer < Devise::Mailer
     helper :application # gives access to all helpers defined within `application_helper`.
   include Devise::Controllers::UrlHelpers # Optional. eg. `confirmation_url`
-    default from: 'SEGURA&CO <seguraretainingwalls@gmail.com>'
-    default reply_to: 'SEGURA&CO <seguraretainingwalls@gmail.com>'
+    default from: 'SEGURA&CO <admin@seguraconstruction.com>'
+    default reply_to: 'SEGURA&CO <admin@seguraconstruction.com>'
 
     def welcome_email(user)
         @user = user

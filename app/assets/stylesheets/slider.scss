@@ -328,7 +328,7 @@ html {
         color: white;
         // display: inline-block;
         // font-size: 1.5rem;
-        color: $grey;
+        // color: $grey;
         // margin-bottom: 1rem;
         // margin-right: 5rem;
         @media only screen and (max-height: 450px) and (max-width: 900px) {
@@ -558,6 +558,7 @@ html {
         content: "";
         // position: absolute;
         height: 100%;
+
         width: 100%;
         border-radius: 3rem;
         top: 0;
@@ -566,10 +567,16 @@ html {
       }
 
       &::after {
-        transform: translate(4rem, -1rem);
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        // border: 2px dashed red;
+        transform: translate(-3rem, -2rem);
       }
       &::before {
-        transform: translate(2rem, -2rem);
+        padding: 3rem 3rem;
+        // border: 2px dashed blue;
+        transform: translate(0rem, -2rem);
       }
     }
   }
