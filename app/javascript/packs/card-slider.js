@@ -114,7 +114,7 @@
     var card = this.cards[this.currentIndex];
     var cardWidth = this.windowWidth / 2;
 
-    card.style.left = "-50%";
+    card.style.left = "0%";
 
     this.resetCardElsPosition();
 
@@ -122,9 +122,9 @@
     this.setActivePlaceholder();
     card = this.cards[this.currentIndex];
 
-    card.style.left = "50%";
+    card.style.left = "20%";
 
-    this.moveCardEls(cardWidth * 3);
+    this.moveCardEls(cardWidth * 2);
 
     // add delay to resetting position
     setTimeout(function () {
@@ -144,7 +144,7 @@
     var card = this.cards[this.currentIndex];
     var cardWidth = this.windowWidth / 2;
 
-    card.style.left = "150%";
+    card.style.left = "50%";
 
     this.resetCardElsPosition();
 
@@ -152,7 +152,7 @@
     this.setActivePlaceholder();
     card = this.cards[this.currentIndex];
 
-    card.style.left = "50%";
+    card.style.right = "0%";
 
     this.moveCardEls(-cardWidth * 3);
 
@@ -260,5 +260,5 @@
   // else delte any sliders and d-none dots
 
   // create slider
-  var slider = new Slider();
+  // var slider = new Slider();
 })();

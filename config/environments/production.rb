@@ -76,17 +76,18 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.perform_deliveries = true
 ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.smtp_settings = {
-  :enable_starttls_auto => true,  
-  :address            => 'mail.privateemail.com',
-  :port               => 465,
-  :tls                  => false,
+  :user_name => ENV['SENGRID_API_USERNAME'],
+  :password           => ENV['SENDGRID_API_KEY'],
   :domain             => 'seguraconstruction.com', 
+  :address            => 'smtp.sendgrid.net',
+  :port               => 465,
   :authentication     => :plain,
-  :user_name          => ENV['EMAIL_USERNAME'],
-  :password           => ENV['EMAIL_PASSWORD']
+  :enable_starttls_auto => true  
+  # :tls                  => false,
+  # :user_name          => ENV['EMAIL_USERNAME'],
 }
   # config.action_mailer_host 
-  config.action_mailer.default_url_options = { host: 'admin@seguraconstruction.com'}
+  config.action_mailer.default_url_options = { host: 'seguraconstruction.com'}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

@@ -29,9 +29,14 @@
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <span class="password-min" >
-    <em>(<%= @minimum_password_length %> characters minimum)</em></span>
+    <em>(<%= @minimum_password_length %> characters minimummm)</em></span>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+  <div class="field bg-info p-4">
+    
+    <%= f.check_box :remember_me %>
+    <%= f.label :I_consent_to_receive_email_messages %>
   </div>
 
   <div class="field">

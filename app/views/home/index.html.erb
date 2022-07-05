@@ -9,7 +9,7 @@
       >
       
       
-    
+        
         <% if !user_signed_in? %>
             <span class="top-buttons position-absolute " style="z-index: 30;"> 
           <%# link_to 'Sign in', new_user_session_path %>
@@ -20,9 +20,10 @@
             <%= link_to 'Register', new_user_registration_path, class:"card__wish-list card__wish-list--19", style:"" %>   
               </span>
               <% else %>
-                <%= phone_number_link("(501) 777-2525") %>
+                <%# phone_number_link("(501) 777-2525") %>
              
           <% end %>
+          <%= link_to 'Apply', home_careers_path, class:"card-wish-list", style:"display: inline-block;" %>
         
     
       <div class='col-12 row d-flex '>
@@ -394,7 +395,8 @@
           <!-- end of contact -->
 
       </div>
-  
+
+    </div> 
       <%# end top container  %>
     <script>
   

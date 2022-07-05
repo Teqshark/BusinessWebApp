@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   #   confirmations: 'devise/confirmations', sign_up_create: 'home'
   # }
   resources :dashboard
-  resources :home, only: [:index, :our_mission, :about]
+  resources :home, only: [:index, :our_mission, :about, :careers]
   
   resources :user do 
     resources :project 
@@ -19,9 +19,11 @@ Rails.application.routes.draw do
 
 root 'home#index'
 get 'home/about'
+get 'home/careers'
 # , to: 'home#about'
 get 'home/our_mission'
 get 'home/gallery'
+
   
 devise_scope :user do
   get "/users/sign_out" => "devise/sessions#destroy"

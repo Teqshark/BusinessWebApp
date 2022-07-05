@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  /* height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -8,7 +8,8 @@ body {
   font-family: "Roboto", "Helvetica", sans-serif;
 
   transition: background-color 0.2s;
-  will-change: background-color;
+  will-change: background-color; */
+  border: 4px solid green;
 }
 
 .inspired-by {
@@ -21,20 +22,34 @@ body {
 }
 
 .wrapper {
+  /* border: 4px solid blue; */
+  /* background: gray; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  /* align-items: flex-end; */
+  /* justify-items: flex-end; */
   /* position: relative; */
   overflow-x: hidden;
+  overflow-y: hidden;
+  /* padding-left: 12rem; */
+  /* width: 100%; */
+  height: auto;
   width: 100%;
-  /* height: 100%; */
 }
 
 .card {
-  display: block;
-  /* position: absolute; */
+  /* border: 4px solid red; */
+  /* display: block; */
+  /* position: relative; */
   /* top: 25px; */
+  height: auto;
   margin: 0 auto;
-  width: 97%;
-  max-width: 400px;
-  /* height: 600px; */
+  width: 350px;
+
+  /* max-width: 400px; */
+
+  /* max-height: 600px; */
   background-color: #fff;
   border-radius: 15px;
 
@@ -55,12 +70,17 @@ body {
   /* left: 50%; */
 }
 
-.card--solstice,
+.card--solstice {
+  /* display: inline-block; */
+  /* top: 25px; */
+  /* left: 100%; */
+}
 .card--huarache {
   /* left: 150%; */
 }
 
 .card__header {
+  /* border: 4px dashed pink; */
   z-index: 8;
   position: relative;
   height: 28rem;
@@ -137,9 +157,14 @@ body {
   display: block;
   font-size: 1.1rem;
   font-weight: 300;
-  height: 5rem;
+  height: auto;
+  /* border: 7px solid green; */
+  overflow: hidden;
 }
-
+.card__subtitle > table {
+  width: auto;
+  border: 4px dasehd blue;
+}
 .card__body {
   z-index: 10;
   position: relative;
