@@ -5,25 +5,27 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     confirmations: 'devise/confirmations', sign_up_create: 'home'
   }
-
+  
   # to verride registrations controller 
   # devise_for :users, controllers: {registrations: 'users/registrations',
   #   confirmations: 'devise/confirmations', sign_up_create: 'home'
   # }
   resources :dashboard
-  resources :home, only: [:index, :our_mission, :about, :careers]
+  resources :home, only: [:index, :our_mission, :about]
   
   resources :user do 
     resources :project 
   end
-
-root 'home#index'
-get 'home/about'
-get 'home/careers'
-# , to: 'home#about'
-get 'home/our_mission'
-get 'home/gallery'
-
+  
+  root 'home#index'
+  get 'home/about'
+  # get 'home/careers'
+  # , to: 'home#about'
+  get 'home/our_mission'
+  get 'home/gallery'
+  
+  # get 'careers/new'
+  resources :careers, :only => [:show, :new, :create]
   
 devise_scope :user do
   get "/users/sign_out" => "devise/sessions#destroy"

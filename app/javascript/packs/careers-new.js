@@ -1,3 +1,29 @@
+// var buttons = document.querySelectorAll(".appl-button");
+// buttons.onClick('toggle-form')
+
+function toggleForm(position) {
+  console.log(position);
+  var positionSelected = position;
+  console.log(positionSelected);
+  var form = document.getElementsByClassName("appl")[0];
+  console.log(form);
+  var positionField = document.getElementsByClassName("position-field")[0];
+  console.log(positionField);
+  console.log(positionField.value);
+  if (form.classList.contains("open")) {
+    positionField.value = "";
+    form.classList.toggle("open");
+  } else {
+    console.log("setting positionField value");
+    positionField.value = positionSelected;
+    console.log(positionField);
+    console.log(positionField.value);
+    console.log(positionSelected);
+
+    form.classList.toggle("open");
+  }
+}
+
 (function () {
   "use strict";
 

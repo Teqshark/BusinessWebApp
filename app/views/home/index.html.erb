@@ -23,8 +23,7 @@
                 <%# phone_number_link("(501) 777-2525") %>
              
           <% end %>
-          <%= link_to 'Apply', home_careers_path, class:"card-wish-list", style:"display: inline-block;" %>
-        
+          <%= link_to 'Apply', new_career_path, class:"apply-button", style:"display: inline-block;" %>
     
       <div class='col-12 row d-flex '>
 
@@ -73,7 +72,7 @@
        align-items-center" style="" >
         <%= image_tag("no-bg-elements/wall-front-nobg.png", alt: "poured concrete retaining wall illustration", id: 'wall-img-png', class: '',:style => "border-radius: 20px;margin: auto;") %>
       </div>
-
+      <%= render 'shared/featured' %>
       <%= render 'shared/cost' %>
 
       <div class="col-12 row d-none border-element" style="height: 500px;">

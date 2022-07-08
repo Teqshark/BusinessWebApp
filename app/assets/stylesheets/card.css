@@ -9,7 +9,7 @@ body {
 
   transition: background-color 0.2s;
   will-change: background-color; */
-  border: 4px solid green;
+  /* border: 4px solid green; */
 }
 
 .inspired-by {
@@ -163,7 +163,7 @@ body {
 }
 .card__subtitle > table {
   width: auto;
-  border: 4px dasehd blue;
+  /* border: 4px dasehd blue; */
 }
 .card__body {
   z-index: 10;
@@ -221,8 +221,8 @@ body {
 }
 
 .card__wish-list--solstice {
-  color: #ffba00;
-  border-color: #ffba00;
+  color: #8850ff;
+  border-color: #8850ff;
 }
 
 .card__wish-list--huarache {

@@ -1,7 +1,8 @@
 
 
 <div class="top-cont container-fluid py-5">
-        <div class="appl open">
+    <h1>This is the careers.html page </h1>
+        <div class="appl">
          <%# 
 to do 
 create admin user
@@ -18,6 +19,12 @@ sort by
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :desired_position %><br />
+    <%# f.select :position, autofocus: true, autocomplete: "position" %>
+    <%= f.select(:position, ['full-time', 'part-time', 'seasonal'], {}, { :class => 'position-field'}) %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -27,7 +34,7 @@ sort by
     <%= f.text_field :first_name, autocomplete: "first name" %>
   </div>
 
-  <div class="field">
+  <div class="field d-none">
     <%= f.label :last_name %> <br />
     <%= f.text_field :last_name, autocomplete: "last name" %>
   </div>
@@ -92,7 +99,7 @@ sort by
           <div class="card__body">
             
             <img src="<%= asset_path 'no-bg-elements/sign-men-working-nobg.png' %>" alt="Workers" class="card__image apply-image-1 card__will-animate">
-            <div class="card__wish-list card__wish-list--19 card__will-animate">Apply</div>
+            <div class="card__wish-list card__wish-list--19 card__will-animate apply-button" position="part-time" onclick="toggleForm(this.position)" >Apply</div>
 
             <span class="card__category card__will-animate d-none">Men's running shoe</span>
           </div>
@@ -121,7 +128,7 @@ sort by
           <div class="card__body">
           
             <img src="<%= asset_path 'no-bg-elements/worker-jackhammer-nobg.png' %>" alt="Nike Solstice" class="card__image apply-image-2 card__will-animate">
-            <div class="card__wish-list card__wish-list--solstice card__will-animate">get started</div>
+            <div class="card__wish-list card__wish-list--solstice card__will-animate" position="full-time" onclick="toggleForm(this.position)" >get started</div>
 
             <span class="card__category card__will-animate d-none">Men's shoe</span>
           </div>
@@ -136,7 +143,7 @@ sort by
 
             <span class="card__price card__will-animate">competitive pay $</span>
 
-            <h1 class="card__title card__will-animate">summer position</h1>
+            <h1 class="card__title card__will-animate">summer/winter seasonal position</h1>
             <span class="card__subtitle card__will-animate">
               <table>
               <tr><td>Weekly Pay</td></tr>
@@ -149,7 +156,7 @@ sort by
           
           <div class="card__body">
           <img src="<%= asset_path 'no-bg-elements/tools-removebg.png' %>" alt="Nike Huarache" class="card__image apply-image-3 card__will-animate">
-            <a class="card__wish-list card__wish-list--solstice card__will-animate">Wish List</a>
+            <a class="card__wish-list card__wish-list--solstice card__will-animate apply-button" position="seasonal" onclick="toggleForm(this.position)">Apply</a>
 
             <span class="card__category card__will-animate d-none">Men's shoe</span>
           </div>
@@ -162,25 +169,33 @@ sort by
         <div class="cards-placeholder__item"></div>
       </div>
   <%= link_to 'Back', :back  %>
-     <%= javascript_pack_tag 'card-slider' %>
+     <%= javascript_pack_tag 'careers-new' %>
 </div>
 
 <script>
-  var buttons = document.querySelectorAll(".appl-button");
-  buttons.onClick('toggle-form')
-  function toggleForm() {
-    appl = document.querySelector("#appl");
-    if (appl.hasclass('d-none') ) {
-      
-      appl.classList.remove("d-none");
+  // var buttons = document.querySelectorAll(".appl-button");
+  // buttons.onClick('toggle-form')
 
-    } else {
-      this.addClass('disabled'); 
-    }
+  function toggleForm(position) {
+  
+      var positionSelected = position;
+      var form =  
+      document.getElementsByClassName('appl')[0];
+      
+        var positionField = document.getElementsByClassName('position-field')[0];
+      if (form.hasClass('open')) {
+        positionField.value = '';
+        form.classList.toggle("open");
+      } else {
+
+
+      positionField.value = positionSelected;
+
+      form.classList.toggle("open");
+      }
+      
   }
-  document.getElementById('button').onclick = function(){
-     document.getElementsByClassName('appl')[0].classList.toggle("open");
-} 
+
   
 
 

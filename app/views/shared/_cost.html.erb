@@ -2,7 +2,15 @@
     <div class="cost-top" style="">
     <h2 class="featurette-heading"> Reinforced Concrete Retaining Wall Cost </h2>
     <h4 class="text-muted">(With footer already poured)</h4>
-    <%= image_tag("no-bg-elements/wall-labeled-nobg.png", alt: "Reinforced Concrete Retaining Wall labeled illustration", class:"cost-image", :style=> "") %>
+    <div id="concrete-wall-image-container">
+     <%= image_tag("no-bg-elements/wall-labeled-nobg.png", alt: "reinforced concrete wall model illustration labeled", class: 'cost-image', id:"concrete-wall-image", :style => "border-radius: 20px;margin: auto;") %>
+     </div>
+      <%= image_tag("no-bg-elements/worker-standing-handsup-nobg.png", alt: "concrete specialist construction worker", id: 'worker-standing', class: '',:style => "border-radius: 20px;margin: auto;") %>
+     <%= image_tag("no-bg-elements/worker-squat-nobg.png", alt: "concrete specialist construction worker", id: 'worker-squatting', class: '',:style => "border-radius: 20px;margin: auto;") %>
+
+          <%= image_tag("no-bg-elements/worker-shouting-nobg.png", alt: "concrete specialist construction worker", id: 'worker-shouting', class: '',:style => "border-radius: 20px;margin: auto;") %>
+
+          <%= image_tag("no-bg-elements/worker-pose-nobg.png", alt: "concrete specialist construction worker", id: 'worker-pose', class: '',:style => "border-radius: 20px;margin: auto;") %>
     <h2 class="cost-subtitle top-float" style="z-index: 9;">complete <br> solutions</h2>
     </div>
     <div class="cost-bottom" style="z-index: 9;">
@@ -15,4 +23,6 @@
         <span class="bubble third">Built to Last</span>
     </div>
 </div>
+<%= javascript_pack_tag 'cost-partial' %>
+
 

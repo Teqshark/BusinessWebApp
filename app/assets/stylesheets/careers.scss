@@ -1,3 +1,27 @@
+.wrapper {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    .card {
+      margin-top: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    flex-direction: row;
+    .card--solstice {
+      // clear: right;
+      // margin-top: 3rem;
+    }
+    .card--huarache {
+      margin-top: 2.5rem;
+      // display: ;
+    }
+  }
+}
 .apply-image-1 {
   width: 80%;
   right: -20px;
@@ -32,6 +56,14 @@
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  .position-field {
+    width: 50%;
+    min-width: 200px;
+    /* border: 2px solid cyan; */
+    font-size: 1rem;
+    height: 2rem;
+    border: 4px solid gray;
+  }
 }
 
 .open {

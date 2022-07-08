@@ -33,6 +33,96 @@ a {
 $color-1: #1a1a1a;
 $color-2: #fefefe;
 $pad: 0.925rem;
+
+.apply-button {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  width: 5rem;
+  min-width: 100px;
+  min-height: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #313133;
+  background: #4fd1c5;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 230, 217, 1) 0%,
+    rgba(79, 209, 197, 1) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+.apply-button::before {
+  content: "";
+  border-radius: 1000px;
+  width: 7rem;
+  height: 120%;
+  min-width: calc(100px + 4px);
+  min-height: calc(20px + 3px);
+  border: 6px solid #00ffcb;
+  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.apply-button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.apply-button:hover::before,
+.apply-button:focus::before {
+  opacity: 1;
+}
+
+.apply-button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00ffcb;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.apply-button:hover::after,
+.apply-button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
 .cont {
   /* position: absolute; */
   display: flex;
@@ -1388,6 +1478,9 @@ em {
 } */
 form > .field > input {
   border: 4px solid gray;
+  line-height: 24px;
+  font-family: sans-serif;
+  display: block;
   /* margin-bottom: 1rem; */
 }
 

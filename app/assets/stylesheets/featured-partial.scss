@@ -1,66 +1,48 @@
-//
-//
-//
-//
-#worker-standing {
-  display: none;
-  bottom: 0%;
-  right: 0;
-  position: absolute;
-  transform: scale(0.3, 0.3);
-}
-#worker-squatting {
-  display: none;
-  top: 0;
-  left: 0;
-  position: absolute;
-  transform: scale(-0.4, 0.4);
-}
-#worker-shouting {
-  display: none;
+// #fullpage {
+//   display: none;
+//   position: absolute;
+//   z-index: 9999;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: scroll;
+//   background-size: contain;
+//   background-repeat: no-repeat no-repeat;
+//   background-position: center center;
+//   background-color: black;
+// }
 
-  top: 0;
-  left: 0;
-  position: absolute;
-  transform: scale(-0.4, 0.4);
-}
-#worker-pose {
-  display: none;
-  top: 0;
-  left: 0;
-  position: absolute;
-  transform: scale(-0.4, 0.4);
-}
-
-#worker-pose {
-  display: none;
-  top: 0;
-  left: 0;
-  position: absolute;
-  transform: scale(-0.4, 0.4);
-  // transform: scale(1, -1);
-}
-.cost-image {
+.featured-image {
+  margin-top: 2rem;
+  // margin: auto;
+  width: 90%;
   height: auto;
   // max-height: 400px;
-  width: auto;
   max-width: 100%;
+  border-radius: 8px;
+  opacity: 1;
 }
-.cost-partial {
+.featured-partial {
   // max-height: 700px;
   // max-width: 700px;
   border-radius: 4rem;
   background-color:
   //  #4580e9
-  //  #5680e9
-    #84ceeb // #5ab9ea
+    #5680e9 // #84ceeb
+    // #5ab9ea
     //  #c1c8e4
 ;
-  padding: 4rem;
+  padding: 3rem;
   // height: 90vh;
   // max-height: 700px;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
+  // opacity: 0.8;
+
+  .featured-subtitle {
+    margin-top: 3rem;
+  }
   @media screen and (max-width: 700px) {
     padding: 4rem 2rem;
     margin-top: 2rem;
@@ -73,7 +55,7 @@
     .text-muted {
       font-size: large;
     }
-    .cost-subtitle {
+    .featured-subtitle {
       font-size: x-large;
     }
   }
@@ -111,7 +93,7 @@
 .new-project:hover {
   text-decoration: none;
 }
-.cost-top {
+.featured-top {
   display: flex;
   /* place items in column */
   flex-direction: column;
@@ -122,7 +104,7 @@
   /* padding-bottom: 3rem; */
   /* border: 2px dashed green; */
 }
-.cost-bottom {
+.featured-bottom {
   display: flex;
   /* border: 2px dashed blue; */
   position: relative;
@@ -137,7 +119,7 @@
   max-width: 600px;
   margin: auto;
 }
-.cost-bottom > {
+.featured-bottom > {
   z-index: 4;
 }
 .bubble {
@@ -166,6 +148,6 @@
 .third {
   top: 55%;
 }
-.cost-title {
+.featured-title {
   font-size: 2em;
 }

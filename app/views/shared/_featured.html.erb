@@ -1,0 +1,26 @@
+
+
+
+<div class="d-flex flex-column col-12 featured-partial" style="">
+
+    <div class="featured-top" style="">
+    <h2 class="featurette-heading"> Featured project: Lake Village Welcome Center</h2>
+    <h4 class="text-muted">(Lake Village, AR)</h4>
+     <%# <div id="fullpage" onclick="this.style.display='none';"></div> %>
+     <div id="container">
+    <%= image_tag("retaining-wall-lake-village-finished-hd-cropped.jpeg", alt: "Reinforced Concrete Retaining Wall finished project", class:"featured-image", id:"toggle-fullscreen", :style=> "") %>
+    </div>
+    <h2 class="featured-subtitle top-float" style="z-index: 9;">Commercial Project</h2>
+    </div>
+
+    <div class="featured-bottom" style="z-index: 9;">
+        
+        <h3 class="top-float">Total cost:</h3>
+        <h2 class="top-float" >$12.50 / ft²</h2>
+        <%# link_to 'Schedule now', new_dashboard_url, class: 'new-project top-float' %>
+        <span class="bubble first">200+ yrds in length</span>
+        <span class="bubble second">Curved designed</span>
+        <span class="bubble third">Supports commercial building</span>
+    </div>
+</div>
+<%= javascript_pack_tag 'featured-partial' %>
