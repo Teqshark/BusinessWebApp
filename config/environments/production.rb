@@ -76,13 +76,13 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.perform_deliveries = true
 ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['SENGRID_API_USERNAME'],
-  :password           => ENV['SENDGRID_API_KEY'],
-  :domain             => 'seguraconstruction.com', 
-  :address            => 'smtp.sendgrid.net',
-  :port               => 465,
-  :authentication     => :plain,
-  :enable_starttls_auto => true  
+  user_name: ENV['SENDGRID_API_USERNAME'],
+  password: ENV['SENDGRID_API_KEY'],
+  domain: 'seguraconstruction.com', 
+  address:'smtp.sendgrid.net',
+  port: 465,
+  authentication: :plain,
+  enable_starttls_auto: true  
   # :tls                  => false,
   # :user_name          => ENV['EMAIL_USERNAME'],
 }
