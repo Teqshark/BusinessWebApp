@@ -1,6 +1,6 @@
 class SignUpCreate 
   include ActiveModel::Model 
-  attr_accessor :email, :first_name, :last_name, :phone_number, :password, :zip_code, :width, :length, :height, :remember_me, :terms
+  attr_accessor :email, :first_name, :last_name, :phone_number, :password, :zip_code, :width, :length, :height, :remember_me, :terms, :email_consent
 
   
 
@@ -17,7 +17,7 @@ class SignUpCreate
   def save 
     return false if invalid?
     ActiveRecord::Base.transaction do
-      @user = User.create!(email: email, first_name: first_name, last_name: last_name, phone_number: phone_number, password: password)
+      @user = User.create!(email: email, first_name: first_name, last_name: last_name, phone_number: phone_number, password: password, email_consent: email_consent, remember_me: remember_me)
       #  puts ' errors user :
       # from user 
       # errors:

@@ -47,7 +47,7 @@ class SignUpCreateController < ApplicationController
     end
   end
   def sign_up_create_params 
-    params.permit(:email, :first_name, :last_name, :phone_number, :password, :terms, :length, :height, :width, :street_name, :city, :state, :zip_code, :desired_start_date, :desired_completion_date, :remember_me, :terms)
+    params.permit(:email, :first_name, :last_name, :phone_number, :password, :length, :height, :width, :street_name, :city, :state, :zip_code, :desired_start_date, :desired_completion_date, :remember_me, :terms, :email_consent)
     
   end
   # private

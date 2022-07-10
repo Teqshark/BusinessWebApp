@@ -5,8 +5,10 @@ class Candidate < ApplicationRecord
 
   validates :name, :length => {:maximum => 30, :too_long => '%{count} characters is the maximum allowed'
   }
-  validates :position, :length => {:maximum => 30, :too_long => '%{count} characters is the maximum allowed'
-  }
+  # validates :position, :length => {:maximum => 30, :too_long => '%{count} characters is the maximum allowed'}
+
+validates_inclusion_of :position,
+:in => %w( full-time part-time seasonal),  :allow_blank => false
 
   validates :address, :length => 
   {:maximum => 100,

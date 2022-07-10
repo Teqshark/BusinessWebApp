@@ -1,7 +1,7 @@
 // var buttons = document.querySelectorAll(".appl-button");
 // buttons.onClick('toggle-form')
 
-function toggleForm(position) {
+window.toggleForm = function toggleForm(position) {
   console.log(position);
   var positionSelected = position;
   console.log(positionSelected);
@@ -22,9 +22,8 @@ function toggleForm(position) {
 
     form.classList.toggle("open");
   }
-}
-
-(function () {
+};
+function cardSlider() {
   "use strict";
 
   var BODY_BACKGROUNDS = ["#8850FF", "#FFBA00", "#4054FF"];
@@ -287,4 +286,4 @@ function toggleForm(position) {
 
   // create slider
   // var slider = new Slider();
-})();
+}

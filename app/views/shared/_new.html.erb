@@ -44,11 +44,12 @@
   </div>
     <div class="field terms">
     
+     
+      <%= f.check_box :terms, class:"" %>
+      <%= f.label :terms, "I agree to the terms and conditions", class:"label" %>
       <button type="button" id="modalButton"class="" data-toggle="modal" data-target="#termsModal" onClick="toggleModal()">
         Read Terms and Conditions
       </button>
-      <%= f.check_box :terms, class:"" %>
-      <%= f.label :terms, "I agree to the terms and conditions", class:"label" %>
     </div>
 
         <!-- Button trigger modal -->
@@ -75,6 +76,17 @@
       </div>
     <br>
 
+    <div class="field bg-info p-4">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, :checked => true %>
+    </div>
+
+    <div class="field bg-info p-4">
+      <%= f.check_box :email_consent, checked: 'true' %>
+      <%= f.label :I_consent_to_receive_email_messages %>
+    </div>
+
+
   <div class="actions">
   <div class="input_box button">
 
@@ -85,6 +97,7 @@
 
   </div>
 <% end %>
+<%= javascript_pack_tag 'terms-modal' %>
 
 <%# <%= render "devise/shared/links" %> 
 <%# </form> %>

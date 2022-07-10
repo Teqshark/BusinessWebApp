@@ -30,7 +30,7 @@
           <div class="card__body">
             
             <img src="<%= asset_path 'no-bg-elements/sign-men-working-nobg.png' %>" alt="Workers" class="card__image apply-image-1 card__will-animate">
-            <div class="card__wish-list card__wish-list--19 card__will-animate apply-button" data-position="part-time" onclick="toggleForm(this.getAttribute('data-position'))" >Apply</div>
+            <div class="card__wish-list card__wish-list--19 card__will-animate" data-position="part-time" onclick="toggleForm(this.getAttribute('data-position'))" >Apply</div>
 
             <span class="card__category card__will-animate d-none">Men's running shoe</span>
           </div>
@@ -87,7 +87,7 @@
           
           <div class="card__body">
           <img src="<%= asset_path 'no-bg-elements/tools-removebg.png' %>" alt="Nike Huarache" class="card__image apply-image-3 card__will-animate">
-            <a class="card__wish-list card__wish-list--solstice card__will-animate apply-button" data-position="seasonal" onclick="toggleForm(this.getAttribute('data-position'))">Apply</a>
+            <a class="card__wish-list card__wish-list--solstice card__will-animate " data-position="seasonal" onclick="toggleForm(this.getAttribute('data-position'))">Apply</a>
 
             <span class="card__category card__will-animate d-none">Men's shoe</span>
           </div>
@@ -100,7 +100,7 @@
         <div class="cards-placeholder__item"></div>
       </div>
 
-         <div class="appl">
+         <div class="appl py-5 mt-5">
                   <%# 
           to do 
           create admin user
@@ -151,6 +151,7 @@
         </div>
           <div class="field">
           <%= f.label :current_address %>
+          <i >( street number, street name, apt # if applicable )</i>
           <%= f.text_field :address, required: true, class: '' %>
         </div>
 
