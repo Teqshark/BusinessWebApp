@@ -34,27 +34,103 @@ $color-1: #1a1a1a;
 $color-2: #fefefe;
 $pad: 0.925rem;
 
+.register-button {
+  position: absolute;
+  right: 2rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  width: 9rem;
+  min-width: 100px;
+  min-height: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #f1f1f8;
+  background: 'blue';
+  background: linear-gradient(
+    90deg,
+    rgb(23, 62, 190) 0%,
+    rgb(50, 96, 220) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(34, 83, 216, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+}
+
+.register-button::before {
+  content: '';
+  border-radius: 1000px;
+  // width: 7rem;
+  height: 120%;
+  min-width: calc(100px + 4px);
+  min-height: calc(20px + 3px);
+  border: 6px solid rgba(34, 83, 216, 0.64);
+  box-shadow: 0 0 60px rgba(34, 83, 216, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.register-button:hover,
+.button:focus {
+  color: #f1f1f8;
+  transform: translateY(-6px);
+}
+
+.register-button:hover::before,
+.register-button:focus::before {
+  opacity: 1;
+}
+
+.register-button::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid rgba(34, 83, 216, 0.64);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.register-button:hover::after,
+.register-button:focus::after {
+  animation: none;
+  display: none;
+}
 .apply-button {
   margin-left: 1rem;
   margin-top: 2rem;
   width: 5rem;
   min-width: 100px;
   min-height: 20px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
-  color: #313133;
-  background: #4fd1c5;
+  color: #f1f1f8;
+  background: 'blue';
   background: linear-gradient(
     90deg,
-    rgba(129, 230, 217, 1) 0%,
-    rgba(79, 209, 197, 1) 100%
+    rgb(23, 62, 190) 0%,
+    rgb(50, 96, 220) 100%
   );
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  box-shadow: 12px 12px 24px rgba(34, 83, 216, 0.64);
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -63,14 +139,14 @@ $pad: 0.925rem;
 }
 
 .apply-button::before {
-  content: "";
+  content: '';
   border-radius: 1000px;
   width: 7rem;
   height: 120%;
   min-width: calc(100px + 4px);
   min-height: calc(20px + 3px);
-  border: 6px solid #00ffcb;
-  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  border: 6px solid rgba(34, 83, 216, 0.64);
+  box-shadow: 0 0 60px rgba(34, 83, 216, 0.64);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -81,7 +157,7 @@ $pad: 0.925rem;
 
 .apply-button:hover,
 .button:focus {
-  color: #313133;
+  color: #f1f1f8;
   transform: translateY(-6px);
 }
 
@@ -91,11 +167,11 @@ $pad: 0.925rem;
 }
 
 .apply-button::after {
-  content: "";
+  content: '';
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 6px solid #00ffcb;
+  border: 6px solid rgba(34, 83, 216, 0.64);
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -183,7 +259,7 @@ tbody {
       z-index: 10;
       // width: 110%;
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         right: 0;
@@ -251,7 +327,7 @@ tbody {
 }
 
 .labeled-img {
-  src: "assets/no-bg-elements/complete-wall-labeled-removebg.png";
+  src: 'assets/no-bg-elements/complete-wall-labeled-removebg.png';
 }
 
 .labeled-img-content {
@@ -374,7 +450,7 @@ tbody {
       // width: $pad;
       border-color: green;
       height: 100%;
-      content: "";
+      content: '';
       background: white;
       z-index: 1;
       transition: background 400ms;
@@ -440,7 +516,7 @@ tbody {
       z-index: -1;
       // display: hidden;
       display: hidden;
-      font-family: "Courier New", Courier, monospace;
+      font-family: 'Courier New', Courier, monospace;
       text-indent: 15em;
       white-space: nowrap;
       transition: text-indent 500ms ease-in-out;
@@ -1004,7 +1080,7 @@ tbody {
     margin-top: 2rem;
   }
   #top-logo {
-    content: url("logo/gradient-logo-260x160.png");
+    content: url('logo/logo-300x200.png');
   }
   .top-cont {
     padding-top: 20px;
@@ -1211,7 +1287,7 @@ button.cta-schedule {
   // left: 50vw;
   // top: 50vh;
   // transform: translate(-50%, -80%);
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Varela Round', sans-serif;
   font-size: 2vw;
   letter-spacing: 0.1em;
   color: #e8e8e8;
@@ -1245,7 +1321,7 @@ button.cta-schedule {
 }
 @media screen and (max-height: 500px) {
   #top-logo {
-    content: url("logo/gradient-logo-260x160.png");
+    content: url('logo/logo-300x200.png');
     // border: 4px solid pink;
   }
 }
@@ -1258,9 +1334,9 @@ button.cta-schedule {
 // position: relative;
 // }
 @media screen and (max-width: 300px) {
-  #top-logo {
-    content: url("logo/gradient-logo-160x98.png");
-  }
+  // #top-logo {
+  //   content: url('logo/logo-200x100.png');
+  // }
 }
 
 .info {
@@ -1855,7 +1931,7 @@ input[type-submit]:hover {
 
 /* clear floats afte the columns */
 .row:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -2237,7 +2313,7 @@ form a:hover {
   }
 
   .subtitle {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px 20px;
   }
   .btn.about-us {

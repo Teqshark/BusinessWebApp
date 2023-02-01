@@ -11,14 +11,16 @@
       
         
         <% if !user_signed_in? %>
-            <span class="top-buttons position-absolute " style="z-index: 30;"> 
+            <%# <span class="top-buttons position-absolute " style="z-index: 30;">  %>
           <%# link_to 'Sign in', new_user_session_path %>
  
           <%# <h4 class="d-none"> Create a free account first or log in to create a project and get an estimate</h4> %>
           <%# render 'shared/sign_up_create'%>
-          
-            <%= link_to 'Register', new_user_registration_path, class:"card__wish-list card__wish-list--19", style:"" %>   
-              </span>
+             <%= link_to 'Register', new_user_registration_path, class:"register-button", 
+             style:"" 
+             %>
+    
+              <%# </span> %>
               <% else %>
                 <%# phone_number_link("(501) 777-2525") %>
              
@@ -28,8 +30,11 @@
       <div class='col-12 row d-flex '>
 
         <a href="<%= root_path%>" class="m-auto" >
-          <%= image_tag("logo/gradient-logo-nobg-500x300.png", alt: "segura and company logo", class:"", id: "top-logo"
+          <%= image_tag("logo/logo-500x300.png", alt: "segura and company logo", class:"", id: "top-logo"
         )%>
+          <%# image_tag("logo/logo-300x200.png", alt: "segura and company logo", class:"", id: "top-logo-mobile"
+        )%>
+
         </a>    
       </div> 
       <%# <div class="col-12">
